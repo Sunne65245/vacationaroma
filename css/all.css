@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,24 +49,227 @@ table {
   border-spacing: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
 body {
   background: #E0D8D4;
 }
 
 .navbar {
   background-color: #D9BCB8;
-  height: 170px;
+  height: 10em;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar ul li {
+  margin: 0 1em;
+}
+
+.navbar a {
+  color: #462A1E;
 }
 
 .navbar img {
-  height: 100px;
+  height: 10em;
 }
 
 .indexBanner {
-  background-image: url("/img/NU_46be0f4a2c64da1e3bdeaae49bfc64d3.jpg");
+  margin: 4em 0;
+  z-index: 0;
+  height: 30em;
+  background-size: cover;
+  background-image: url("/img/素材/coffee-2540277_1280.jpg");
 }
 
-.brandContent {
+.indexBanner .indexBannerContent {
+  text-align: center;
+  padding: 5em 0;
+}
+
+.indexBanner .indexBannerContent h2 {
+  font-size: 4em;
+}
+
+.indexBanner .indexBannerContent h2 span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+  margin: 0.5em;
+}
+
+.indexBanner .indexBannerContent .goCommodityPage {
+  margin: 0 auto;
+  text-align: center;
   background-color: #ffffff;
+  font-size: 1.5em;
+  line-height: 2em;
+  height: 2em;
+  width: 6em;
+  color: #462A1E;
+  border-radius: 0.5em;
+}
+
+.aboutBrand {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1em;
+  width: auto;
+  height: 22em;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.aboutBrand .brandLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutBrand .brandLogo img {
+  width: 18em;
+}
+
+.aboutBrand .brandContent {
+  width: 90%;
+  text-align: left;
+  margin: 0 3em;
+}
+
+.aboutBrand .brandContent p {
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+.aboutBrand .brandContent img {
+  margin-top: 1em;
+}
+
+.aboutBrand .brandContentImg {
+  text-align: right;
+}
+
+.aboutBrand .brandContentImg img {
+  width: 20em;
+}
+
+.aboutBrand .brandImg {
+  min-width: 20%;
+  text-align: right;
+  overflow: hidden;
+}
+
+.aboutBrand .brandImg img {
+  height: 100%;
+}
+
+.commodityTitle {
+  margin: 3em auto;
+}
+
+.commodityTitle h3 {
+  text-align: center;
+}
+
+.commodityTitle h3 img {
+  height: 10em;
+}
+
+.commodityTitle .commodity {
+  text-align: center;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 86em;
+}
+
+.commodityTitle .commodity li {
+  padding: 1em;
+  max-width: 22em;
+  overflow: hidden;
+}
+
+.commodityTitle .commodity li img {
+  height: 20em;
+}
+
+.commodityTitle .commodity li .commodityName {
+  display: block;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.commodityTitle .commodity li .commodityPrice {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.3em;
+  color: #462A1E;
+}
+
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  height: 22em;
+  padding: 5em 2em 0 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer .vaIGBtn {
+  background-image: url("/img/iconIG.png");
+}
+
+.footer .mapKit {
+  width: 3em;
+  height: 2em;
+  color: #ffffff;
 }
 /*# sourceMappingURL=all.css.map */
