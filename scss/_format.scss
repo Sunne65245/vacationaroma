@@ -1,0 +1,19 @@
+$VABackgroundColor:#E0D8D4;
+$VADarkOrange:#462A1E;
+$VARaspberry:#D9BCB8;
+$VADarkGray:#333333;
+$VAFontSizeS:8px;
+
+.solid{
+    border-top: 1px solid $VADarkGray ;
+    opacity:0.5;
+}
+
+.hide{
+    display: none;
+}
+
+* { 
+    box-sizing: border-box;
+    text-decoration:none;
+}

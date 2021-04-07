@@ -1,0 +1,90 @@
+body{
+    background-color: #ffffff;
+}
+
+
+
+
+.commodityContent{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 5em;
+}
+
+.commodityNav{
+    font-size: 1em;
+    li{
+        margin:1em 0;
+
+    }
+    .selectCommodity{
+
+        min-width: 10em;
+        padding: 1em 0.5em;
+
+        .commodityArea{
+            margin:1em;
+        }
+        a{
+            color:$VADarkGray;
+        }
+    }
+
+}
+
+
+.purchasingNav{
+
+    display: flex;
+    img{
+        height:400px;
+    }
+    p{
+        margin: 1em 0 5em 0;
+    }
+    ul{
+        margin-left: 2em;
+        h1{
+            font-size: 3em;
+            //margin-bottom: 0.5em;
+
+        }
+        .purchasingSubtitle{
+            font-size: 1.5em;
+            margin: 0.5em 0;
+            color: $VADarkOrange;
+
+        }
+        .selectPurchasingNum{
+            display: flex;
+            input{
+                border:none;
+            }
+        }
+        .purchasingNum{
+            display: flex;
+            border:1px solid $VADarkGray
+
+        }
+    }
+    .total{
+        text-align: right;
+        .totalNum{
+            font-size: 2em;
+            color:$VADarkOrange;
+        }
+
+    }
+}
+
+.purchasingText{
+    margin-top: 3em;
+    span{
+        line-height:  4em;
+    }
+    p{
+        line-height:  2em;
+    }
+}
+
+

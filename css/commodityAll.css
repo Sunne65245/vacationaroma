@@ -49,21 +49,6 @@ table {
   border-spacing: 0;
 }
 
-.solid {
-  border-top: 1px solid #333333;
-  opacity: 0.5;
-}
-
-.hide {
-  display: none;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-decoration: none;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -287,4 +272,120 @@ body {
   height: 2em;
   color: #ffffff;
 }
-/*# sourceMappingURL=all.css.map */
+
+.solid {
+  border-top: 1px solid #333333;
+  opacity: 0.5;
+}
+
+.hide {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.commodityContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3em 5em;
+}
+
+.commodityNav {
+  font-size: 1em;
+}
+
+.commodityNav li {
+  margin: 1em 0;
+}
+
+.commodityNav .selectCommodity {
+  min-width: 10em;
+  padding: 1em 0.5em;
+}
+
+.commodityNav .selectCommodity .commodityArea {
+  margin: 1em;
+}
+
+.commodityNav .selectCommodity a {
+  color: #333333;
+}
+
+.purchasingNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.purchasingNav img {
+  height: 400px;
+}
+
+.purchasingNav p {
+  margin: 1em 0 5em 0;
+}
+
+.purchasingNav ul {
+  margin-left: 2em;
+}
+
+.purchasingNav ul h1 {
+  font-size: 3em;
+}
+
+.purchasingNav ul .purchasingSubtitle {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  color: #462A1E;
+}
+
+.purchasingNav ul .selectPurchasingNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.purchasingNav ul .selectPurchasingNum input {
+  border: none;
+}
+
+.purchasingNav ul .purchasingNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #333333;
+}
+
+.purchasingNav .total {
+  text-align: right;
+}
+
+.purchasingNav .total .totalNum {
+  font-size: 2em;
+  color: #462A1E;
+}
+
+.purchasingText {
+  margin-top: 3em;
+}
+
+.purchasingText span {
+  line-height: 4em;
+}
+
+.purchasingText p {
+  line-height: 2em;
+}
+/*# sourceMappingURL=commodityAll.css.map */
