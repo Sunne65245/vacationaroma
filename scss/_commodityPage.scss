@@ -1,29 +1,28 @@
 body{
     background-color: #ffffff;
+    box-sizing: border-box;
 }
-
 
 
 
 .commodityContent{
     display: flex;
     justify-content: space-between;
-    margin: 3em 5em;
+    margin: 3rem 5rem;
 }
 
 .commodityNav{
-    font-size: 1em;
+    font-size: 1rem;
     li{
-        margin:1em 0;
+        margin:1rem 0;
 
     }
     .selectCommodity{
 
-        min-width: 10em;
-        padding: 1em 0.5em;
-
+        min-width: 10rem;
+        padding: 1rem 0.5rem;
         .commodityArea{
-            margin:1em;
+            margin:1rem;
         }
         a{
             color:$VADarkGray;
@@ -40,51 +39,101 @@ body{
         height:400px;
     }
     p{
-        margin: 1em 0 5em 0;
+        margin: 1rem 0 5rem 0;
     }
     ul{
-        margin-left: 2em;
+        margin-left: 2rem;
+
         h1{
-            font-size: 3em;
-            //margin-bottom: 0.5em;
+            font-size: 3rem;
+            //margin-bottom: 0.5rem;
 
         }
         .purchasingSubtitle{
-            font-size: 1.5em;
-            margin: 0.5em 0;
+            font-size: 1.5rem;
+            margin-top: 2rem ;
+            margin-bottom: 0.5rem;
             color: $VADarkOrange;
 
         }
+//框研究
+        .selectGrind{
+            appearance:none;
+            /*改變右邊箭頭樣式*/
+            //background: ;
+            
+            border:1px solid $VABtn;  
+            font-size: 1rem;
+            width:100%;
+            height: 2.5rem;
+            padding:0.5rem;
+            color: $VADarkOrange;
+        }
+        .purchasingValue{
+            appearance:none;
+            /*改變右邊箭頭樣式*/
+            //background: none;
+            font-size: 1rem;
+            width:50%;
+            height: 2.5rem;
+            // padding:0.5rem;
+            text-align: center;
+            color: $VADarkOrange;
+        }
         .selectPurchasingNum{
             display: flex;
+            justify-content: space-between;
+
+            .purchasingNum{
+                display: flex;
+                justify-content: space-between;
+                margin-right: 1rem;
+                border:1px solid $VABorder;
+            }
+            
+            .selectValueAddSub{
+                // display: block;
+                font-size: 1.5rem;
+                color: $VADarkOrange;
+                margin: auto;
+
+
+            }
+
+            .carBtn{
+                font-size: 1.2rem;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                color: $VADarkOrange;
+                background-color: $VABtn;
+                width: 50%;
+
+
+            }
+
+
             input{
-                border:none;
+                border:1px solid $VABtn;  
             }
         }
-        .purchasingNum{
-            display: flex;
-            border:1px solid $VADarkGray
 
-        }
     }
     .total{
         text-align: right;
+        margin: 1rem;
         .totalNum{
-            font-size: 2em;
+            font-size: 2rem;
             color:$VADarkOrange;
         }
-
     }
 }
 
 .purchasingText{
-    margin-top: 3em;
     span{
-        line-height:  4em;
+        line-height:  4rem;
     }
     p{
-        line-height:  2em;
+        line-height:  2rem;
     }
 }
-
-

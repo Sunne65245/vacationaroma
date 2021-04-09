@@ -3,6 +3,8 @@ $VABackgroundColor:#E0D8D4;
 $VADarkOrange:#462A1E;
 $VARaspberry:#D9BCB8;
 $VADarkGray:#333333;
+$VABtn:#B18C78;
+
 $VAFontSizeS:8px;
 
 * { //outline: 1px solid pink;
@@ -19,8 +21,8 @@ body{
 //首頁選單
 .navbar{
 background-color: $VARaspberry;
-height: 10em;
-font-size: 1em;
+height: 10rem;
+font-size: 1rem;
 display: flex;
 justify-content: space-between;
 
@@ -29,7 +31,7 @@ ul{
     justify-content: center;
     align-self:center;
     li{
-        margin: 0 1em;
+        margin: 0 1rem;
     }
 }
 a{
@@ -37,43 +39,43 @@ a{
 }
 
 img{
-    height: 10em;
+    height: 10rem;
 }}
 
 //首頁banner
 .indexBanner{
-    margin: 4em 0;
+    margin: 4rem 0;
     z-index:0;
-    height: 30em;
+    height: 30rem;
     // width: 100%;
     background-size: cover;
     background-image:url("/img/素材/coffee-2540277_1280.jpg");
     // overflow: hidden;
     .indexBannerContent{
         text-align: center;
-        padding: 5em 0;
+        padding: 5rem 0;
 
         
         h2{
-            font-size: 4em;
+            font-size: 4rem;
             //text-shadow:3px 3px 5px 6px #333333;
             span{
                 display: flex;
                 flex-direction: column;
                 color: #ffffff;
-                margin:0.5em;
+                margin:0.5rem;
             }
         }
         .goCommodityPage{
             margin: 0 auto;
             text-align: center;
             background-color: #ffffff;
-            font-size: 1.5em;
-            line-height: 2em;
-            height: 2em;
-            width: 6em;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            height: 2rem;
+            width: 6rem;
             color:$VADarkOrange ;
-            border-radius:0.5em;
+            border-radius:0.5rem;
         }
     }
     
@@ -85,10 +87,10 @@ img{
     background-color: #ffffff;
     display: flex;
     justify-content:space-between;
-    font-size: 1em;
+    font-size: 1rem;
     width: auto;
-    height: 22em;
-    padding: 2em;
+    height: 22rem;
+    padding: 2rem;
     margin: 0 auto;
     
     
@@ -97,21 +99,21 @@ img{
         display: flex;
         flex-direction:column;
         img{
-            width: 18em;
+            width: 18rem;
         }
     }
     .brandContent{
         width: 90%;
         text-align: left;
-        margin: 0 3em;
+        margin: 0 3rem;
 
         p{
-            line-height: 1.5em;
-            margin-top: 1em;
+            line-height: 1.5rem;
+            margin-top: 1rem;
         }
 
         img{
-            margin-top: 1em;
+            margin-top: 1rem;
 
         }
     }
@@ -119,7 +121,7 @@ img{
     .brandContentImg{
         text-align: right;
         img{
-            width: 20em;
+            width: 20rem;
         }
     }
 
@@ -136,13 +138,13 @@ img{
 
 //商品區
 .commodityTitle{
-    //margin-top: 3em;
-    margin: 3em auto;
+    //margin-top: 3rem;
+    margin: 3rem auto;
 
     h3 {
         text-align: center;
         img{
-            height:10em;
+            height:10rem;
             
         }
     }
@@ -153,29 +155,29 @@ img{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 86em;
+        max-width: 86rem;
 
 
 
         li{
-            padding: 1em;
-            max-width: 22em;
+            padding: 1rem;
+            max-width: 22rem;
             
             overflow: hidden;
             img{
-                height: 20em;
+                height: 20rem;
                 //width: 120%;
 
             }
             .commodityName{
                 display: block;
-                font-size: 1em;
-                margin-top: 1em;
+                font-size: 1rem;
+                margin-top: 1rem;
             }
             .commodityPrice{
                 display: block;
-                font-size: 1.5em;
-                margin-top: 0.3em;
+                font-size: 1.5rem;
+                margin-top: 0.3rem;
                 color: $VADarkOrange;
             }
         }
@@ -188,13 +190,13 @@ img{
 .footer{
 background-color:$VADarkGray;
 color: #ffffff;
-height:22em ;
-padding: 5em 2em 0 2em;
+height:22rem ;
+padding: 5rem 2rem 0 2rem;
 display: flex;
 justify-content: space-between;
 
 li{
-    line-height: 2em;
+    line-height: 2rem;
 }
 .vaIGBtn{
     background-image: url("/img/iconIG.png");
@@ -202,8 +204,8 @@ li{
 
 
 .mapKit {
-    width: 3em;
-    height: 2em;
+    width: 3rem;
+    height: 2rem;
     color: #ffffff;
 }
 }
