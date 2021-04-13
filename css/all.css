@@ -54,6 +54,10 @@ table {
   opacity: 0.5;
 }
 
+.setInFrame {
+  margin: 0 7rem;
+}
+
 .hide {
   display: none;
 }
@@ -142,9 +146,8 @@ body {
   margin: 0 auto;
   text-align: center;
   background-color: #ffffff;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  height: 2rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
   width: 6rem;
   color: #462A1E;
   border-radius: 0.5rem;
