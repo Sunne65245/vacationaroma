@@ -446,4 +446,38 @@ body {
 .purchasingText p {
   line-height: 2rem;
 }
-/*# sourceMappingURL=commodityAll.css.map */
+
+.commodityBanner {
+  height: 10rem;
+  overflow: hidden;
+}
+
+.commodityBanner img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.searchSort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searchSort .sortBtn {
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
+
+.searchSort .sortBtn a {
+  padding: 0.5rem;
+  background-color: #B18C78;
+  color: #462A1E;
+}
+
+.searchSort .sortBtn a:hover {
+  background-color: white;
+  border: 1px solid #8A6552;
+}
+/*# sourceMappingURL=searchAll.css.map */

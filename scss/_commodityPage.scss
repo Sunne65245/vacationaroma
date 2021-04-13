@@ -13,8 +13,11 @@ body{
 
 .commodityNav{
     font-size: 1rem;
+    margin-right: 3rem;
     li{
-        margin:1rem 0;
+        margin-top: 2rem;
+        //margin-bottom:2rem 0;
+
 
     }
     .selectCommodity{
@@ -26,6 +29,7 @@ body{
         }
         a{
             color:$VADarkGray;
+            
         }
     }
 
@@ -56,7 +60,7 @@ body{
             color: $VADarkOrange;
 
         }
-//框研究
+//框
         .selectGrind{
             appearance:none;
             /*改變右邊箭頭樣式*/
