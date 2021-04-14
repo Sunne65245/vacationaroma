@@ -1,0 +1,16 @@
+.deliveryContent{
+margin: 0 5rem;
+}
+.stepBtn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    color:$VADarkGray;
+    .nextBtn{
+        margin: 0;
+    }
+    .previousBtn:hover{
+        background-color: #08DF5D;
+        color:white;
+    }
+}

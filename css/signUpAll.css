@@ -274,7 +274,7 @@ body {
 
 .solid {
   border-top: 1px solid #333333;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .setInFrame {
@@ -481,6 +481,10 @@ body {
   border: 1px solid #8A6552;
 }
 
+.commodity li {
+  padding: 0;
+}
+
 .signUpContent {
   text-align: center;
   margin: 5rem auto;
@@ -505,7 +509,7 @@ body {
 }
 
 .signUpBtn {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 2rem 0;
   padding: 1.1rem;
   background-color: #8A6552;

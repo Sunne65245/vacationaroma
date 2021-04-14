@@ -274,7 +274,7 @@ body {
 
 .solid {
   border-top: 1px solid #333333;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .setInFrame {
@@ -479,5 +479,9 @@ body {
 .searchSort .sortBtn a:hover {
   background-color: white;
   border: 1px solid #8A6552;
+}
+
+.commodity li {
+  padding: 0;
 }
 /*# sourceMappingURL=searchAll.css.map */

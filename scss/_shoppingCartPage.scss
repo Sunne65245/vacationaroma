@@ -1,0 +1,63 @@
+.cartContent{
+    margin: 5rem 10rem;
+}
+
+.cartBar{
+    display: flex;
+    margin: 4rem auto;
+    min-width: 9rem;
+    justify-content: space-between;
+
+    li{
+        min-width: 8rem;
+        font-size: 1.2rem;
+        color: $VADarkOrange;
+        display: flex;
+
+        .nextIcon{
+            margin: 0 3rem;
+        }
+    }
+    .cancel{
+        opacity:0.3;
+    }
+}
+
+
+.CartList{
+    text-align: center;
+    width: 100%;
+
+    .cartListName{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    th{
+        background-color:$VABorder ;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        color: #ffffff;
+    }
+    td{
+        h3{
+            font-size: 2rem;
+        }
+        margin: 3rem;
+        img{
+            max-width: 8rem;
+        }
+    }
+
+}
+
+.nextBtn{
+    text-align: center;
+    margin: 1rem 0;
+    margin-left: 9rem*5;
+    padding: 1rem;
+    font-size: 1.2rem;
+    //width: 5rem;
+    background-color:$VABorder;
+    color: #ffffff;
+}

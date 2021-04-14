@@ -1,0 +1,35 @@
+.cartContent{
+    min-width: 10rem*6;
+}
+
+.payment{
+    text-align: center;
+    font-size: 2rem;
+    //color: #ffffff;
+    margin-bottom: 5rem;
+
+    .storePayBtn{
+        padding: 2rem;
+        margin: 2rem 10rem*2;
+        color: $VABorder;
+        //background-color: $VABorder;
+        border: 1px solid  $VABorder;
+        border-radius:1rem;
+        
+    }
+    :hover .storePayBtn{
+                background-color: $VABorder;
+                border: none;
+                color: $VABorder;
+    }
+    
+    .linePayBtn{
+        padding: 2rem;
+        margin: 2rem 10rem*2;
+
+        color: $LineColor;
+        // background-color: $LineColor;
+        border: 1px solid $LineColor;
+        border-radius:1rem;
+    }
+}

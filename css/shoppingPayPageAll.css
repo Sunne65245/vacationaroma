@@ -297,53 +297,260 @@ body {
           box-sizing: border-box;
 }
 
-.loginContent {
-  text-align: center;
-  margin: 5rem auto;
-  width: 30rem;
-}
-
-.loginContent .loginForm {
-  margin: 0 auto;
-}
-
-.loginContent li {
-  text-align: left;
-  margin: 2rem 0;
-}
-
-.loginContent input {
-  border: none;
-  color: #333333;
-  opacity: 0.5;
-}
-
-.loginContent .promptBtn {
+.commodityContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #333333;
-  opacity: 0.5;
+  margin: 3rem 5rem;
 }
 
-.loginBtn {
+.commodityNav {
+  font-size: 1rem;
+  margin-right: 3rem;
+}
+
+.commodityNav li {
+  margin-top: 2rem;
+}
+
+.commodityNav .selectCommodity {
+  min-width: 10rem;
+  padding: 1rem 0.5rem;
+}
+
+.commodityNav .selectCommodity .commodityArea {
+  margin: 1rem;
+}
+
+.commodityNav .selectCommodity a {
+  color: #333333;
+}
+
+.purchasingNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.purchasingNav img {
+  height: 400px;
+}
+
+.purchasingNav p {
+  margin: 1rem 0 5rem 0;
+}
+
+.purchasingNav ul {
+  margin-left: 2rem;
+}
+
+.purchasingNav ul h1 {
+  font-size: 3rem;
+}
+
+.purchasingNav ul .purchasingSubtitle {
   font-size: 1.5rem;
-  margin: 2rem 0;
-  padding: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #462A1E;
+}
+
+.purchasingNav ul .selectGrind {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*改變右邊箭頭樣式*/
+  border: 1px solid #B18C78;
+  font-size: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  color: #462A1E;
+}
+
+.purchasingNav ul .purchasingValue {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*改變右邊箭頭樣式*/
+  font-size: 1rem;
+  width: 50%;
+  height: 2.5rem;
+  text-align: center;
+  color: #462A1E;
+}
+
+.purchasingNav ul .selectPurchasingNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.purchasingNav ul .selectPurchasingNum .purchasingNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 1rem;
+  border: 1px solid #8A6552;
+}
+
+.purchasingNav ul .selectPurchasingNum .selectValueAddSub {
+  font-size: 1.5rem;
+  color: #462A1E;
+  margin: auto;
+}
+
+.purchasingNav ul .selectPurchasingNum .carBtn {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #462A1E;
+  background-color: #B18C78;
+  width: 50%;
+}
+
+.purchasingNav ul .selectPurchasingNum input {
+  border: 1px solid #B18C78;
+}
+
+.purchasingNav .total {
+  text-align: right;
+  margin: 1rem;
+}
+
+.purchasingNav .total .totalNum {
+  font-size: 2rem;
+  color: #462A1E;
+}
+
+.purchasingText span {
+  line-height: 4rem;
+}
+
+.purchasingText p {
+  line-height: 2rem;
+}
+
+.cartContent {
+  margin: 5rem 10rem;
+}
+
+.cartBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4rem auto;
+  min-width: 9rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cartBar li {
+  min-width: 8rem;
+  font-size: 1.2rem;
+  color: #462A1E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cartBar li .nextIcon {
+  margin: 0 3rem;
+}
+
+.cartBar .cancel {
+  opacity: 0.3;
+}
+
+.CartList {
+  text-align: center;
+  width: 100%;
+}
+
+.CartList .cartListName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.CartList th {
+  background-color: #8A6552;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.CartList td {
+  margin: 3rem;
+}
+
+.CartList td h3 {
+  font-size: 2rem;
+}
+
+.CartList td img {
+  max-width: 8rem;
+}
+
+.nextBtn {
+  text-align: center;
+  margin: 1rem 0;
+  margin-left: 45rem;
+  padding: 1rem;
+  font-size: 1.2rem;
   background-color: #8A6552;
   color: #ffffff;
 }
 
-.lineLogin {
-  background-color: #08DF5D;
+.cartContent {
+  min-width: 60rem;
 }
 
-.loginTitle {
+.payment {
+  text-align: center;
   font-size: 2rem;
-  color: #333333;
-  margin: 2rem;
+  margin-bottom: 5rem;
 }
-/*# sourceMappingURL=loginAll.css.map */
+
+.payment .storePayBtn {
+  padding: 2rem;
+  margin: 2rem 20rem;
+  color: #8A6552;
+  border: 1px solid #8A6552;
+  border-radius: 1rem;
+}
+
+.payment :hover .storePayBtn {
+  background-color: #8A6552;
+  border: none;
+  color: #8A6552;
+}
+
+.payment .linePayBtn {
+  padding: 2rem;
+  margin: 2rem 20rem;
+  color: #08DF5D;
+  border: 1px solid #08DF5D;
+  border-radius: 1rem;
+}
+/*# sourceMappingURL=shoppingPayPageAll.css.map */
