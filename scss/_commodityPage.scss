@@ -1,6 +1,6 @@
-.commodityTitle{
-    display: flex;
-}
+// .commodityTitle{
+//     display: flex;
+// }
 
 .commodityContent{
     display: flex;
@@ -34,11 +34,15 @@
 
 
 .purchasingNav{
-
+    //min-width: 60rem;
     display: flex;
-    img{
-        height:400px;
+    margin-bottom: 3rem;
+    .productImg{
+        height:25rem;
+        width: 25rem;
+        overflow: hidden;
     }
+
     p{
         margin: 1rem 0 5rem 0;
     }
@@ -62,13 +66,12 @@
             appearance:none;
             /*改變右邊箭頭樣式*/
             //background: ;
-            
-            border:1px solid $VABtn;  
+            border:1px solid $VABorder ; 
             font-size: 1rem;
             width:100%;
             height: 2.5rem;
             padding:0.5rem;
-            color: $VADarkOrange;
+            color: $VABorder ;
         }
         .purchasingValue{
             appearance:none;
@@ -76,14 +79,20 @@
             //background: none;
             font-size: 1rem;
             width:50%;
-            height: 2.5rem;
+            //height: 2.5rem;
             // padding:0.5rem;
             text-align: center;
-            color: $VADarkOrange;
+            outline: none;
+            //color: $VADarkOrange;
+            padding: 0rem;
+            border: none;
+
+
         }
         .selectPurchasingNum{
             display: flex;
             justify-content: space-between;
+            height: 2.5rem;
 
             .purchasingNum{
                 display: flex;
@@ -106,17 +115,16 @@
                 display: flex;
                 justify-content: center;
                 align-items:center;
-                color: $VADarkOrange;
-                background-color: $VABtn;
+                color: #ffffff;
+                background-color: $VABorder;
                 width: 50%;
 
-
             }
 
 
-            input{
-                border:1px solid $VABtn;  
-            }
+            // input{
+            //     border:1px solid $VABorder;  
+            // }
         }
 
     }
