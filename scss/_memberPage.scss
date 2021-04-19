@@ -1,0 +1,41 @@
+.memberContent{
+
+    .memberNav{
+        margin: 3rem 0;
+        // text-align: center;
+        display: flex;
+        .memberName{
+            font-size: 3rem;
+        }
+
+        .memberInformation{
+            margin-left: 3rem;
+        }
+        
+    }
+}
+.memberPhoto{
+    overflow: hidden;
+    img{
+        width:5rem;
+        height:5rem;
+        border-radius: 50%;
+        background-color: $VABorder;
+    }
+}
+
+.selectCommodity {
+
+    display: flex;
+    flex-direction:column;
+        // li{
+        // display: flex;
+        // flex-direction:column;
+        // }
+}
+
+
+.memberOrder{
+    background-color: $VADarkOrange;
+    color:#ffffff;
+}

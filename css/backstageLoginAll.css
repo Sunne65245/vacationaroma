@@ -48,13 +48,17 @@ table {
   border-spacing: 0;
 }
 
+* {
+  text-decoration: none;
+}
+
 .solid {
   border-top: 1px solid #333333;
   opacity: 0.3;
 }
 
 .setInFrame {
-  margin: 0 7rem;
+  margin: 0 8rem;
 }
 
 .hide {
@@ -65,6 +69,10 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
+}
+
+body {
+  background-color: #E0D8D4;
 }
 
 body {

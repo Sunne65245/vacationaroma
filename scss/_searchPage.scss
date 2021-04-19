@@ -5,13 +5,12 @@
         width: 100%;
         height: auto;
         text-align: center;
-    }
+    }   
 
 }
 
 .searchSort{
     display: flex;
-    //justify-content: center;
     .sortBtn{
         font-size: 1.2rem;
         margin-top: 3rem;
@@ -32,7 +31,6 @@
 
 .commodity{
     li{
-        
         padding: 0;
     }
 }

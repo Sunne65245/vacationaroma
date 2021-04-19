@@ -1,3 +1,6 @@
+//開版
+
+
 $VABackgroundColor:#E0D8D4;
 $VADarkOrange:#462A1E;
 $VARaspberry:#D9BCB8;
@@ -9,12 +12,19 @@ $LineColor:#08DF5D;
 
 $VAFontSizeS:8px;
 
+
+* { //outline: 1px solid pink;
+  //  box-sizing: border-box;
+    text-decoration:none;
+
+}
+
 .solid{
     border-top: 1px solid $VADarkGray ;
     opacity:0.3;
 }
 .setInFrame{
-    margin: 0 7rem;
+    margin: 0 8rem;
 }
 
 .hide{
@@ -24,4 +34,9 @@ $VAFontSizeS:8px;
 * { 
     box-sizing: border-box;
     text-decoration:none;
+}
+
+
+body{
+    background-color:$VABackgroundColor;
 }

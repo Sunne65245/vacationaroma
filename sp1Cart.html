@@ -5,41 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shoppingCart1</title>
-    <link rel="stylesheet" href="./css/shoppingCartAll.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
 
     <!-- 上方選單起始 要固定 -->
     
     <div class="navbar">
-        <h1 class="vacationAromaLogo"><img src="/img/logoB.png" alt=""></h1>
-        <ul>
-        <li><a href="">會員登入</a></li>
-        <li><a href="">購物車</a></li>
-        <li><a href="">風味搜尋</a></li>
-        </ul>
 
-        
+        <div class="setInFrame dpSpaceBetween">
+            <h1 class="vacationAromaLogo">
+                <a href="/index.html"><img src="/img/logoB.png" alt=""></a>
+            </h1>
+    
+            <ul>
+                <li><a href="/login.html">會員登入</a></li>
+                <li><a href="/sp1Cart.html">購物車</a></li>
+                <li><a href="">風味搜尋</a></li>
+            </ul>  
+    
+        </div>
+
     </div>
     <!-- 上方選單結束 -->
 
 <!-- 商品區 需調整 -->
     <div class="cartContent">
+
         <ul class="cartBar">
-            <li class="">確認購物車
-                <div class="nextIcon">></div>
-            </li>
-            <li class="">付款方式
-                <div class="nextIcon">></div>
-            </li>
-            <li class="cancel">資料填寫
-                <div class="nextIcon">></div>
-            </li>
+            <li class="">確認購物車</li>
+            <li class="nextIcon">></li>
+
+            <li class="cancel">付款方式</li>
+            <li class="nextIcon cancel">></li>
+
+            <li class="cancel">資料填寫</li>
+            <li class="nextIcon cancel">></li>
+
             <li class="cancel">確認收件資料</li>
+
         </ul>
 
-        <table class="CartList">
+
+        <table class="cartList">
             <tr>
+                <th></th>
                 <th>商品名稱</th>
                 <th>數量</th>
                 <th>品項價格</th>
@@ -47,18 +58,20 @@
 
             <tr>
                 <td>
-                    <div >
-                        <img src="/img/素材/20170502171200.jpg" alt="">
-                        <span>
-                            <h3>台灣 古坑 日曬 比里咖啡莊園</h3>
-                            <span>沖煮方式：義式手沖壺</span>
-                            <span>單價 1690</span>
-                        </span>
+                    <div class="productImg">
+                        <img src="/img/素材/20170502171200.jpg"  alt="">
                     </div>
-
                     
-
                 </td>
+
+                <td>
+                    <div>
+                        <h3 class="product">台灣 古坑 日曬 比里咖啡莊園</h3>
+                        <span class="grinding">沖煮方式：義式手沖壺</span>
+                        <span class="price">單價 1690</span>
+                    </div>
+                </td>
+
                 <td>
                     <div class="purchasingNum">
                         <a href="" class="selectValueAddSub">-</a>
@@ -67,15 +80,16 @@
                     </div>
                 </td>
                 <td>NT.1690</td>
+
             </tr>
-            <!-- <td colspan="4">        
-                <div class="nextBtn">下一步</div>
-            </td> -->
 
-            
+            <td colspan="4" align="right" class="tdNotSolid">      
+                <div class="nextBtn">
+                    <span>下一步</span>
+                </div>
+            </td>
+
         </table>
-
-        <div class="nextBtn">下一步</div>
     </div>
 
 
@@ -100,6 +114,8 @@
         
     </div>
     <!-- 尾 店家資訊 結束 -->
+
+    <script src="/js/sp1Cart.js"></script>
     
 </body>
 </html>

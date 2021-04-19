@@ -559,6 +559,11 @@ body {
   text-align: center;
 }
 
+.deliveryContent {
+  margin: 2rem auto;
+  width: 40rem;
+}
+
 .deliveryContent li {
   font-size: 1.2rem;
   padding: 1rem;
@@ -571,16 +576,11 @@ body {
 }
 
 .deliveryContent {
-  margin: 0 5rem;
+  margin: 2rem auto;
+  width: 35rem;
 }
 
 .stepBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 3rem;
   color: #333333;
 }

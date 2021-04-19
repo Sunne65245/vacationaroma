@@ -50,38 +50,18 @@ table {
 }
 
 * {
-  text-decoration: none;
-}
-
-.solid {
-  border-top: 1px solid #333333;
-  opacity: 0.3;
-}
-
-.setInFrame {
-  margin: 0 8rem;
-}
-
-.hide {
-  display: none;
-}
-
-* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
 }
 
 body {
-  background-color: #E0D8D4;
+  background: #E0D8D4;
 }
 
 .navbar {
   background-color: #D9BCB8;
   height: 10rem;
-}
-
-.navbar .dpSpaceBetween {
   font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,6 +95,7 @@ body {
 }
 
 .indexBanner {
+  margin: 4rem 0;
   z-index: 0;
   height: 30rem;
   background-size: cover;
@@ -123,7 +104,7 @@ body {
 
 .indexBanner .indexBannerContent {
   text-align: center;
-  padding: 8rem 0;
+  padding: 5rem 0;
 }
 
 .indexBanner .indexBannerContent h2 {
@@ -162,9 +143,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1rem;
+  width: auto;
   height: 22rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 .aboutBrand .brandLogo {
@@ -193,7 +175,6 @@ body {
 }
 
 .aboutBrand .brandContent img {
-  width: 18rem;
   margin-top: 1rem;
 }
 
@@ -216,8 +197,7 @@ body {
 }
 
 .commodityTitle {
-  padding-bottom: 3rem;
-  background-color: #E0D8D4;
+  margin: 3rem auto;
 }
 
 .commodityTitle h3 {
@@ -265,13 +245,6 @@ body {
   color: #462A1E;
 }
 
-@media screen and (max-width: 768px) {
-  .aboutBrand {
-    display: block;
-    height: auto;
-  }
-}
-
 .footer {
   background-color: #333333;
   color: #ffffff;
@@ -297,6 +270,181 @@ body {
   width: 3rem;
   height: 2rem;
   color: #ffffff;
+}
+
+.solid {
+  border-top: 1px solid #333333;
+  opacity: 0.3;
+}
+
+.setInFrame {
+  margin: 0 7rem;
+}
+
+.hide {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.commodityContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3rem 5rem;
+}
+
+.commodityNav {
+  font-size: 1rem;
+  margin-right: 3rem;
+}
+
+.commodityNav li {
+  margin-top: 2rem;
+}
+
+.commodityNav .selectCommodity {
+  min-width: 10rem;
+  padding: 1rem 0.5rem;
+}
+
+.commodityNav .selectCommodity .commodityArea {
+  margin: 1rem;
+}
+
+.commodityNav .selectCommodity a {
+  color: #333333;
+}
+
+.purchasingNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.purchasingNav img {
+  height: 400px;
+}
+
+.purchasingNav p {
+  margin: 1rem 0 5rem 0;
+}
+
+.purchasingNav ul {
+  margin-left: 2rem;
+}
+
+.purchasingNav ul h1 {
+  font-size: 3rem;
+}
+
+.purchasingNav ul .purchasingSubtitle {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #462A1E;
+}
+
+.purchasingNav ul .selectGrind {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*改變右邊箭頭樣式*/
+  border: 1px solid #B18C78;
+  font-size: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem;
+  color: #462A1E;
+}
+
+.purchasingNav ul .purchasingValue {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*改變右邊箭頭樣式*/
+  font-size: 1rem;
+  width: 50%;
+  height: 2.5rem;
+  text-align: center;
+  color: #462A1E;
+}
+
+.purchasingNav ul .selectPurchasingNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.purchasingNav ul .selectPurchasingNum .purchasingNum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 1rem;
+  border: 1px solid #8A6552;
+}
+
+.purchasingNav ul .selectPurchasingNum .selectValueAddSub {
+  font-size: 1.5rem;
+  color: #462A1E;
+  margin: auto;
+}
+
+.purchasingNav ul .selectPurchasingNum .carBtn {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #462A1E;
+  background-color: #B18C78;
+  width: 50%;
+}
+
+.purchasingNav ul .selectPurchasingNum input {
+  border: 1px solid #B18C78;
+}
+
+.purchasingNav .total {
+  text-align: right;
+  margin: 1rem;
+}
+
+.purchasingNav .total .totalNum {
+  font-size: 2rem;
+  color: #462A1E;
+}
+
+.purchasingText span {
+  line-height: 4rem;
+}
+
+.purchasingText p {
+  line-height: 2rem;
 }
 
 .cartContent {
@@ -384,227 +532,4 @@ body {
   background-color: #8A6552;
   color: #ffffff;
 }
-
-.cartContent {
-  min-width: 60rem;
-}
-
-.payment {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 5rem;
-}
-
-.payment .storePayBtn {
-  padding: 2rem;
-  margin: 2rem 20rem;
-  color: #8A6552;
-  border: 1px solid #8A6552;
-  border-radius: 1rem;
-}
-
-.payment :hover .storePayBtn {
-  background-color: #8A6552;
-  border: none;
-  color: #8A6552;
-}
-
-.payment .linePayBtn {
-  padding: 2rem;
-  margin: 2rem 20rem;
-  color: #08DF5D;
-  border: 1px solid #08DF5D;
-  border-radius: 1rem;
-}
-
-.deliveryTitle {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-.deliveryContent {
-  margin: 2rem auto;
-  width: 40rem;
-}
-
-.deliveryContent li {
-  font-size: 1.2rem;
-  padding: 1rem;
-  color: #333333;
-}
-
-.deliveryContent input {
-  border: none;
-  font-size: 1rem;
-}
-
-.deliveryContent {
-  margin: 2rem auto;
-  width: 35rem;
-}
-
-.stepBtn {
-  margin-top: 3rem;
-  color: #333333;
-}
-
-.stepBtn .nextBtn {
-  margin: 0;
-}
-
-.stepBtn .previousBtn:hover {
-  background-color: #08DF5D;
-  color: white;
-}
-
-body {
-  background-color: #ffffff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.loginContent {
-  text-align: center;
-  margin: 5rem auto;
-  width: 30rem;
-}
-
-.loginContent .loginForm {
-  margin: 0 auto;
-}
-
-.loginContent li {
-  text-align: left;
-  margin: 2rem 0;
-}
-
-.loginContent input {
-  border: none;
-  color: #333333;
-  opacity: 0.5;
-}
-
-.loginContent .promptBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: #333333;
-  opacity: 0.5;
-}
-
-.loginBtn {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-  padding: 1.1rem;
-  background-color: #8A6552;
-  color: #ffffff;
-}
-
-.lineLogin {
-  background-color: #08DF5D;
-}
-
-.loginTitle {
-  font-size: 2rem;
-  color: #333333;
-  margin: 2rem;
-}
-
-.signUpContent {
-  text-align: center;
-  margin: 5rem auto;
-  width: 30rem;
-}
-
-.signUpTitle {
-  font-size: 2rem;
-  color: #333333;
-  margin: 2rem;
-}
-
-.signUpForm li {
-  text-align: left;
-  margin: 2rem 0;
-}
-
-.signUpForm input {
-  border: none;
-  color: #333333;
-  opacity: 0.5;
-}
-
-.signUpBtn {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-  padding: 1.1rem;
-  background-color: #8A6552;
-  color: #ffffff;
-}
-
-.lineLogin {
-  background-color: #08DF5D;
-}
-
-.memberContent .memberNav {
-  margin: 3rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.memberContent .memberNav .memberName {
-  font-size: 3rem;
-}
-
-.memberContent .memberNav .memberInformation {
-  margin-left: 3rem;
-}
-
-.memberPhoto {
-  overflow: hidden;
-}
-
-.memberPhoto img {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  background-color: #8A6552;
-}
-
-.selectCommodity {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.memberOrder {
-  background-color: #462A1E;
-  color: #ffffff;
-}
-
-.registerSuccess {
-  text-align: center;
-  margin: 8rem;
-}
-
-.registerTitle {
-  font-size: 2rem;
-  color: #333333;
-  margin: 2rem;
-}
-
-.backHomepageBtn {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-  padding: 1.1rem;
-  background-color: #8A6552;
-  color: #ffffff;
-}
-/*# sourceMappingURL=all.css.map */
+/*# sourceMappingURL=sp1CartAll.css.map */

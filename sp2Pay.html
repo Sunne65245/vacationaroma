@@ -5,37 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shoppingPay</title>
-    <link rel="stylesheet" href="./css/shoppingPayPageAll.css">
+    <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
 
         <!-- 上方選單起始 要固定 -->
     
         <div class="navbar">
-            <h1 class="vacationAromaLogo"><img src="/img/logoB.png" alt=""></h1>
-            <ul>
-            <li><a href="">會員登入</a></li>
-            <li><a href="">購物車</a></li>
-            <li><a href="">風味搜尋</a></li>
-            </ul>
+
+            <div class="setInFrame dpSpaceBetween">
+                <h1 class="vacationAromaLogo">
+                    <a href="/index.html"><img src="/img/logoB.png" alt=""></a>
+                </h1>
+        
+                <ul>
+                    <li><a href="/login.html">會員登入</a></li>
+                    <li><a href="/sp1Cart.html">購物車</a></li>
+                    <li><a href="">風味搜尋</a></li>
+                </ul>  
+        
+            </div>
     
-            
         </div>
     <!-- 上方選單結束 -->
 
     <!-- 商品區 需調整 -->
     <div class="cartContent">
         <ul class="cartBar">
-            <li class="cancel">確認購物車
-                <div class="nextIcon">></div>
-            </li>
-            <li class="">付款方式
-                <div class="nextIcon">></div>
-            </li>
-            <li class="cancel">資料填寫
-                <div class="nextIcon">></div>
-            </li>
+            <li class="cancel">確認購物車</li>
+            <li class="nextIcon cancel">></li>
+
+            <li class="">付款方式</li>
+            <li class="nextIcon">></li>
+
+            <li class="cancel">資料填寫</li>
+            <li class="nextIcon cancel">></li>
+
             <li class="cancel">確認收件資料</li>
+
         </ul>
 
 
@@ -46,20 +53,16 @@
             <div class="linePayBtn">
                 LINE PAY付款
             </div>
+
+            <div class="nextBtn">
+                <span>下一步</span>
+            </div>
         </div>
-        
-
-
-
-
-
-        <div class="nextBtn">下一步</div>
     </div>
-
 
     <!-- 尾 店家資訊 -->
     <div class="footer">
-        <ul class="brandVA">
+        <ul class="brandVA setInFrame">
             <li>
                 <span class="vaIGBtn"></span>
                 <span class="vaFBBtn"></span>
@@ -79,5 +82,7 @@
     </div>
     <!-- 尾 店家資訊 結束 -->
     
+
+    <script src="/js/sp2Pay.js"></script>
 </body>
 </html>

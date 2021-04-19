@@ -7,6 +7,7 @@
     font-size: 2rem;
     //color: #ffffff;
     margin-bottom: 5rem;
+    //width: 40rem;
 
     .storePayBtn{
         padding: 2rem;
@@ -18,9 +19,9 @@
         
     }
     :hover .storePayBtn{
-                background-color: $VABorder;
-                border: none;
-                color: $VABorder;
+        background-color: $VABorder;
+        border: none;
+        color: $VABorder;
     }
     
     .linePayBtn{
@@ -32,4 +33,6 @@
         border: 1px solid $LineColor;
         border-radius:1rem;
     }
+
+
 }

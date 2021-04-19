@@ -19,7 +19,6 @@ const confirmPassword=document.querySelector(".confirmPassword");
 const signUpBtn=document.querySelector(".signUpBtn");
 
 function try02(){
-    alert("彈跳測試");
     signUp= {
         "Name":`${userName.value}`,
         "Phone":`${userPhone.value}`,
@@ -27,7 +26,7 @@ function try02(){
         "Password":`${userLogin.value}`,
     }
 
-    console.log("yoooo",signUp); 
+    //console.log("yoooo",signUp); 
 
     axios.post(API,signUp)
     .then(function (response) {
@@ -36,6 +35,13 @@ function try02(){
     .catch(function (error) {
         console.log(error);
     });
+
+    // axios.request({
+    //     url: `${API}`,  //+license
+    //     method: 'post',
+    //     headers:headers,
+    //     data: signUp
+    // });
 
 }
 
