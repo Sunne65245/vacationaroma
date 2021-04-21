@@ -1,9 +1,9 @@
 let API = `http://vacationaroma.rocket-coding.com/api/Login`;
 //let API2 = `http://vacationaroma.rocket-coding.com/api/Orders/PostOrder`;
 
-const MyToken = "";
-const license = { headers: { Authorization: `Bearer ${MyToken}` } };
-// Bearer ${MyToken}沒有打空格就會他馬的吃不到  postman上右側可以讀取程式碼
+//const MyToken = "";
+//const license = { headers: { Authorization: `Bearer ${MyToken}` } };
+// Bearer ${MyToken} postman上右側可以讀取程式碼
 let VaLogin = {
     "Email":"",
     "Password":"",
@@ -14,7 +14,6 @@ let VaLogin = {
 
 //getElementById
 const account=document.querySelector(".account");
-
 const password=document.querySelector(".password");
 const loginBtn=document.querySelector(".loginBtn");
 //sun65245@gmail.com
@@ -30,13 +29,15 @@ function login(){
     axios.post(API,VaLogin)
     .then(function (response) {
         console.log(response);
-        userToken=response.data.token;
-        localStorage.setItem("token",`${response.data.token}`);
+        userToken=response.data.mytoken;
+        localStorage.setItem("mytoken",`${response.data.mytoken}`);
+
         //登入成功 要寫跳轉的功能 可以額外寫函式再放進來
         if(userToken === undefined){
 
             alert("登入不成功")
             console.log("Token空的");
+
         }else{
             
             window.location.replace(`http://127.0.0.1:5500/index.html`)

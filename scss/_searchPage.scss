@@ -18,11 +18,12 @@
 
         a{
             padding:0.5rem;
-            background-color: $VADarkGray;
+            border: 1px solid $VABorder;
             color: $VADarkOrange;
         }
         a:hover{ 
-            background-color: white;
+            color: #ffffff;
+            background-color: $VABorder;
             border: 1px solid $VABorder;
         }
     }
@@ -33,6 +34,10 @@
     li{
         padding: 0;
     }
+}
+
+.commodityTitle{
+    background-color: none;
 }
 
 

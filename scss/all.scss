@@ -1,8 +1,10 @@
 @import "reset";  //重置
 @import "format"; //樣式
+
 @import "navbar"; //選單
 @import "index";  //首頁
 @import "footer"; //表尾
+
 @import "sp1CartPage";      //購物車
 @import "sp2PayPage";       //付款選擇
 @import "sp3deliveryPage";  //收件人資料
@@ -12,7 +14,7 @@
 @import "memberPage";  //會員資料
 @import "registerSuccessPage";  //登入成功
 @import "searchPage";  //搜尋
-@import "commodityPage";
+@import "commodityPage";  //商品頁面
 
 
 

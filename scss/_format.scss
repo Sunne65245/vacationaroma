@@ -25,6 +25,10 @@ $VAFontSizeS:8px;
     margin: 0 8rem;
 }
 
+// .setInFramePadding{
+//     padding: 8rem;
+// }
+
 .hide{
     display: none;
 }
@@ -34,7 +38,6 @@ $VAFontSizeS:8px;
     text-decoration:none;
 }
 
-
-body{
-    background-color:$VABackgroundColor;
+li{
+    list-style: none;
 }

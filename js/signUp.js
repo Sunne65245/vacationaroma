@@ -1,4 +1,4 @@
-let API = `http://vacationaroma.rocket-coding.com/api/User/PostUser`;
+let signUpAPI = `${allApi}api/User/PostUser`;
 
 const MyToken = "";
 const license = { headers: { Authorization: `Bearer ${MyToken}` } };
