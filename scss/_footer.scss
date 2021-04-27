@@ -10,8 +10,26 @@
     li{
         line-height: 2rem;
     }
-    .vaIGBtn{
+    .footerIconBtn{
+        display:flex;
+    }
+    .social{
+        display: block;
+        background-size: contain;
+        height: 2rem;
+        width: 2rem;
         background-image: url("/img/iconIG.png");
+        .IGBtn{
+            background-image: url("/img/iconFB.png");
+        }
+        .FBBtn{
+            background-image: url("/img/iconIG.png");
+        }
+        .LineBtn{
+            background-image: url("/img/iconIG.png");
+        }
+
+        
     }
     
     

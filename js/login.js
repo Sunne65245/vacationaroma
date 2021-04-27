@@ -39,9 +39,7 @@ function login(){
             console.log("Token空的");
 
         }else{
-            
             window.location.replace(`http://127.0.0.1:5500/index.html`)
-
         };
 
     })
@@ -54,6 +52,21 @@ function login(){
 
 }
 
+
+//line會員登入的功能    
+const lineLogin =document.getElementById("lineLoginASD");
+console.log(lineLogin);
+
+function testLine(){
+    axios.get(LineLoginUrl)
+    .then(function (response) {
+        console.log(response);
+        let lineUrl=response.data;
+        window.open(lineUrl);
+    }
+)};
+
+lineLogin.addEventListener("click",testLine)
 
 //測試能否訂單資料推PostOrder
 // function text02(){

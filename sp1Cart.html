@@ -58,14 +58,14 @@
 
             <tr>
                 <td>
-                    <div class="productImg">
+                    <div class="productImg" id="productImgId">
                         <img src="/img/素材/20170502171200.jpg"  alt="">
                     </div>
                     
                 </td>
 
                 <td>
-                    <div>
+                    <div id="productOrderList">
                         <h3 class="product">台灣 古坑 日曬 比里咖啡莊園</h3>
                         <span class="grinding">沖煮方式：義式手沖壺</span>
                         <span class="price">單價 1690</span>
@@ -73,18 +73,24 @@
                 </td>
 
                 <td>
-                    <div class="purchasingNum">
-                        <a href="" class="selectValueAddSub">-</a>
-                        <input type="number" name="" id="" value="1" class="purchasingValue">
-                        <a href="" class="selectValueAddSub">+</a>
+                    <div class="purchasingNum"  id="purchasingNumAddLessPlus" >
+                        <span class="selectValueAddSub addLess">-</span>
+                        <input type="text" name="" id="purchasingValueSP1Id" value="0" class="purchasingValue">
+                        <span class="selectValueAddSub  addPlus">+</span>
+                        <!-- <span class="selectValueAddSub addLess">-</span>
+                        <input type="text" name="" id="purchasingValueId" value="0" class="purchasingValue">
+                        <span class="selectValueAddSub addPlus">+</span>
+                        </div> -->
                     </div>
                 </td>
-                <td>NT.1690</td>
+                <td>
+                <span id="purchasingPay">NT.1690</span>
+                </td>
 
             </tr>
 
             <td colspan="4" align="right" class="tdNotSolid">      
-                <div class="nextBtn">
+                <div class="nextBtn" id="nextBtnId">
                     <span>下一步</span>
                 </div>
             </td>
@@ -116,9 +122,11 @@
     <!-- 尾 店家資訊 結束 -->
 
     <!-- 載入ＪＳ -->
-    <script src="/js/sp1Cart.js"></script>
+    <script src="/js/API.js"></script>
+
     <!-- 判斷登入 -->
     <script src="/js/loginMember.js"></script>
+    <script src="/js/sp1Cart.js"></script>
     
 </body>
 </html>

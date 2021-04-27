@@ -33,7 +33,7 @@
     <!-- 上方選單結束 -->
 
     <!-- 商品選單欄位 開始 -->
-    <div class="commodityContent">
+    <div class="commodityContent setInFrame setInFrameTB">
         
         <div class="commodityNav">
             <h2>商品分類</h2>
@@ -82,40 +82,43 @@
     
     
         <!-- 商品介紹 開始 -->
-        <div class="purchasing setInFrame">
-            <div class="purchasingNav">
-                <div class="productImg">
-                    <img src="/img/素材/tea-garden-1396463_1280.jpg" alt="">
+        <div class="purchasing" >
+            <div class="purchasingNav" id="purchasingId">
+                <div id="purchasingImg" >
+                    <div class="productImg" style="background-image: url('');width:600px;height:400px">
+                    </div>
                 </div>
-                <ul>
-                    <li><h1>古坑 日曬 比里咖啡莊園</h1></li>
-                    <li><p>產品介紹內文產品介紹內文產品介紹內文</p></li>
+
+                <ul class="purchasingArea">
+                    <li id="areaNameId"><h1>古坑 日曬 比里咖啡莊園</h1></li>
+                    <li id="areaText"><p >產品介紹內文產品介紹內文產品介紹內文</p></li>
                     
                     <li class="purchasingSubtitle">研磨方式</li>
                     <li class="selectGrindNav">
-                        <select name="" id="" class="selectGrind">
-                        <option value>選取研磨方式</option>
-                        <option value="" >不研磨</option>
-                        <option value="" >手沖</option>
-                        <option value="" >義式手沖壺</option>
+                        <select name=""class="selectGrind" id="selectGrindId" >
+                        <option value="選取研磨方式" id="grindingMethodId">選取研磨方式</option>
+                        <option value="不研磨"  id="selectNoGrindId">不研磨</option>
+                        <option value="手沖" id="grinHandPunchId">手沖</option>
+                        <option value="義式手沖壺" id="ItalianGrinHandPunchId" >義式手沖壺</option>
                     </select>
                     </li>
 
                     <li class="purchasingSubtitle">購買數量</li>
                     
                     <li class="selectPurchasingNum" >
-                        <div class="purchasingNum">
-                        <a href="" class="selectValueAddSub">-</a>
-                        <input type="number" name="" id="" value="1" class="purchasingValue">
-                        <a href="" class="selectValueAddSub">+</a>
+                        <div class="purchasingNum" id="cartLessPlus">
+                        
+                        <!-- <a href="" >-</a> -->
+                        <span class="selectValueAddSub addLess">-</span>
+                        <input type="text" name="" id="purchasingValueId" value="0" class="purchasingValue">
+                        <span class="selectValueAddSub addPlus">+</span>
                         </div>
 
-                        <a href="" class="carBtn">加入購物車</a>
-
+                        <span class="cartBtn" id="cartBtnId">加入購物車</span>
                     </li>
 
 
-                    <li  class="total">
+                    <li class="total"id="totalNumId">
                         <span>合計</span>
                         <span class="totalNum">NT.1600</span>
                     </li>
@@ -125,13 +128,16 @@
                 
             </div>
 
-
+            <hr class="solid">
             <div class="purchasingText">
-                <hr class="solid">
+                
                 <span>描述</span>
-                <p>*度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。</p>
-                <p>*青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成。</p>
-                <p>*長江東逝水，浪花淘盡英雄。是非成敗轉頭空，青山依舊在，幾度夕陽紅。白髮漁。</p>
+                <div id="pageAreaText">
+                    <!-- <p>*本商品有多款外包裝，照片僅供參考。</p>
+                    <p>*商品上架時間不等於烘焙時間，請放心。</p>
+                    <p>*您可以在『額外資訊』找到風味指標。風味指標並非烘焙度。風味指標越低，代表口味越沈重且不酸；越高則是有更高的果酸感，口味越清爽。您也可以利用風味指標與咖啡豆總表，快速選擇您喜愛的風味。</p> -->
+                </div>
+                
             </div>
         </div>
     
@@ -165,7 +171,11 @@
     
 
     <!-- 載入ＪＳ -->
+    <!-- 載入ＡＰＩ -->
+    <script src="/js/API.js"></script>
     <!-- 判斷登入 -->
     <script src="/js/loginMember.js"></script>
+    <!-- 商品渲染 -->
+    <script src="/js/commodityPage.js"></script>
 </body>
 </html>

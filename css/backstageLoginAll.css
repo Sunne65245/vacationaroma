@@ -63,6 +63,11 @@ table {
   margin: 0 8rem;
 }
 
+.setInFrameTB {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .hide {
   display: none;
 }

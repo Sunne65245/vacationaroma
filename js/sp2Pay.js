@@ -1,8 +1,8 @@
 
 let cartAPI = `http://vacationaroma.rocket-coding.com/api/Login`;
 let domain=`http://127.0.0.1:5500`;
-let memberToken=localStorage.getItem("token");
-console.log(memberToken);
+//let memberToken=localStorage.getItem("token");
+//console.log(memberToken);
 //let API2 = `http://vacationaroma.rocket-coding.com/api/Orders/PostOrder`;
 
 

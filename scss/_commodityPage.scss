@@ -3,7 +3,7 @@
 .commodityContent{
     display: flex;
     justify-content: space-between;
-    margin: 3rem 5rem;
+    //margin: 3rem 5rem;
 }
 
 .commodityNav{
@@ -11,7 +11,7 @@
     margin-right: 3rem;
     li{
         margin-top: 2rem;
-        //margin-bottom:2rem 0;
+
 
 
     }
@@ -29,26 +29,38 @@
     }
 
 }
+.purchasing{
+    margin-left: 5rem;
+}
 
 
 .purchasingNav{
     //min-width: 60rem;
     display: flex;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
+
+    justify-content: space-between;
+    
+
     .productImg{
-        height:25rem;
-        width: 25rem;
+        background-position:center;
+        background-size: cover;
+        max-height:25rem;
+        max-width: 25rem;
         overflow: hidden;
+
     }
 
     p{
         margin: 1rem 0 5rem 0;
     }
-    ul{
-        margin-left: 2rem;
+    .purchasingArea{
+        min-width: 23rem;
+        //margin-left: 2rem;
 
         h1{
-            font-size: 3rem;
+            font-size: 2rem;
+            line-height: 2.5rem;
             //margin-bottom: 0.5rem;
 
         }
@@ -59,6 +71,7 @@
             color: $VADarkOrange;
 
         }
+
 //框
         .selectGrind{
             appearance:none;
@@ -77,13 +90,11 @@
             //background: none;
             font-size: 1rem;
             width:50%;
-            //height: 2.5rem;
-            // padding:0.5rem;
             text-align: center;
             outline: none;
-            //color: $VADarkOrange;
             padding: 0rem;
             border: none;
+            color: $VABorder ;
 
 
         }
@@ -108,7 +119,7 @@
 
             }
 
-            .carBtn{
+            .cartBtn{
                 font-size: 1.2rem;
                 display: flex;
                 justify-content: center;

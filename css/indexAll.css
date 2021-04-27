@@ -64,6 +64,11 @@ table {
   margin: 0 8rem;
 }
 
+.setInFrameTB {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .hide {
   display: none;
 }
@@ -133,7 +138,29 @@ li {
   line-height: 2rem;
 }
 
-.footer .vaIGBtn {
+.footer .footerIconBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .social {
+  display: block;
+  background-size: contain;
+  height: 2rem;
+  width: 2rem;
+  background-image: url("/img/iconIG.png");
+}
+
+.footer .social .IGBtn {
+  background-image: url("/img/iconFB.png");
+}
+
+.footer .social .FBBtn {
+  background-image: url("/img/iconIG.png");
+}
+
+.footer .social .LineBtn {
   background-image: url("/img/iconIG.png");
 }
 
