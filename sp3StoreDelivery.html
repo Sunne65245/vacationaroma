@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>delivery</title>
+    <title>sp3StoreDelivery</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/all.css">
 </head>
@@ -42,27 +42,27 @@
                 <li class="">資料填寫</li>
                 <li class="nextIcon">></li>
     
-                <li class="cancel">確認收件資料</li>
+                <li class="cancel">確認取貨人資訊</li>
 
             </ul>
 
             <div class="deliveryContent">
-                <h3 class="deliveryTitle">收件人資料</h3>
+                <h3 class="deliveryTitle">取貨人資訊</h3>
 
                 <ul>
                     <li>姓名
-                        <input type="text" name=""  value="" class="" placeholder="收件人姓名">
+                        <input type="text" name=""  value="" id="recipientName" class="" placeholder="收件人姓名">
                         <hr class="solid">
                     </li>
 
                     <li>手機
-                        <input type="text" name=""  value="" class="" placeholder="收件人手機">
+                        <input type="text" name=""  value="" id="recipientPhone" class="" placeholder="收件人手機">
                         <hr class="solid">
                     </li>
-                    <li>地址
-                        <input type="text" name=""  value="" class="" placeholder="收件地址">
+                    <!-- <li>地址
+                        <input type="text" name=""  value="" id="recipientAddress" class="" placeholder="收件地址">
                         <hr class="solid">
-                    </li>
+                    </li> -->
 
                 </ul>
 
@@ -77,7 +77,7 @@
     
     
     
-            <div class="nextBtn">
+            <div class="nextBtn" id="nextBtnSDsp3Id">
                 <span>下一步</span>
             </div>
         </div>
@@ -108,9 +108,9 @@
 
 
     <!-- 載入ＪＳ -->
-
+    <script src="/js/API.js"></script>
     <!-- 判斷登入 -->
     <script src="/js/loginMember.js"></script>
-    <script src="/js/sp3delivery.js"></script>    
+    <script src="/js/sp3Storedelivery.js"></script>    
 </body>
 </html>

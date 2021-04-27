@@ -26,6 +26,7 @@ const productOrderList=document.getElementById("productOrderList")
 const purchasingValueSP1Id=document.getElementById("purchasingValueSP1Id");
 const purchasingNumAddLessPlus = document.getElementById("purchasingNumAddLessPlus");
 const purchasingPay = document.getElementById("purchasingPay");
+let domain=`http://127.0.0.1:5500`;
 //►►►_____________________API____________________►►►
 let postOrderAPI = `${allApi}api/Orders/PostOrder`;
 //測試line登入用  const MyToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJVY2I0MzQ4NmEwZTUxZTRkNTYwZDU2MWY3NjIzYWQ2OTciLCJQZXJtaXNzaW9uIjoxLCJpYXQiOiI0LzIzLzIwMjEgMjo1MTowNyBQTSIsIkV4cCI6IjQvMjQvMjAyMSAyOjUxOjA3IFBNIn0.ONBKVlzjv2qoVbf2MBfm3pVV1eVIVp0bfvXpTaaKCl4svkb5_bEhKwYa_Fk314oudNOBRV8S1rvFrZP6jDMWqQ";
@@ -40,7 +41,6 @@ let purchasingPaySrt="";
 let Quantity=Number(OrderListData[0].Quantity);
 let ProTotal=Number(OrderListData[0].ProTotal);
 let UnitPrice=Number(OrderListData[0].UnitPrice);
-console.log(`全域看看${typeof(Quantity)}`);
 
 //►►►渲染產品資料
 function productRender(){
@@ -64,8 +64,7 @@ function productRender(){
     productOrderList.innerHTML=productOrderListSrt;
     //(產品預設數量)
     purchasingNumAddLessPlus.innerHTML=purchasingNumAddLessPlusSrt;
-    //（價格）
-    
+    //（價格）g
     purchasingPay.innerHTML=purchasingPaySrt;
 }
 productRender();
@@ -112,83 +111,46 @@ purchasingNumAddLessPlus.addEventListener("click",quantitySP1)
 
 
 
-
-
-
-//let domain=`http://127.0.0.1:5500`;
-//測試能否訂單資料推PostOrder
-// function text02(){
-
-//     axios.request({
-//         method: 'post',
-//         data: {
-//             "token": `${MyToken}`,
-//             "order": {
-//                 "Name": "大王",
-//                 "Phone": "0955121111",
-//                 "Address": "台北市",
-//                 "Payment": 2,   //門市付款都是
-//                 "ProTotal": 250,
-//                 "Shipping": 60,
-//                 "SubTotal": 310,
-//                 "Notice": 1,
-//                 "Remark": "麻煩了",
-//                 "OrderDetails": [
-//                     { "ProductName": "巴拿馬 哈特曼莊園 日曬 藝伎 咖啡豆半磅", "ProductBrew": "手沖", "UnitPrice": 10, "Quantity": 5 },
-//                     { "ProductName": "衣索比亞 極深烘焙綜合豆 半磅", "ProductBrew": "不研磨", "UnitPrice": 20, "Quantity": 10 }
-//                 ]
-//             },
-//         },
-//         baseURL: API2,
-//         'Content-Type': 'application/json',
-//     })
-//         .then((result) => { console.log(result.data) })
-//         .catch((err) => { console.error(err) });
-
-
-//         //(寫一個功能觸發)    
-//     //window.location.replace(`${domain}/sp2Pay.html`);
-// };
-
-
 //推二次購物車清單
 let shoppingCart = {
     "OrderDetails": [
         { 
-            "ProductName": "" ,
-            "ProductBrew": "",
-            "ProductImg": "", 
-            "UnitPrice": 0,
-            "Quantity":  0,
-            "ProTotal": 0,
-            "ProductId":"",
+            "ProductName": OrderListData[0].ProductName, 
+            "ProductBrew": OrderListData[0].ProductBrew, 
+            "ProductImg": OrderListData[0].ProductImg, 
+            "UnitPrice": OrderListData[0].UnitPrice, 
+            "Quantity": Quantity,
+            "ProTotal": ProTotalAllSP1,
+            //"ProductId":OrderListData[0].ProductId,
         },
     ]
 };
+console.log(shoppingCart);
 
-function text03(e){
-    console.log("e")
+function text03(){
+
 
     if(Quantity <=0 ){
         alert("尚未選購");
         return;
     }else{
     
-        shoppingCart = 
+        let cartPushSP1 = 
         { 
-            "ProductName": pageArea.ProductName, 
-            "ProductBrew": selectGrindId.options[selectGrindId.selectedIndex].value, 
-            "ProductImg": pageArea.ProductImg, 
-            "UnitPrice": pageArea.ProducPrice, 
-            "Quantity": purchasingValueId.value,
-            "ProTotal":totalCashAll,
-            "ProductId":+new Date(),
+            "ProductName": OrderListData[0].ProductName, 
+            "ProductBrew": OrderListData[0].ProductBrew, 
+            "ProductImg": OrderListData[0].ProductImg, 
+            "UnitPrice": OrderListData[0].UnitPrice, 
+            "Quantity": Quantity,
+            "ProTotal": ProTotalAllSP1,
+            //"ProductId":OrderListData[0].ProductId,
         };
+        shoppingCart.push(cartPushSP1)
+        localStorage.setItem("OrderDetails",JSON.stringify(cartPushSP1));
+        alert("要去下一頁囉")
+        window.location.replace(`sp2Pay.html`);
     
-        localStorage.setItem("OrderDetails",JSON.stringify(shoppingCart));
-        alert("加入購物車成功")
-         //window.location.replace(`${domain}/sp2Pay.html`);
     
-    
-};
+}};
+
 nextBtnSpc1.addEventListener("click",text03)

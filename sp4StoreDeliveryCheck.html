@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shoppingPay</title>
+    <title>sp4StoreDeliveryCheck</title>
     <link rel="stylesheet" href="./css/all.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 <body>
-
         <!-- 上方選單起始 要固定 -->
     
         <div class="navbar">
@@ -29,41 +28,55 @@
             </div>
     
         </div>
-    <!-- 上方選單結束 -->
-
-    <!-- 商品區 需調整 -->
-    <div class="cartContent">
-        <ul class="cartBar">
-            <li class="cancel">確認購物車</li>
-            <li class="nextIcon cancel">></li>
-
-            <li class="">付款方式</li>
-            <li class="nextIcon">></li>
-
-            <li class="cancel">資料填寫</li>
-            <li class="nextIcon cancel">></li>
-
-            <li class="cancel">確認收件資料</li>
-
-        </ul>
-
-
-        <div class="payment">
-            <div class="storePayBtn" id="storePayBtnId">
-                門市取貨付款
-            </div>
-            <div class="linePayBtn" id="linePayBtnId">
-                LINE PAY付款
-            </div>
-
-            <!-- <div class="nextBtn">
-                <span>下一步</span>
-            </div> -->
         </div>
-    </div>
+        <!-- 上方選單結束 -->
 
-    <!-- 尾 店家資訊 -->
-    <div class="footer">
+
+        <div class="cartContent">
+            <ul class="cartBar">
+                <li class="cancel">確認購物車</li>
+                <li class="nextIcon cancel">></li>
+
+                <li class="cancel">付款方式</li>
+                <li class="nextIcon  cancel">></li>
+
+                <li class="cancel">資料填寫</li>
+                <li class="nextIcon cancel">></li>
+
+                <li class="">確認收件資料</li>
+
+            </ul>
+
+            <div class="deliveryContent">
+                <h3 class="deliveryTitle" >收件資訊確認</h3>
+
+                <ul class="deliveryList" id="deliveryPickerId">
+                    <li>姓名
+                        <span>孫小毛</span>
+                        <hr class="solid">
+                    </li>
+
+                    <li>手機
+                        <span>0912-345678</span>
+                        <hr class="solid">
+                    </li>
+                    <li>地址
+                        <span>高雄</span>
+                        <hr class="solid">
+                    </li>
+                    <li class="stepBtn">
+                        <!-- <div class="nextBtn">上一步 修改資料</div> -->
+                        <div class="nextBtn previousBtn">確認訂購人資料 前往付款</div>
+                    </li>
+                </ul>
+
+            </div>
+    
+        </div>
+
+
+        <!-- 尾 店家資訊 -->
+        <div class="footer">
         <ul class="brandVA setInFrame">
             <li>
                 <span class="vaIGBtn"></span>
@@ -83,13 +96,12 @@
         
     </div>
     <!-- 尾 店家資訊 結束 -->
-    
 
     <!-- 載入ＪＳ -->
     <script src="/js/API.js"></script>
-
     <!-- 判斷登入 -->
     <script src="/js/loginMember.js"></script>
-    <script src="/js/sp2Pay.js"></script>
+    <script src="/js/sp4StoreDeliveryCheck.js"></script>
+    
 </body>
 </html>

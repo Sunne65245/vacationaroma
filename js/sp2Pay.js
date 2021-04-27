@@ -1,28 +1,42 @@
 
-let cartAPI = `http://vacationaroma.rocket-coding.com/api/Login`;
+let cartAPI = `${allApi}api/Login`;
 let domain=`http://127.0.0.1:5500`;
-//let memberToken=localStorage.getItem("token");
-//console.log(memberToken);
+//點選樣式storePayBtn linePayBtn 加上On
+
+
 //let API2 = `http://vacationaroma.rocket-coding.com/api/Orders/PostOrder`;
 
 
 
-const nextBtnSpc2=document.querySelector(".nextBtn");
+const storePayBtnId=document.getElementById("storePayBtnId");
+const linePayBtnId=document.getElementById("linePayBtnId");
 
 
-function BtnSpc2(){
+function storePayBtnSpc2(){
+    if( memberToken === "undefined" || memberToken === null  ){
+        //請去登入
+        console.log("undefined");
+        window.location.replace(`${domain}/login.html`)
+    }else{
+        console.log(domain);
+        //下一頁具續選購
+        window.location.replace(`${domain}/sp3StoreDelivery.html`)
+    }
+    
+}
+
+function linePaySpc2(){
 
     if( memberToken === "undefined" || memberToken === null  ){
         //請去登入
         console.log("undefined");
-        window.location.replace(`${domain}/login.html`);
+        window.location.replace(`${domain}/login.html`)
     }else{
         //下一頁具續選購
         console.log(domain);
-        window.location.replace(`${domain}/sp3delivery.html`);
+        window.location.replace(`${domain}/sp3LineDelivery.html`)
     }
-
-    
-    
 }
-nextBtnSpc2.addEventListener("click",BtnSpc2);
+storePayBtnId.addEventListener("click",storePayBtnSpc2);
+linePayBtnId.addEventListener("click",linePaySpc2);
+

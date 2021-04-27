@@ -1,7 +1,6 @@
 
 //左邊的商品霸要寫函式 如果在單一產品頁要能跳轉 但到了全部商品頁不能跳
 //產品描述的4eh要撰寫
-//請用class做事情
 
 //►►►_____________________備註結束____________________►►►
 //►►►_____________________分隔線說明____________________►►►
@@ -101,6 +100,7 @@ let totalCashAll=Number(totalCash);
 //►►►數量加減
 function quantity(e){
     if(e.path[0].classList[1] === "addLess" && purchasingValueId.value >0 && totalCashAll>totalCash){
+
         purchasingValueId.value--;
         totalCashAll-=totalCash;
         
@@ -124,20 +124,8 @@ function quantity(e){
 }
 
 //推購物車清單
-let shoppingCart = {
-    "OrderDetails": [
-        { 
+let shoppingCart = [];
 
-        "ProductName": "" ,
-        "ProductBrew": "",
-        "ProductImg": pageArea.ProductImg, 
-        "UnitPrice": 0,
-        "Quantity":  0,
-        "ProTotal": 0,
-        "ProductId":"",
-    },
-    ]
-};
 
 const selectGrindId=document.getElementById("selectGrindId");
 const grindingMethodId=document.getElementById("selectGrindId");
@@ -156,8 +144,7 @@ if(purchasingValueId.value <=0  &&  selectGrindValue == `選取研磨方式` ){
     return;
 }else{
 
-    shoppingCart = 
-    { 
+    let cartPush = { 
         "ProductName": pageArea.ProductName, 
         "ProductBrew": selectGrindId.options[selectGrindId.selectedIndex].value, 
         "ProductImg": pageArea.ProductImg, 
@@ -166,6 +153,8 @@ if(purchasingValueId.value <=0  &&  selectGrindValue == `選取研磨方式` ){
         "ProTotal":totalCashAll,
         "ProductId":+new Date(),
     };
+
+    shoppingCart.push(cartPush)
 
     localStorage.setItem("OrderDetails",JSON.stringify(shoppingCart));
     alert("加入購物車成功")

@@ -19,9 +19,8 @@ const license = { headers: { Authorization: `Bearer ${memberToken}` } };
 
 
 
-// 先抓網址檢查有沒有問好？
+// line判定 先抓網址檢查有沒有問好？
 let q = window.location.href.indexOf("?")//如果找到會大於-1`
-
 function qaz(){
     let a = window.location.search.split(`=`)[1].split(`&`)[0];
         let b = window.location.search.split(`=`)[2].split(`&`)[0];
@@ -55,14 +54,14 @@ function qaz(){
                 });
         }
 }
-
-
-
 if(q>-1){
     qaz();
 }else{
     console.log("xxx");
 }
+
+
+
 
 
 
