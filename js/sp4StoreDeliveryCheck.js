@@ -10,8 +10,16 @@ console.log(orderId);
 
 //►►►_____________________Dom____________________►►►
 const deliveryPickerId = document.getElementById("deliveryPickerId");
+const stepBtnSDId = document.getElementById("stepBtnSDId");
+
 let pickerAPI = `${allApi}api/Orders/Consignee/${orderId}`;
 let orderConfirm = [];
+
+function aaa(e) {
+    window.location.replace(`index.html`)
+};
+
+stepBtnSDId.addEventListener("click",aaa);
 
 axios.get(pickerAPI,license)
     .then(function (response) {
@@ -41,3 +49,5 @@ axios.get(pickerAPI,license)
     .catch(function (error) {
         console.log(error);
     });
+
+

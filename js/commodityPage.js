@@ -124,7 +124,7 @@ function quantity(e){
 }
 
 //推購物車清單
-let shoppingCart = [];
+
 
 
 const selectGrindId=document.getElementById("selectGrindId");
@@ -137,6 +137,9 @@ const ItalianGrinHandPunchId=document.getElementById("ItalianGrinHandPunchId");
 
 // let cart=localStorage.setItem("OrderDetails",[])
 // console.log(cart);
+
+let shoppingCart = JSON.parse(localStorage.getItem("OrderDetails"));
+//JSON.parse(localStorage.getItem("OrderDetails"));
 
 function buyCartBtn(){
 if(purchasingValueId.value <=0  &&  selectGrindValue == `選取研磨方式` ){

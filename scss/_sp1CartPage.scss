@@ -51,10 +51,9 @@ body{
         color: #ffffff;
     }
     td{
+        vertical-align: middle;
         margin:auto 3rem;
         padding: 1em;
-        //max-width: 8rem;
-        // vertical-align:center;
         border-bottom: 1px solid #e9e9e9;
 
         h3{
@@ -64,12 +63,12 @@ body{
 
 
         .productImg{
-            //max-width: 8rem;
-            padding: 0.1rem;
+            //max-width: 8rem;  
+            padding-top: 1rem;
             overflow:hidden;
         }
         img{
-            height: 8rem;
+            height: 5rem;
         //    width: 100%; 
             text-align: center;
             //margin-top: 2rem;
@@ -134,5 +133,11 @@ color: $VABorder ;
     font-size: 1.2rem;
     width: 8rem;
     background-color:$VABorder;
-    color: #ffffff;
+    color: #ffffff;    
+
+}
+
+.alignRight{
+    display: flex;
+    flex-direction:row-reverse;
 }

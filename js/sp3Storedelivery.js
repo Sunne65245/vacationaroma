@@ -52,6 +52,10 @@ console.log(OrderSp3);
 
 let orderId="";
 let PostOrderAPI = `${allApi}api/Orders/PostOrder`;
+let Phone=recipientPhone.value;
+
+// let MobileReg = /^(09)[0-9]{8}$/;
+// (str.match(MobileReg)) ? true : false;
 function confirmOrder(){
 
     if( recipientName.value === ""){
@@ -60,27 +64,33 @@ function confirmOrder(){
     }else if(recipientPhone.value===""){
         alert("手機未填寫")
         return
-    }else{
+    }
+    else{
         console.log("測試")
-        let data ={
-            "mytoken": memberToken,
-            "order": {
-                "Name": recipientName.value,
-                "Phone": recipientPhone.value,
-                "Address": "門市取貨付款",
-                "Payment": 2,   //Line才是都是1
-                "ProTotal": OrderSp3.ProTotal,  //產品總額
-                "Shipping": 60,    //運費固定
-                "SubTotal": OrderSp3.ProTotal+60,   //訂單總額 待改
-                
-              //  "Remark": "麻煩了",
-                "OrderDetails": [
-                    { "ProductName": OrderSp3.ProductName, 
-                    "ProductBrew": OrderSp3.ProductBrew, 
-                    "UnitPrice": OrderSp3.UnitPrice, 
-                    "Quantity": OrderSp3.Quantity },
-                ]
-            }}
+        let data="";
+        OrderSp3.forEach(function (item){
+            data ={
+                "mytoken": memberToken,
+                "order": {
+                    "Name": recipientName.value,
+                    "Phone": recipientPhone.value,
+                    "Address": "門市取貨付款",
+                    "Payment": 2,   //Line才是都是1
+                    "ProTotal": item.ProTotal,  //產品總額
+                    "Shipping": 60,    //運費固定
+                    "SubTotal": item.ProTotal+60,   //訂單總額 待改
+                    
+                  //  "Remark": "麻煩了",   
+                    "OrderDetails": [
+                        { "ProductName": item.ProductName, 
+                        "ProductBrew": item.ProductBrew, 
+                        "UnitPrice": item.UnitPrice, 
+                        "Quantity": item.Quantity },
+                    ]
+                }
+            }
+        })
+        
             axios.post(PostOrderAPI,data)
             .then(function (response) {
                 console.log(response); 
@@ -91,10 +101,10 @@ function confirmOrder(){
             })
             .catch(function (error) {
                 console.log(error);
-            });
+            })
     }
-    
-};
+}
+
 
 
 nextBtnSDsp3Id.addEventListener("click",confirmOrder);

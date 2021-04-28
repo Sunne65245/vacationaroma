@@ -5,3 +5,12 @@ const allApi= `http://vacationaroma.rocket-coding.com/`;
 // <script>
 //     const url = "http://www.rocket"
 // </script> -->
+
+
+
+
+let OrderDetailsJudge =localStorage.getItem('OrderDetails');
+if(OrderDetailsJudge==null){
+    let OrderDetails=[];
+    localStorage.setItem("OrderDetails",JSON.stringify(OrderDetails));
+}

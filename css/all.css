@@ -759,6 +759,7 @@ body {
 }
 
 .cartList td {
+  vertical-align: middle;
   margin: auto 3rem;
   padding: 1em;
   border-bottom: 1px solid #e9e9e9;
@@ -769,12 +770,12 @@ body {
 }
 
 .cartList td .productImg {
-  padding: 0.1rem;
+  padding-top: 1rem;
   overflow: hidden;
 }
 
 .cartList td img {
-  height: 8rem;
+  height: 5rem;
   text-align: center;
 }
 
@@ -830,6 +831,16 @@ body {
   width: 8rem;
   background-color: #8A6552;
   color: #ffffff;
+}
+
+.alignRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .cartContent {

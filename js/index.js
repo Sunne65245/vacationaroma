@@ -3,6 +3,7 @@ const indexApi=`${allApi}api/MinProducts/GetIndex`;
 let indexCommodityData=[];
 let commodityTitleIdSrt="";
 
+
 // ►►► 預設載入產品ＡＰＩ
 axios.get(indexApi)
 .then(function (response) {
