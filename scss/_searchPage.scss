@@ -38,11 +38,15 @@
     .commodityImg{
         display:block;
         //text-align: center;
+        
     }
 }
 
 .commodityTitle{
     background-color: none;
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content:flex-start
 }
 
 

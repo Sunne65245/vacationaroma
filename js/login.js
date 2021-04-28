@@ -1,4 +1,6 @@
 let API = `http://vacationaroma.rocket-coding.com/api/Login`;
+////line會員登入
+let LineLoginUrl = `${allApi}api/Linelogin/GetLineLoginUrl`;
 //let API2 = `http://vacationaroma.rocket-coding.com/api/Orders/PostOrder`;
 
 //const MyToken = "";

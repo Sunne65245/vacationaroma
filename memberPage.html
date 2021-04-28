@@ -64,7 +64,8 @@
         <!-- <div class="cartContent setInFrame"> -->
 
             <table class="cartContent setInFrame">
-                <thead  class="cartList">
+
+                <thead class="cartList" >
                     <th>訂單編號</th>
                     <th>訂購日期</th>
                     <th>金額</th>
@@ -74,24 +75,24 @@
                 </thead>
                 
     
-                <tbody >
+                <tbody class="cartContentList" id="userCartList">
                     <th>訂單編號</th>
                     <th>訂購日期</th>
                     <th>金額</th>
                     <th>店取或宅配</th>
                     <th>收件人</th>
                     <th>訂單內容</th>
-
                 </tbody>
 
-            </table>
-            <table class="cartList">
+                <footer>
+                    <td colspan="15" align="right" class="tdNotSolid">      
+                        <div class="nextBtn" id="nextBtnId">
+                            <span>回首頁</span>
+                        </div>
+                    </td>
+                </footer>
     
-                <td colspan="15" align="right" class="tdNotSolid">      
-                    <div class="nextBtn" id="nextBtnId">
-                        <span>回首頁</span>
-                    </div>
-                </td>
+                
             </table>
             
         <!-- </div> -->
@@ -124,8 +125,10 @@
     <!-- 尾 店家資訊 結束 -->
 
     <!-- 載入ＪＳ -->
+    <script src="/js/API.js"></script>
     <!-- 判斷登入 -->
     <script src="/js/loginMember.js"></script>
+    <script src="/js/memberPage.js"></script>
     
 </body>
 </html>

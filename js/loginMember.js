@@ -1,85 +1,33 @@
-let loginMemberAPI = "http://vacationaroma.rocket-coding.com/api/User/Getuserdata";
-
-////line會員登入
-let LineLoginUrl = "https://vacationaroma.rocket-coding.com/api/Linelogin/GetLineLoginUrl";
-
-////Dom
-////當會員登入時要改變狀態
-const loginMember = document.querySelector(".loginMember");
-let memberProfile =[];
-let memberToken=localStorage.getItem("mytoken");
-
-////下方的Token是庸來做ＬＩＮＥ登入的
-
-const license = { headers: { Authorization: `Bearer ${memberToken}` } };
-
-//console.log(memberToken);
-
-
-
-
-//// line判定 先抓網址檢查有沒有問好？
-
-
-
-
-
-
-////原先會員是否登入判斷
-if(memberToken === "undefined" || memberToken === null){
-    console.log("沒登入拉");
-
-}
-else{
-    axios.get(loginMemberAPI,license)
-    .then(function (response) {
-        console.log(response);
-        memberProfile=response.data;
-        ////console.log(`axios的${memberProfile.Name}`);
-
-        ////修改樣式
-        let loginMemberSrt = "";
-        loginMemberSrt=`<ul class="loginMember">
-        <li><a href="/memberPage.html">${memberProfile.Name} 您好</a></li>
-        <li><a href="/sp1Cart.html">購物車</a></li>
-        <li><a href="">風味搜尋</a></li>
-        </ul>  `;
-
-        loginMember.innerHTML=loginMemberSrt;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-
-}
-
-
-//428
+const loginMemberAPI = `https://vacationaroma.rocket-coding.com/api/User/Getuserdata`;
 
 //Dom
 //當會員登入時要改變狀態
+const loginMember = document.querySelector(".loginMember");
+let memberProfile = [];
+let memberToken = localStorage.getItem("mytoken");
+let lineProfile = [];
+const license = { headers: { Authorization: `Bearer ${memberToken}` } };
+//隨機推薦商品圖
+// const prolist = document.querySelector('.commodity');
+// let GetIndexApi = `https://vacationaroma.rocket-coding.com/api/MinProducts/GetIndex`;
+// let GetIndexDate = [];
 
-// //隨機推薦商品圖
-const proList = document.querySelector('.commodity');
-let GetIndexApi = `https://vacationaroma.rocket-coding.com/api/MinProducts/GetIndex`;
-let GetIndexDate = [];
-
-axios.get(GetIndexApi)
-    .then(function (response) {
-        console.log(response);
-        GetIndexDate = response.data.recommend;
-        let str = '';
-        GetIndexDate.forEach(function (item) {
-        str += `<li><img src="http:${item.ProductImg}" alt="#">
-        <span class="commodityName">${item.ProductName}</span>
-        <span class="commodityPrice">NT.${item.ProducPrice}</span>
-        </li>`;
-        })
-        proList.innerHTML = str;
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+// axios.get(GetIndexApi)
+//     .then(function (response) {
+//         console.log(response);
+//         GetIndexDate = response.data.recommend;
+//         let str = '';
+//         GetIndexDate.forEach(function (item) {
+//             str += `<li><img src="http:${item.ProductImg}" alt="#">
+//         <span class="commodityName">${item.ProductName}</span>
+//         <span class="commodityPrice">NT.${item.ProducPrice}</span>
+//         </li>`;
+//         })
+//         prolist.innerHTML = str;
+//     })
+//     .catch(function (error) {
+//         console.log(error);
+//     });
 
 // 先抓網址檢查有沒有問好？
 let q = window.location.href.indexOf("?")//如果找到會大於-1`
