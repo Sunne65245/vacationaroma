@@ -15,11 +15,14 @@ const stepBtnSDId = document.getElementById("stepBtnSDId");
 let pickerAPI = `${allApi}api/Orders/Consignee/${orderId}`;
 let orderConfirm = [];
 
-function aaa(e) {
-    window.location.replace(`index.html`)
+function goIndex() {
+
+    //window.location.replace(`sp2Pay.html`);
+    window.location.replace(`memberPage.html`)
+    
 };
 
-stepBtnSDId.addEventListener("click",aaa);
+stepBtnSDId.addEventListener("click",goIndex);
 
 axios.get(pickerAPI,license)
     .then(function (response) {
@@ -29,7 +32,7 @@ axios.get(pickerAPI,license)
 
         //修改樣式
         let Srt = "";
-        Srt=`
+        Srt+=`
         <li>姓名
             <span>${orderConfirm.Name}</span>
             <hr class="solid">
@@ -38,10 +41,6 @@ axios.get(pickerAPI,license)
         <li>手機
             <span>${orderConfirm.Phone}</span>
             <hr class="solid">
-        </li>
-
-        <li class="stepBtn">
-            <div class="nextBtn">確認訂購人資料</div>
         </li>`;
 
         deliveryPickerId.innerHTML=Srt;
@@ -49,5 +48,3 @@ axios.get(pickerAPI,license)
     .catch(function (error) {
         console.log(error);
     });
-
-

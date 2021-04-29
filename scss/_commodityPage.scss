@@ -1,9 +1,15 @@
 
 
 .commodityContent{
+    
     display: flex;
     justify-content: space-between;
+    
     //margin: 3rem 5rem;
+}
+.commodityCenter{
+    margin: 3rem auto;
+    max-width: 70rem;
 }
 
 .commodityNav{
@@ -11,9 +17,6 @@
     margin-right: 3rem;
     li{
         margin-top: 2rem;
-
-
-
     }
     .selectCommodity{
 
@@ -155,3 +158,4 @@
         line-height:  2rem;
     }
 }
+

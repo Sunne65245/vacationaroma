@@ -45,6 +45,9 @@
 
                 <li class="">確認收件資料</li>
 
+
+
+
             </ul>
 
             <div class="deliveryContent">
@@ -64,10 +67,12 @@
                         <span>高雄</span>
                         <hr class="solid">
                     </li> -->
-                    <li class="stepBtn" id="stepBtnSDId">
-                        <div class="nextBtn previousBtn">確認資料 回首頁</div>
-                    </li>
+
                 </ul>
+
+                <div  class="stepBtn" id="stepBtnSDId">
+                    <div class="nextBtn previousBtn">確認歷史訂單</div>
+                </div>
 
             </div>
     
@@ -102,6 +107,15 @@
     <script src="/js/loginMember.js"></script>
     <script src="/js/sp4StoreDeliveryCheck.js"></script>
     <!-- <script src="/js/sp4StoreDeliveryCheck.js"></script> -->
+    <script>
+    window.onbeforeunload=function(e){
+        var e=window.event||e;
+        e.returnValue=("準備要清除 orderId囉 ");
+        localStorage.removeItem("OrderDetails");
+        localStorage.removeItem("orderId");
+    }
+    </script>
+
     
 </body>
 </html>

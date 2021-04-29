@@ -470,12 +470,13 @@ body {
   color: #ffffff;
 }
 
-.cartContentList {
+.cartContentList th {
+  margin: 1rem 3rem;
+  padding: 1em;
   border-bottom: 1px solid #e9e9e9;
 }
 
-.cartContentList th {
-  margin: 1rem 3rem;
+.cartContentList td {
   padding: 1em;
 }
 
@@ -559,6 +560,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.commodityCenter {
+  margin: 3rem auto;
+  max-width: 70rem;
 }
 
 .commodityNav {
@@ -929,30 +935,10 @@ body {
   font-size: 1rem;
 }
 
-.deliveryContent {
+.cartSp5 {
   margin: 2rem auto;
-  width: 35rem;
-}
-
-.stepBtn {
-  margin-top: 3rem;
-  color: #333333;
-}
-
-.stepBtn .nextBtn {
-  margin: 0;
-}
-
-.stepBtn .previousBtn:hover {
-  background-color: #08DF5D;
-  color: white;
-}
-
-.nextBtn {
-  width: 18rem;
-}
-
-h3 {
-  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
 }
 /*# sourceMappingURL=all.css.map */

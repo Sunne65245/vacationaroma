@@ -15,11 +15,10 @@
 
 //►►►_____________________API____________________►►►
 let memberPageAPI = `${allApi}api/Orders/GetOrderList`;
-// let memberToken=localStorage.getItem("mytoken");
-// const license = { headers: { Authorization: `Bearer ${memberToken}` } };
-//memberToken license
+
 //►►►_____________________DOM____________________►►►
-const userCartList=document.getElementById("userCartList")
+const userCartList=document.getElementById("userCartList");
+const signOutBtnId=document.getElementById("signOutBtnId")
 let userOrderListRender=[];
 
 
@@ -46,12 +45,17 @@ function userCartListRender() {
 
 axios.get(memberPageAPI ,license)
     .then(function (response) {
-        console.log(response);
         userOrderListRender=response.data.orderdata;
         console.log(userOrderListRender);
         userCartListRender()
     })
     .catch(function (error) {
         console.log(error);
-    });
+});
 
+function signOutBtn() {
+    //console.log("aaa");
+    localStorage.removeItem("mytoken");
+    window.location.replace(`index.html`);
+}
+signOutBtnId.addEventListener("click",signOutBtn)

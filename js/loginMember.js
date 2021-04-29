@@ -7,27 +7,7 @@ let memberProfile = [];
 let memberToken = localStorage.getItem("mytoken");
 let lineProfile = [];
 const license = { headers: { Authorization: `Bearer ${memberToken}` } };
-//隨機推薦商品圖
-// const prolist = document.querySelector('.commodity');
-// let GetIndexApi = `https://vacationaroma.rocket-coding.com/api/MinProducts/GetIndex`;
-// let GetIndexDate = [];
 
-// axios.get(GetIndexApi)
-//     .then(function (response) {
-//         console.log(response);
-//         GetIndexDate = response.data.recommend;
-//         let str = '';
-//         GetIndexDate.forEach(function (item) {
-//             str += `<li><img src="http:${item.ProductImg}" alt="#">
-//         <span class="commodityName">${item.ProductName}</span>
-//         <span class="commodityPrice">NT.${item.ProducPrice}</span>
-//         </li>`;
-//         })
-//         prolist.innerHTML = str;
-//     })
-//     .catch(function (error) {
-//         console.log(error);
-//     });
 
 // 先抓網址檢查有沒有問好？
 let q = window.location.href.indexOf("?")//如果找到會大於-1`
@@ -88,7 +68,7 @@ if (q > -1) {
 }
 
 let linetoken = localStorage.getItem("linetoken");
-var username = localStorage.getItem("name");
+let username = localStorage.getItem("name");
 
 //非第一次line登入
 if (linetoken !== null) {
@@ -103,9 +83,9 @@ if (linetoken !== null) {
     loginMember.innerHTML = loginMemberSrt;
 }
 
-//會員是否登入判斷x`
+//一般會員是否登入判斷x`
 if (memberToken === "undefined" || memberToken === null) {
-    console.log("會員沒東西拉");
+    console.log("一般的會員 沒東西拉");
 }
 else {
     axios.get(loginMemberAPI, license)

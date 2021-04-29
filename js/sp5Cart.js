@@ -1,39 +1,21 @@
 //我要把資料待到這 才推到 遠端ＡＰＩ
 // ►►► 預設載入產品ＡＰＩ
-let OrderList=JSON.parse(localStorage.getItem("OrderDetails"));
-console.log(OrderList);
-//研究桌子
-//item要改OrderList
+let OrderListCart5=JSON.parse(localStorage.getItem("OrderDetails"));
+console.log(OrderListOrderListCart5);
+
 
 
 //►►►_____________________待辦事項____________________►►►
-//要把OrderList的物件資料渲染 綁好後inner到頁面上
-//要先榜ＤＯＭ
-//綁修改數量的函式
-//要同步修改總金額
-//按鈕下去跟單一商品一樣打包存進lg 但要比對ＩＤ
-//下一頁面要帶資料
-
-
-
 //►►►_____________________分隔線說明____________________►►►
 // ►►► () *,.*♫_____________________☺____________________♫*,.*
 
 
 
 //►►►_____________________Dom____________________►►►
-const productImgId =document.getElementById("productImgId")
-const productOrderList=document.getElementById("productOrderList")
-//const purchasingValueSP1Id=document.getElementById("purchasingValueSP1Id");
-const purchasingNumAddLessPlus = document.getElementById("purchasingNumAddLessPlus");
-const purchasingPay = document.getElementById("purchasingPay");
-const orderResult = document.getElementById("orderResult");
 let domain=`http://127.0.0.1:5500`;
 //►►►_____________________API____________________►►►
 let postOrderAPI = `${allApi}api/Orders/PostOrder`;
-//測試line登入用  const MyToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJVY2I0MzQ4NmEwZTUxZTRkNTYwZDU2MWY3NjIzYWQ2OTciLCJQZXJtaXNzaW9uIjoxLCJpYXQiOiI0LzIzLzIwMjEgMjo1MTowNyBQTSIsIkV4cCI6IjQvMjQvMjAyMSAyOjUxOjA3IFBNIn0.ONBKVlzjv2qoVbf2MBfm3pVV1eVIVp0bfvXpTaaKCl4svkb5_bEhKwYa_Fk314oudNOBRV8S1rvFrZP6jDMWqQ";
 const MyToken = localStorage.getItem("mytoken")
-//const license = { headers: { Authorization: `Bearer ${MyToken}` } };
 const nextBtnSpc1=document.getElementById("nextBtnId");
 
 
@@ -122,23 +104,6 @@ orderResult.addEventListener("click",quantitySP1)
 
 
 
-
-//推二次購物車清單
-// let shoppingCart = {
-//     "OrderDetails": [
-//         { 
-//             "ProductName": item[0].ProductName, 
-//             "ProductBrew": item[0].ProductBrew, 
-//             "ProductImg": item[0].ProductImg, 
-//             "UnitPrice": item[0].UnitPrice, 
-//             "Quantity": Quantity,
-//             "ProTotal": ProTotalAllSP1,
-
-//         },
-//     ]
-// };
-//console.log(shoppingCart);
-
 function text03(){
 
 
@@ -160,7 +125,7 @@ function text03(){
     //     shoppingCart.push(cartPushSP1)
     //    localStorage.setItem("OrderDetails",JSON.stringify(cartPushSP1));
         alert("要去下一頁囉")
-        window.location.replace(`sp2Pay.html`);
+        //window.location.replace(`index.html`);
     
     
 };

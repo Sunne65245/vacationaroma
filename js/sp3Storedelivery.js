@@ -66,42 +66,46 @@ function confirmOrder(){
         return
     }
     else{
-        console.log("測試")
-        let data="";
+
+        let data={
+            "mytoken": memberToken,
+            "order":""}
+            
         OrderSp3.forEach(function (item){
-            data ={
-                "mytoken": memberToken,
-                "order": {
-                    "Name": recipientName.value,
-                    "Phone": recipientPhone.value,
-                    "Address": "門市取貨付款",
-                    "Payment": 2,   //Line才是都是1
-                    "ProTotal": item.ProTotal,  //產品總額
-                    "Shipping": 60,    //運費固定
-                    "SubTotal": item.ProTotal+60,   //訂單總額 待改
-                    
-                  //  "Remark": "麻煩了",   
-                    "OrderDetails": [
-                        { "ProductName": item.ProductName, 
-                        "ProductBrew": item.ProductBrew, 
-                        "UnitPrice": item.UnitPrice, 
-                        "Quantity": item.Quantity },
-                    ]
-                }
+            data.order ={
+                "Name": recipientName.value,
+                "Phone": recipientPhone.value,
+                "Address": "門市取貨付款",
+                "Payment": 2,   //Line才是都是1
+                "ProTotal": item.ProTotal,  //產品總額
+                "Shipping": 60,    //運費固定
+                "SubTotal": item.ProTotal+60,   //訂單總額 待改
+                
+              //  "Remark": "麻煩了",   
+                "OrderDetails": [
+                    { "ProductName": item.ProductName, 
+                    "ProductBrew": item.ProductBrew, 
+                    "UnitPrice": item.UnitPrice, 
+                    "Quantity": item.Quantity },
+                ]
             }
+            }
+        )
+        
+        axios.post(PostOrderAPI,data)
+        .then(function (response) {
+            console.log(response); 
+            orderId=response.data.Id;
+            console.log(orderId);
+            localStorage.setItem("orderId",`${orderId}`);
+
+            window.location.replace(`sp4StoreDeliveryCheck.html`)
+        })
+        .catch(function (error) {
+            console.log(error);
         })
         
-            axios.post(PostOrderAPI,data)
-            .then(function (response) {
-                console.log(response); 
-                orderId=response.data.Id;
-                console.log(orderId);
-                localStorage.setItem("orderId",`${orderId}`);
-                window.location.replace(`sp4StoreDeliveryCheck.html`)
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
+
     }
 }
 
