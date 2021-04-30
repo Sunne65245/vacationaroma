@@ -1,4 +1,5 @@
 let backSearch =localStorage.getItem("backSearch");
+let backSearch2 =localStorage.getItem("backSearch2");
 // if(backSearch !==null){
 // return
 // }else{
@@ -62,6 +63,8 @@ for (i = 0; i < toggler.length; i++) {
     this.parentElement.querySelector(".commodityArea").classList.toggle("active");
   });
 }
+
+
 //data資料
 let hhDate = [];
 let LowDate = [];

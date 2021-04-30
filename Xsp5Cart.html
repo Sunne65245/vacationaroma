@@ -37,53 +37,34 @@
             <span>訂購完成</span>
         </h2>
 
-        <table class="cartList">
-            <tr>
+        <table class="cartContent setInFrame">
+
+            <thead class="cartList" >
                 <th></th>
-                <th>商品名稱</th>
-                <th>數量</th>
-                <th>品項價格</th>
-            </tr>
+                <th>訂購日期</th>
+                <th>金額</th>
+                <th>店取或宅配</th>
+                <th>收件人</th>
+                <th>訂單內容</th>
+            </thead>
+            
 
-            <tr>
-                <td>
-                    <div class="productImg" id="productImgId">
-                        <img src="/img/素材/20170502171200.jpg"  alt="">
-                    </div>
-                    
-                </td>
+            <tbody class="cartContentList" id="userCartList">
+                <th>訂購日期</th>
+                <th>金額</th>
+                <th>收件人</th>
+                <th>訂單內容</th>
+            </tbody>
 
-                <td>
-                    <div id="productOrderList">
-                        <h3 class="product">台灣 古坑 日曬 比里咖啡莊園</h3>
-                        <span class="grinding">沖煮方式：義式手沖壺</span>
-                        <span class="price">單價 1690</span>
-                    </div>
-                </td>
-
-                <td>
-                    <div class="purchasingNum"  id="purchasingNumAddLessPlus" >
-                        <span class="selectValueAddSub addLess">-</span>
-                        <input type="text" name="" id="purchasingValueSP1Id" value="0" class="purchasingValue">
-                        <span class="selectValueAddSub  addPlus">+</span>
-                        <!-- <span class="selectValueAddSub addLess">-</span>
-                        <input type="text" name="" id="purchasingValueId" value="0" class="purchasingValue">
-                        <span class="selectValueAddSub addPlus">+</span>
-                        </div> -->
+            <footer>
+                <td colspan="6" align="right" id="nextIndexBtnId" class="tdNotSolid">      
+                    <div class="nextBtn" >
+                        <span>回首頁</span>
                     </div>
                 </td>
-                <td>
-                <span id="purchasingPay">NT.1690</span>
-                </td>
+            </footer>
 
-            </tr>
-
-            <td colspan="4" align="right" class="tdNotSolid">      
-                <div class="nextBtn" id="nextBtnId">
-                    <span>回首頁</span>
-                </div>
-            </td>
-
+            
         </table>
     </div>
 

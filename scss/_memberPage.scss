@@ -1,9 +1,11 @@
 .memberContent{
 
     .memberNav{
-        margin: 3rem 0;
-        // text-align: center;
+        //margin: 3rem auto;
+        //text-align: center;
+        
         display: flex;
+        justify-content: space-between;
         .memberName{
             font-size: 3rem;
         }
@@ -32,6 +34,9 @@
         // display: flex;
         // flex-direction:column;
         // }
+    li{
+        margin-top: 0.5rem;
+    }
 }
 
 

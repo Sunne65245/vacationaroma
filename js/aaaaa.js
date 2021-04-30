@@ -40,8 +40,18 @@ function rootFolder() {
   //js li下拉選單收合
 var toggler = document.getElementsByClassName("caret");
 var i;
+
 for (i = 0; i < toggler.length; i++) {
   toggler[i].addEventListener("click", function () {
+    // let backSearch2= i;
+    // console.log(this.i);
+    // localStorage.setItem("backSearch2",backSearch2);
+
     this.parentElement.querySelector(".commodityArea").classList.toggle("active");
   });
+//   toggler[i].addEventListener("click", function (e){
+// console.log(e.path);
+//   })
+
 }
+

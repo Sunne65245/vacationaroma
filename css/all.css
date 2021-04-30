@@ -362,6 +362,9 @@ body {
   border: none;
   color: #333333;
   opacity: 0.5;
+  line-height: 2rem;
+  font-size: 1rem;
+  outline: none;
 }
 
 .loginContent .promptBtn {
@@ -429,10 +432,12 @@ body {
 }
 
 .memberContent .memberNav {
-  margin: 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .memberContent .memberNav .memberName {
@@ -462,6 +467,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.selectCommodity li {
+  margin-top: 0.5rem;
 }
 
 .memberOrder {

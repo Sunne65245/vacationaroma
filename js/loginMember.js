@@ -47,7 +47,6 @@ function qaz() {
                         loginMemberSrt = `<ul class="loginMember">
         <li><a href="/memberPage.html">${lineProfile.Name} 您好</a></li>
         <li><a href="/sp1Cart.html">購物車</a></li>
-        <li><a href="">風味搜尋</a></li>
         </ul>  `;
                         loginMember.innerHTML = loginMemberSrt;
                     }).catch(function (error) {
@@ -99,7 +98,6 @@ else {
             loginMemberSrt = `<ul class="loginMember">
         <li><a href="/memberPage.html">${memberProfile.Name} 您好</a></li>
         <li><a href="/sp1Cart.html">購物車</a></li>
-        <li><a href="">風味搜尋</a></li>
         </ul>  `;
 
             loginMember.innerHTML = loginMemberSrt;
