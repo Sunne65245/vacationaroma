@@ -317,19 +317,18 @@ body {
   background-size: contain;
   height: 2rem;
   width: 2rem;
+}
+
+.footer .IGBtn {
   background-image: url("/img/iconIG.png");
 }
 
-.footer .social .IGBtn {
+.footer .FBBtn {
   background-image: url("/img/iconFB.png");
 }
 
-.footer .social .FBBtn {
-  background-image: url("/img/iconIG.png");
-}
-
-.footer .social .LineBtn {
-  background-image: url("/img/iconIG.png");
+.footer .LineBtn {
+  background-image: url("/img/iconLine.png");
 }
 
 .footer .mapKit {

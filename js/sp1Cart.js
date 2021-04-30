@@ -28,7 +28,6 @@ const productOrderList=document.getElementById("productOrderList")
 const purchasingNumAddLessPlus = document.getElementById("purchasingNumAddLessPlus");
 const purchasingPay = document.getElementById("purchasingPay");
 const orderResult = document.getElementById("orderResult");
-let domain=`http://127.0.0.1:5500`;
 //►►►_____________________API____________________►►►
 let postOrderAPI = `${allApi}api/Orders/PostOrder`;
 //測試line登入用  const MyToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJVY2I0MzQ4NmEwZTUxZTRkNTYwZDU2MWY3NjIzYWQ2OTciLCJQZXJtaXNzaW9uIjoxLCJpYXQiOiI0LzIzLzIwMjEgMjo1MTowNyBQTSIsIkV4cCI6IjQvMjQvMjAyMSAyOjUxOjA3IFBNIn0.ONBKVlzjv2qoVbf2MBfm3pVV1eVIVp0bfvXpTaaKCl4svkb5_bEhKwYa_Fk314oudNOBRV8S1rvFrZP6jDMWqQ";
@@ -49,7 +48,7 @@ function productRender(){
     OrderList.forEach(function (item){
         orderResultSrt+=`
     <tr>
-        <td>
+        <td data-set:"${item.ProductId}">
             <div class="productImg" >
             <img src="http://${item.ProductImg}"  alt="">
             </div>

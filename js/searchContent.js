@@ -11,21 +11,45 @@
 
 //►►►_____________________備註結束____________________►►►
 
-let americaId = "2001";
-let southAmericaId = "2002";
-let taiwanId = "3001";
+
+
+// ►►► 產品API ole
+// const africaApi=`${allApi}api/MinProducts/MenuClass?classid=${americaId}`;
+// const southAmericaApi=`${allApi}api/MinProducts/MenuClass?classid=${southAmericaId}`;
+// const taiwanApi=`${allApi}api/MinProducts/MenuClass?classid=${taiwanId}`;
+
+//選單
+const scID=document.getElementById("scID");
+const taiwanAreaId=document.getElementById("taiwanAreaId");
+const southAmericaId=document.getElementById("southAmericaId");
+const africaId=document.getElementById("africaId");
+
 
 // ►►► 產品API
-const africaApi=`${allApi}api/MinProducts/MenuClass?classid=${americaId}`;
-const southAmericaApi=`${allApi}api/MinProducts/MenuClass?classid=${southAmericaId}`;
-const taiwanApi=`${allApi}api/MinProducts/MenuClass?classid=${taiwanId}`;
-
+let EthiopiaAmericaId = "5001";
+let PanamaId = "4001";
+let BrazilId = "4002";
+let ColombiaId = "4003";
+let AlishanTaiwanId = "3001";
+let GukengTaiwanId = "3002";
+let TainanTaiwanId = "3003";
+const EthiopiaAmericaApi=`${allApi}api/MinProducts/MenuClass?classid=${EthiopiaAmericaId}`;
+const PanamaApi=`${allApi}api/MinProducts/MenuClass?classid=${PanamaId}`;
+const BrazilApi=`${allApi}api/MinProducts/MenuClass?classid=${BrazilId}`;
+const ColombiaApi=`${allApi}api/MinProducts/MenuClass?classid=${ColombiaId}`;
+const AlishanTaiwanIdApi=`${allApi}api/MinProducts/MenuClass?classid=${AlishanTaiwanId}`;
+const GukengTaiwanApi=`${allApi}api/MinProducts/MenuClass?classid=${GukengTaiwanId}`;
+const TainanTaiwanApi=`${allApi}api/MinProducts/MenuClass?classid=${TainanTaiwanId}`;
+// ►►► 產品陣列
+let EthiopiaAmericaArray = [];
+let PanamaArray = [];
+let BrazilArray = [];
+let ColombiaArray = [];
+let AlishanTaiwanArray = [];
+let GukengTaiwanArray = [];
+let TainanTaiwanArray = [];
 
 const commodityTaiwanBtn=document.getElementById("commodityTaiwan");
-const commoditySouthAmericaBtn=document.getElementById("commoditySouthAmerica");
-
-
-
 
 //let memberToken=localStorage.getItem("token");
 //const license = { headers: { Authorization: `Bearer ${memberToken}` } };
@@ -82,7 +106,7 @@ function getAxios(){
         console.log(error);
     });
 
-// ►►► 台灣
+////// ►►► 台灣
     axios.get(taiwanApi)
     .then(function (response) {
         console.log(response);
@@ -100,13 +124,16 @@ function getAxios(){
 
 
 
+
+
+
+
 // ►►► _____________________ 產品宣染區域____________________►►►
 
 const commodityArea=document.getElementById("commodityArea")
 
 
 let commodityAreaSrt="";
-
 // ►►► 非洲 
 function commodityAfricaRender(){
     commodityAreaSrt="";
@@ -151,6 +178,8 @@ function commodityTaiwanRender(){
     commodityArea.innerHTML=commodityAreaSrt;
 }
 
+
+
 //►►►_____________________判斷產品點擊____________________►►►
 
 function getCommodityAreaId(e) {
@@ -177,8 +206,40 @@ function getCommodityAreaId(e) {
 
     };
 }
-
 commodityArea.addEventListener("click",getCommodityAreaId)
+
+
+
+
+//點擊渲染產品
+function commodityAreaRender(e) {
+    console.log(e);
+    if (e.path[1].className !== "selectCommodity") {
+        return;  
+    }else {
+        console.log("點到囉");
+        //console.log(textId);
+        //localStorage.setItem("commodityId",`${textId}`);
+        //window.location.replace(`commodityPage.html`);
+
+        //比對三個陣列裡的ID
+
+    };
+}
+
+scID.addEventListener("click",commodityAreaRender);
 
 //►►►_____________________頁面仔入時就先抓取商品資料庫____________________►►►
 getAxios();
+
+// ►►► 台灣
+
+axios.get(taiwanApi)
+.then(function (response) {
+    console.log(response);
+    taiwanDate=response.data.orderProducts;
+    console.log(taiwanDate);
+})
+.catch(function (error) {
+    console.log(error);
+});

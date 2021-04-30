@@ -93,7 +93,7 @@ else {
             console.log(response);
             memberProfile = response.data;
             //console.log(`axios的${memberProfile.Name}`);
-            console.log("會員登入名稱")
+            console.log(`會員登入名稱${memberProfile.Name}`)
             //修改樣式
             let loginMemberSrt = "";
             loginMemberSrt = `<ul class="loginMember">

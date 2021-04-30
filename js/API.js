@@ -14,3 +14,5 @@ if(OrderDetailsJudge==null){
     let OrderDetails=[];
     localStorage.setItem("OrderDetails",JSON.stringify(OrderDetails));
 }
+// 預設登入網址
+let domain=`http://127.0.0.1:5500`;

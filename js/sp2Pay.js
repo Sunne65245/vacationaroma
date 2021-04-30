@@ -1,6 +1,5 @@
 
 let cartAPI = `${allApi}api/Login`;
-let domain=`http://127.0.0.1:5500`;
 //點選樣式storePayBtn linePayBtn 加上On
 
 

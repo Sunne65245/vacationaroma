@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searchPage</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/all.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        .caret {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .commodityArea {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 上方選單起始 要固定 -->
+
+    <div class="navbar">
+
+        <div class="setInFrame dpSpaceBetween">
+            <h1 class="vacationAromaLogo">
+                <a href="/index.html"><img src="/img/logoB.png" alt=""></a>
+            </h1>
+
+            <ul class="loginMember">
+                <li><a href="/login.html">會員登入</a></li>
+                <li><a href="/sp1Cart.html">購物車</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- 上方選單結束 -->
+
+    <div class="commodityContent setInFrame setInFrameTB">
+
+        <!-- 商品選單欄位 開始 -->
+        <div class="commodityNav">
+            <h2>商品分類</h2>
+
+            <ul class="selectCommodity">
+                <li><a class="free">期間限定</a>
+                    <hr class="solid">
+                </li>
+
+                <!-- <li><a class="free">特惠組合</a>
+                    <hr class="solid">
+                </li> -->
+
+                <li>
+                    <span class="caret">台灣商品</span>
+                    <hr class="solid">
+                    <ul class="commodityArea">
+                        <li data-value="3001">台灣阿里山</a></li>
+                        <li data-value="3002">台灣古坑</a></li>
+                        <li data-value="3003">台南東山</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="caret">中南美洲商品</span>
+                    <hr class="solid">
+                    <ul class="commodityArea">
+                        <li data-value="4001">巴拿馬</li>
+                        <li data-value="4002">巴西</li>
+                        <li data-value="4003">哥倫比亞</li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- <a href="" ></a> -->
+                    <span class="caret">非洲商品</span>
+                    <hr class="solid">
+                    <ul class="commodityArea">
+                        <li data-value="5001">衣索比亞</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+        </div>
+        <!-- 商品選單欄位 結束 -->
+
+        <!-- 商品介紹 開始 -->
+        <div class="searchContent">
+            <div class="commodityBanner">
+                <img src="/img/素材/african-3385074.jpg" alt="">
+            </div>
+            <ul class="searchSort">
+                <li class="sortBtn">
+                    <!-- API共用 -->
+                    <a class="LowToHeight" style="display:none">價位由低至高</a>
+                    <!-- 期間限定專用(JS) -->
+                    <a class="JSLowToHeight" style="display:none">價位由高至低</a>
+                </li>
+                <li class="sortBtn">
+                    <!-- API共用 -->
+                    <a class="HeightToLow" style="display:none">價位由高至低</a>
+                    <!-- 期間限定專用 -->
+                    <a class="JSHeightToLow" style="display:none">價位由低至高</a>
+                </li>
+            </ul>
+            <div class="commodityTitle">
+                <ul class="commodity" id="commodityArea">
+                    <!-- 試寫innerHtml -->
+                    <!-- <li class="commodityPack">
+                        <img src="/img/素材/coffee-1576256_1280.jpg" class="commodityImg" alt="#">
+                        <span class="commodityName">台灣 阿里山 日曬 賽利納</span>
+                        <span class="commodityPrice">NT.1490</span>
+                    </li> -->
+                    <!-- 試寫innerHtml -->
+
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- 商品介紹 結束 -->
+
+    <!-- 尾 店家資訊 -->
+    <div class="footer">
+        <ul class="brandVA">
+            <li class="footerIconBtn" >
+                <a href="#" class="social IGBtn"></a>
+                <a href="#" class="social FBBtn"></a>
+                <a href="#" class="social LineBtn"></a>
+            </li>
+            <li>假期風味</li>
+            <li>聯絡電話 07-5169-123</li>
+            <li>門市地址 高雄市鹽埕區假期一路3F</li>
+
+        </ul>
+        <div class="mapkit"></div>
+    </div>
+    <ul id="cc">
+        <!-- 尾 店家資訊 結束 -->
+
+
+        <!-- 載入ＪＳ& API -->
+
+        <script src="/js/API.js"></script>
+        <!-- 判斷登入 -->
+        <script src="/js/loginMember.js"></script>
+        <!-- 產品選單 -->
+        <!-- <script src="/js/searchContent.js"></script> -->
+        <script src="/js/searchAF.js"></script>
+
+
+
+</body>
+
+</html>

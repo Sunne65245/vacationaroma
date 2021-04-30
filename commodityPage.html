@@ -6,7 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>commodityPage</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/all.css">
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        .caret {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .commodityArea {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <!-- 上方選單起始 要固定 -->
@@ -21,7 +40,7 @@
             <ul class="loginMember">
                 <li><a href="/login.html">會員登入</a></li>
                 <li><a href="/sp1Cart.html">購物車</a></li>
-                <li><a href="">風味搜尋</a></li>
+
             </ul>  
     
         </div>
@@ -35,51 +54,50 @@
     <!-- 商品選單欄位 開始 -->
     <div class="commodityContent setInFrame commodityCenter">
         
+        <!-- 商品選單欄位 開始 -->
         <div class="commodityNav">
             <h2>商品分類</h2>
-            
+
             <ul class="selectCommodity">
-                <li><a href="">期間限定</a>
-                <hr class="solid">
+                <li><a class="free">期間限定</a>
+                    <hr class="solid">
                 </li>
 
-                <li><a href="">特惠組合</a>
-                <hr class="solid">
-                </li>
+                <!-- <li><a class="free">特惠組合</a>
+                    <hr class="solid">
+                </li> -->
 
                 <li>
-                    <a href="">亞洲商品</a>
+                    <span class="caret">台灣商品</span>
                     <hr class="solid">
                     <ul class="commodityArea">
-                        <li><a href="">台灣阿里山</a></li>
-                        <li><a href="">台灣古坑</a></li>
-                        <li><a href="">台南東山</a></li>
+                        <li data-value="3001">台灣阿里山</a></li>
+                        <li data-value="3002">台灣古坑</a></li>
+                        <li data-value="3003">台南東山</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">中南美洲商品</a>
+                    <span class="caret">中南美洲商品</span>
                     <hr class="solid">
-                    <ul class="commodityArea hide">
-                        <li>巴西 雅買加 藍山咖啡</li>
-                        <li>巴西 哥倫比亞 薩拉尼亞</li>
-                        <li>印尼 蘇門答臘 曼特寧</li>
+                    <ul class="commodityArea">
+                        <li data-value="4001">巴拿馬</li>
+                        <li data-value="4002">巴西</li>
+                        <li data-value="4003">哥倫比亞</li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">非洲商品</a>
+                    <!-- <a href="" ></a> -->
+                    <span class="caret">非洲商品</span>
                     <hr class="solid">
-                    <ul class="commodityArea hide">
-                        <li>衣索比雅 耶加雪菲</li>
-                        <li>夏威夷 瓜地馬拉</li>
-                        <li>夏威夷 科納咖啡</li>
+                    <ul class="commodityArea">
+                        <li data-value="5001">衣索比亞</li>
                     </ul>
                 </li>
             </ul>
 
-        
+
         </div>
         <!-- 商品選單欄位 結束 -->
-    
     
         <!-- 商品介紹 開始 -->
         <div class="purchasing" >
@@ -150,14 +168,12 @@
     <!-- 尾 店家資訊 -->
     <div class="footer">
         <ul class="brandVA setInFrame">
-            <li>
-                <span class="vaIGBtn"></span>
-                <span class="vaFBBtn"></span>
-                <span class="vaLineBtn"></span>
-                <a href="" ></a>
-                <a href=""></a>
-                <a href=""></a>
+            <li class="footerIconBtn" >
+                <a href="#" class="social IGBtn"></a>
+                <a href="#" class="social FBBtn"></a>
+                <a href="#" class="social LineBtn"></a>
             </li>
+            
             <li>假期風味</li>
             <li>聯絡電話 07-5169-123</li>
             <li>門市地址 高雄市鹽埕區假期一路3F</li>
@@ -175,8 +191,9 @@
     <script src="/js/API.js"></script>
     <!-- 判斷登入 -->
     <script src="/js/loginMember.js"></script>
-    <!-- 商品渲染 -->
+    <!-- 商品渲染 -->    
+    <script src="/js/aaaaa.js"></script>
     <script src="/js/commodityPage.js"></script>
-    <script src="/js/searchContent.js"></script>
+
 </body>
 </html>

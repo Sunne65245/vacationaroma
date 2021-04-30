@@ -19,6 +19,7 @@ let memberPageAPI = `${allApi}api/Orders/GetOrderList`;
 //►►►_____________________DOM____________________►►►
 const userCartList=document.getElementById("userCartList");
 const signOutBtnId=document.getElementById("signOutBtnId")
+const nextIndexBtnId=document.getElementById("nextIndexBtnId")
 let userOrderListRender=[];
 
 
@@ -59,3 +60,9 @@ function signOutBtn() {
     window.location.replace(`index.html`);
 }
 signOutBtnId.addEventListener("click",signOutBtn)
+
+
+function nextIndexBtn() {
+    window.location.replace(`index.html`)
+}
+nextIndexBtnId.addEventListener("click",nextIndexBtn)
