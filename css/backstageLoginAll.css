@@ -82,6 +82,15 @@ li {
   list-style: none;
 }
 
+input {
+  border: none;
+  color: #333333;
+  opacity: 0.5;
+  line-height: 2rem;
+  font-size: 1rem;
+  outline: none;
+}
+
 body {
   background-color: #D9BCB8;
 }

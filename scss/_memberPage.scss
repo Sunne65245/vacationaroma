@@ -11,6 +11,8 @@
         }
 
         .memberInformation{
+            display: flex;
+            flex-direction:column-reverse;
             margin-left: 3rem;
         }
         

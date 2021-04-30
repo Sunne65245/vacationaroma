@@ -1,3 +1,13 @@
+// let aa = document.getElementById("index1");
+
+// function test1() {
+//   let j = 0;
+//   console.log(j);
+// };
+// aa.addEventListener('click', test1);
+
+
+
 //jq抓li分類值
 var getIndex = "";
 $(document).ready(function () {
@@ -46,7 +56,6 @@ for (i = 0; i < toggler.length; i++) {
     // let backSearch2= i;
     // console.log(this.i);
     // localStorage.setItem("backSearch2",backSearch2);
-
     this.parentElement.querySelector(".commodityArea").classList.toggle("active");
   });
 //   toggler[i].addEventListener("click", function (e){
@@ -54,4 +63,32 @@ for (i = 0; i < toggler.length; i++) {
 //   })
 
 }
+
+//＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+// let searchIdTw=document.getElementById("searchIdTw");
+// let searchIdAs=document.getElementById("searchIdAs");
+// let searchIdArea=document.getElementById("searchIdArea");
+
+
+// function test1() {
+//   let backSearchTest="0";
+//   //localStorage.setItem("backSearch2",backSearchTest);
+//   console.log(backSearchTest);
+// }
+// searchIdTw.addEventListener("click",test1);
+
+// function test2() {
+//   let backSearchTest="1";
+//   //localStorage.setItem("backSearch2",backSearchTest);
+//   console.log(backSearchTest);
+// }
+// searchIdAs.addEventListener("click",test2)
+
+// function test3() {
+//   let backSearchTest="2";
+//   //localStorage.setItem("backSearch2",backSearchTest);
+//   console.log(backSearchTest);
+// }
+// searchIdArea.addEventListener("click",test3);
+
 

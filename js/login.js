@@ -1,4 +1,4 @@
-let API = `http://vacationaroma.rocket-coding.com/api/Login`;
+let API = `${allApi}api/Login`;
 
 ////line會員登入
 let LineLoginUrl = `${allApi}api/Linelogin/GetLineLoginUrl`;
@@ -16,7 +16,13 @@ const account=document.querySelector(".account");
 const password=document.querySelector(".password");
 const loginBtn=document.querySelector(".loginBtn");
 //sun65245@gmail.com
+const signUpBtnId=document.getElementById("signUpBtnId")
 
+function signUp() {
+    console.log("a");
+    window.location.replace(`signUp.html`);
+}
+signUpBtnId.addEventListener("click",signUp)
 
 function login(){
 

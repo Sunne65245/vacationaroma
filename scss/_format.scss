@@ -44,3 +44,12 @@ $VAFontSizeS:8px;
 li{
     list-style: none;
 }
+input{
+    border: none;
+    color:$VADarkGray;
+    opacity:0.5;
+    line-height: 2rem;
+    font-size: 1rem;
+    //width: 50%;
+    outline:none;
+}

@@ -1,14 +1,12 @@
 let backSearch =localStorage.getItem("backSearch");
 let backSearch2 =localStorage.getItem("backSearch2");
-// if(backSearch !==null){
-// return
-// }else{
-//   console.log(backSearch);
-//   return
-//   //window.location.replace(`searchAF.html`)
-//   //localStorage.setItem("commodityId",`${textId}`);
-//   //window.location.replace(`commodityPage.html`);
-// }
+if(backSearch2 ===null){
+console.log("?");
+}else{
+  console.log(backSearch2);
+
+
+}
 
 
 //jq抓li分類值
