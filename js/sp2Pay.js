@@ -15,11 +15,11 @@ function storePayBtnSpc2(){
     if( memberToken === "undefined" || memberToken === null  ){
         //請去登入
         console.log("undefined");
-        window.location.replace(`${domain}/login.html`)
+        window.location.replace(`${domain}login.html`)
     }else{
         console.log(domain);
         //下一頁具續選購
-        window.location.replace(`${domain}/sp3StoreDelivery.html`)
+        window.location.replace(`${domain}sp3StoreDelivery.html`)
     }
     
 }

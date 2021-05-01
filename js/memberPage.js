@@ -57,12 +57,12 @@ axios.get(memberPageAPI ,license)
 function signOutBtn() {
     //console.log("aaa");
     localStorage.removeItem("mytoken");
-    window.location.replace(`index.html`);
+    window.location.replace(`${domain}index.html`);
 }
 signOutBtnId.addEventListener("click",signOutBtn)
 
 
 function nextIndexBtn() {
-    window.location.replace(`index.html`)
+    window.location.replace(`${domain}index.html`)
 }
 nextIndexBtnId.addEventListener("click",nextIndexBtn)
