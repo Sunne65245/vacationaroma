@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>memberPage</title>
     <link rel="stylesheet" href="./css/all.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.js' integrity='sha512-Kg0CewqPNO/ziOJuCq5eyl3P/V6OLz/Lb1I2m+yKS3lHZcGVFN/KOew18rWP+kTsL7haYdaqGjwHQCZrN0heLQ==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.js'
+        integrity='sha512-Kg0CewqPNO/ziOJuCq5eyl3P/V6OLz/Lb1I2m+yKS3lHZcGVFN/KOew18rWP+kTsL7haYdaqGjwHQCZrN0heLQ=='
+        crossorigin='anonymous'></script>
 
 </head>
+
 <body>
 
     <!-- 上方選單起始 要固定 -->
-    
-    
+
+
     <div class="navbar">
 
         <div class="setInFrame dpSpaceBetween">
             <h1 class="vacationAromaLogo">
-                <a href="/index.html"><img src="./img/logoB.png" alt=""></a>
+                <a href="./index.html"><img src="./img/logoB.png" alt=""></a>
             </h1>
-    
+
             <ul class="loginMember">
-                <li><a href="/login.html">會員登入</a></li>
-                <li><a href="/sp1Cart.html">購物車</a></li>
+                <li><a href="./login.html">會員登入</a></li>
+                <li><a href="./sp1Cart.html">購物車</a></li>
                 <li><a href="">風味搜尋</a></li>
-            </ul>  
-    
+            </ul>
+
         </div>
 
     </div>
@@ -38,7 +42,7 @@
         <div class="memberNav cartContent">
 
             <div class="memberPhoto">
-                <img src="/img/products.png" alt="">
+                <img src="./img/products.png" alt="">
                 <h2 class="memberName">Sunne</h2>
 
                 <ul class="selectCommodity">
@@ -46,7 +50,7 @@
                         <span>會員帳號</span>
                         <span>sunne@gmaal.com</span>
                     </li>
-        
+
                     <li>
                         <span>手機</span>
                         <span>0912345678</span>
@@ -58,7 +62,6 @@
                 <div class="nextBtn" id="signOutBtnId">
                     <span>會員登出</span>
                 </div>
-
             </div>
 
         </div>
@@ -66,38 +69,38 @@
 
         <!-- <div class="cartContent setInFrame"> -->
 
-            <table class="cartContent setInFrame">
+        <table class="cartContent setInFrame">
 
-                <thead class="cartList" >
-                    <th>訂單編號</th>
-                    <th>訂購日期</th>
-                    <th>金額</th>
-                    <th>店取或宅配</th>
-                    <th>收件人</th>
-                    <th>訂單內容</th>
-                </thead>
-                
-    
-                <tbody class="cartContentList" id="userCartList">
-                    <th>訂單編號</th>
-                    <th>訂購日期</th>
-                    <th>金額</th>
-                    <th>店取或宅配</th>
-                    <th>收件人</th>
-                    <th>訂單內容</th>
-                </tbody>
+            <thead class="cartList">
+                <th>訂單編號</th>
+                <th>訂購日期</th>
+                <th>金額</th>
+                <th>店取或宅配</th>
+                <th>收件人</th>
+                <th>訂單內容</th>
+            </thead>
 
-                <footer>
-                    <td colspan="15" align="right" id="nextIndexBtnId" class="tdNotSolid">      
-                        <div class="nextBtn" >
-                            <span>回首頁</span>
-                        </div>
-                    </td>
-                </footer>
-    
-                
-            </table>
-            
+
+            <tbody class="cartContentList" id="userCartList">
+                <th>訂單編號</th>
+                <th>訂購日期</th>
+                <th>金額</th>
+                <th>店取或宅配</th>
+                <th>收件人</th>
+                <th>訂單內容</th>
+            </tbody>
+
+            <footer>
+                <td colspan="15" align="right" id="nextIndexBtnId" class="tdNotSolid">
+                    <div class="nextBtn">
+                        <span>回首頁</span>
+                    </div>
+                </td>
+            </footer>
+
+
+        </table>
+
         <!-- </div> -->
 
     </div>
@@ -112,7 +115,7 @@
                 <span class="vaIGBtn"></span>
                 <span class="vaFBBtn"></span>
                 <span class="vaLineBtn"></span>
-                <a href="" ></a>
+                <a href=""></a>
                 <a href=""></a>
                 <a href=""></a>
             </li>
@@ -123,15 +126,16 @@
         </ul>
         <div class="mapkit">
         </div>
-        
+
     </div>
     <!-- 尾 店家資訊 結束 -->
 
     <!-- 載入ＪＳ -->
-    <script src="./js/API.js"></script>
+    <script src="./js/API.js?v=050104"></script>
     <!-- 判斷登入 -->
-    <script src="./js/loginMember.js"></script>
-    <script src="./js/memberPage.js"></script>
-    
+    <script src="./js/loginMember.js?v=050104"></script>
+    <script src="./js/memberPage.js?v=050104"></script>
+
 </body>
+
 </html>

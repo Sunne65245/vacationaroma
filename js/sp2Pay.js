@@ -7,35 +7,35 @@ let cartAPI = `${allApi}api/Login`;
 
 
 
-const storePayBtnId=document.getElementById("storePayBtnId");
-const linePayBtnId=document.getElementById("linePayBtnId");
+const storePayBtnId = document.getElementById("storePayBtnId");
+const linePayBtnId = document.getElementById("linePayBtnId");
 
 
-function storePayBtnSpc2(){
-    if( memberToken === "undefined" || memberToken === null  ){
-        //請去登入
-        console.log("undefined");
-        window.location.replace(`${domain}login.html`)
-    }else{
-        console.log(domain);
-        //下一頁具續選購
-        window.location.replace(`${domain}sp3StoreDelivery.html`)
-    }
-    
-}
-
-function linePaySpc2(){
-
-    if( memberToken === "undefined" || memberToken === null  ){
+function storePayBtnSpc2() {
+    if (memberToken === "undefined" || memberToken === null) {
         //請去登入
         console.log("undefined");
         window.location.replace(`${domain}/login.html`)
-    }else{
+    } else {
+        console.log(domain);
+        //下一頁具續選購
+        window.location.replace(`${domain}/sp3StoreDelivery.html`)
+    }
+
+}
+
+function linePaySpc2() {
+
+    if (linetoken === "undefined" || linetoken === null) {
+        //請去登入
+        console.log("undefined");
+        window.location.replace(`${domain}/login.html`)
+    } else {
         //下一頁具續選購
         console.log(domain);
         window.location.replace(`${domain}/sp3LineDelivery.html`)
     }
 }
-storePayBtnId.addEventListener("click",storePayBtnSpc2);
-linePayBtnId.addEventListener("click",linePaySpc2);
+storePayBtnId.addEventListener("click", storePayBtnSpc2);
+linePayBtnId.addEventListener("click", linePaySpc2);
 

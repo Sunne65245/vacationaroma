@@ -34,9 +34,9 @@
 
 
 //訂單id
-let orderLineId=JSON.parse(localStorage.getItem("orderId"));
+let orderLineId = JSON.parse(localStorage.getItem("orderId"));
 console.log(orderLineId);
-console.log(memberToken);
+console.log(linetoken);
 
 
 //►►►_____________________Dom____________________►►►
@@ -48,38 +48,41 @@ let orderConfirm = [];
 
 
 //lienPayApl
-let LinePayApi=`${allApi}api/Pay/Getreserve/${orderLineId}`
+let LinePayApi = `${allApi}api/Pay/Getreserve/${orderLineId}`;
+//補
+const linelicense = { headers: { Authorization: `Bearer ${linetoken}` } };
 
-let lineDataWeb=""
+let lineDataWeb = ""
 function goLinePay() {
 
 
-    let data = {
-        "Id": orderLineId   //訂單id
-    };
-    axios.get(LinePayApi, license)
-    .then(function (response) {
-        console.log(response.data);
-        lineDataWeb = response.data.web;
-        console.log(lineDataWeb);
-        window.location.replace(lineDataWeb)
-    });
+    axios.get(LinePayApi, linelicense)
+        .then(function (response) {
+            console.log(response.data);
+            lineDataWeb = response.data.web;
+            console.log(lineDataWeb);
+            window.location.replace(lineDataWeb)
+        });
 
     //window.location.replace(`sp2Pay.html`);
     //window.location.replace(`memberPage.html`)
     console.log("goLinePay");
 
-    var url3 = `https://vacationaroma.rocket-coding.com/api/Pay/Put`;
-    axios.put(url3, data)
-        .then(function (response) {
-            console.log(response.data);
-        });
+    //---放錯位子
+    // let data = {
+    //     "Id": orderLineId   //訂單id
+    // };
+    // var url3 = `${allApi}api/Pay/Put`;
+    // axios.put(url3, data)
+    //     .then(function (response) {
+    //         console.log(response.data);
+    //     });
 
 }
 
 
 
-stepBtnLineId.addEventListener("click",goLinePay);
+stepBtnLineId.addEventListener("click", goLinePay);
 
 
 
@@ -90,15 +93,15 @@ stepBtnLineId.addEventListener("click",goLinePay);
 
 
 //渲染用
-axios.get(pickerLineAPI,license)
+axios.get(pickerLineAPI, linelicense)
     .then(function (response) {
         console.log(response);
-        orderConfirm=response.data;
+        orderConfirm = response.data;
         console.log(orderConfirm);
 
         //修改樣式
         let Srt = "";
-        Srt+=`
+        Srt += `
         <li>姓名
             <span>${orderConfirm.Name}</span>
             <hr class="solid">
@@ -109,12 +112,12 @@ axios.get(pickerLineAPI,license)
             <hr class="solid">
         </li>
 
-        <li>手機
+        <li>地址
         <span>${orderConfirm.Address}</span>
         <hr class="solid">
         </li>`;
-        
-        deliveryLinePickerId.innerHTML=Srt;
+
+        deliveryLinePickerId.innerHTML = Srt;
     })
     .catch(function (error) {
         console.log(error);

@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signUpAll</title>
     <link rel="stylesheet" href="./css/all.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.js' integrity='sha512-Kg0CewqPNO/ziOJuCq5eyl3P/V6OLz/Lb1I2m+yKS3lHZcGVFN/KOew18rWP+kTsL7haYdaqGjwHQCZrN0heLQ==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.js'
+        integrity='sha512-Kg0CewqPNO/ziOJuCq5eyl3P/V6OLz/Lb1I2m+yKS3lHZcGVFN/KOew18rWP+kTsL7haYdaqGjwHQCZrN0heLQ=='
+        crossorigin='anonymous'></script>
 
 </head>
+
 <body>
-        <!-- 上方選單起始 要固定 -->
-    
-        <div class="navbar">
+    <!-- 上方選單起始 要固定 -->
 
-            <div class="setInFrame dpSpaceBetween">
-                <h1 class="vacationAromaLogo">
-                    <a href="/index.html"><img src="./img/logoB.png" alt=""></a>
-                </h1>
-        
-                <ul class="loginMember">
-                    <li><a href="/login.html">會員登入</a></li>
-                    <li><a href="/sp1Cart.html">購物車</a></li>
-    
-                </ul>  
-        
-            </div>
-    
-        </div>
+    <div class="navbar">
 
-        <!-- 上方選單結束 -->
-        <div class="signUpContent">
-            <h3 class="signUpTitle">註冊會員</h3>
+        <div class="setInFrame dpSpaceBetween">
+            <h1 class="vacationAromaLogo">
+                <a href="./index.html"><img src="./img/logoB.png" alt=""></a>
+            </h1>
 
-            <ul class="signUpForm">
-                <li class="member">
-                    <span>姓名</span>
-                    <input type="text" name="" value="" class="userName" placeholder="輸入姓名">
-                    <span>手機</span>
-                    <input type="text" name=""  value="" class="userPhone" placeholder="輸入手機">
-                    <hr class="solid">
-                </li>
-    
-                <li>信箱
-                    <input type="text" name=""  value="" class="userEmail" placeholder="信箱即為帳號">
-                    <hr class="solid">
-                </li>
+            <ul class="loginMember">
+                <li><a href="./login.html">會員登入</a></li>
+                <li><a href="./sp1Cart.html">購物車</a></li>
 
-                <li>密碼
-                    <input type="text" name="" value="" class="userLogin" placeholder="密碼">
-                    <hr class="solid">
-                </li>
-
-                <li>密碼確認
-                    <input type="text" name="" value="" class="confirmPassword" placeholder="再次輸入密碼">
-                    <hr class="solid">
-                </li>
-
-                
             </ul>
-            <div class="signUpBtn">確認註冊</div>
-            <!-- <div class="signUpBtn lineLogin" id="lineSign">LINE綁定會員</div> -->
-        </div>
-    
-    
-    
-    
-    
-    
-        <!-- 尾 店家資訊 -->
-        <div class="footer">
-            <ul class="brandVA setInFrame">
-                <li class="footerIconBtn" >
-                    <a href="#" class="social IGBtn"></a>
-                    <a href="#" class="social FBBtn"></a>
-                    <a href="#" class="social LineBtn"></a>
-                </li>
-                <li>假期風味</li>
-                <li>聯絡電話 07-5169-123</li>
-                <li>門市地址 高雄市鹽埕區假期一路3F</li>
-    
-            </ul>
-            <div class="mapkit">
-            </div>
-            
-        </div>
-        <!-- 尾 店家資訊 結束 -->
 
-        <!-- 載入ＪＳ -->
+        </div>
 
-        <script src="./js/API.js"></script>
-        <script src="./js/signUp.js"></script>
-        <!-- 判斷登入 -->
-        <script src="./js/loginMember.js"></script>
+    </div>
+
+    <!-- 上方選單結束 -->
+    <div class="signUpContent">
+        <h3 class="signUpTitle">註冊會員</h3>
+
+        <ul class="signUpForm">
+            <li class="member">
+                <span>姓名</span>
+                <input type="text" name="" value="" class="userName" placeholder="輸入姓名">
+                <span>手機</span>
+                <input type="text" name="" value="" class="userPhone" placeholder="輸入手機">
+                <hr class="solid">
+            </li>
+
+            <li>信箱
+                <input type="text" name="" value="" class="userEmail" placeholder="信箱即為帳號">
+                <hr class="solid">
+            </li>
+
+            <li>密碼
+                <input type="text" name="" value="" class="userLogin" placeholder="密碼">
+                <hr class="solid">
+            </li>
+
+            <li>密碼確認
+                <input type="text" name="" value="" class="confirmPassword" placeholder="再次輸入密碼">
+                <hr class="solid">
+            </li>
+
+
+        </ul>
+        <div class="signUpBtn">確認註冊</div>
+        <!-- <div class="signUpBtn lineLogin" id="lineSign">LINE綁定會員</div> -->
+    </div>
+
+
+
+
+
+
+    <!-- 尾 店家資訊 -->
+    <div class="footer">
+        <ul class="brandVA setInFrame">
+            <li class="footerIconBtn">
+                <a href="#" class="social IGBtn"></a>
+                <a href="#" class="social FBBtn"></a>
+                <a href="#" class="social LineBtn"></a>
+            </li>
+            <li>假期風味</li>
+            <li>聯絡電話 07-5169-123</li>
+            <li>門市地址 高雄市鹽埕區假期一路3F</li>
+
+        </ul>
+        <div class="mapkit">
+        </div>
+
+    </div>
+    <!-- 尾 店家資訊 結束 -->
+
+    <!-- 載入ＪＳ -->
+
+    <script src="./js/API.js?v=050104"></script>
+    <script src="./js/signUp.js?v=050104"></script>
+    <!-- 判斷登入 -->
+    <script src="./js/loginMember.js?v=050104"></script>
 </body>
+
 </html>

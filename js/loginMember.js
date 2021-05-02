@@ -1,4 +1,4 @@
-const loginMemberAPI = `https://vacationaroma.rocket-coding.com/api/User/Getuserdata`;
+const loginMemberAPI = `${allApi}api/User/Getuserdata`;
 
 //Dom
 //當會員登入時要改變狀態
@@ -10,16 +10,16 @@ const license = { headers: { Authorization: `Bearer ${memberToken}` } };
 
 
 // 先抓網址檢查有沒有問好？
-let q = window.location.href.indexOf("?")//如果找到會大於-1`
+let q = window.location.href.indexOf("?f")//如果找到會大於-1`
 function qaz() {
     let a = window.location.search.split(`=`)[1].split(`&`)[0];
     let b = window.location.search.split(`=`)[2].split(`&`)[0];
     let c = window.location.search.split(`=`)[3].split(`&`)[0];
     let d = "";
     let access_token = "";
-    var url2 = `https://vacationaroma.rocket-coding.com/api/Linelogin/GetLineInfo?friendship_status_changed=${a}&code=${b}&state=${c}`;
+    var url2 = `${allApi}api/Linelogin/GetLineInfo?friendship_status_changed=${a}&code=${b}&state=${c}`;
     if (window.location.href.indexOf("error") > -1) {
-        var url = `https://vacationaroma.rocket-coding.com/api/Linelogin/GetLineInfoError`;
+        var url = `${allApi}api/Linelogin/GetLineInfoError`;
         axios.get(url)
             .then(function (response) {
                 console.log(response.data);
@@ -33,20 +33,20 @@ function qaz() {
                 access_token = response.data.access_token;
                 console.log(response.data.friend); //response.data.friend.friendFlag
                 localStorage.setItem("friend", `${response.data.friend.friendFlag}`);
-                var url3 = `https://vacationaroma.rocket-coding.com/api/Linelogin/PostLinePayload?id_token=${d}`;
+                var url3 = `${allApi}api/Linelogin/PostLinePayload?id_token=${d}`;
 
                 axios.post(url3)
                     .then(function (res) {
                         lineProfile = res.data;
                         console.log(lineProfile);
-                        localStorage.setItem("linetoken", `${res.data.mytoken}`);
+                        localStorage.setItem("linetoken", `${res.data.linetoken}`);
                         localStorage.setItem("name", `${lineProfile.Name}`);
                         //修改樣式
                         console.log("第一次line登入名稱")
                         let loginMemberSrt = "";
                         loginMemberSrt = `<ul class="loginMember">
-        <li><a href="/memberPage.html">${lineProfile.Name} 您好</a></li>
-        <li><a href="/sp1Cart.html">購物車</a></li>
+        <li><a href="./memberPage.html">${lineProfile.Name} 您好</a></li>
+        <li><a href="./sp1Cart.html">購物車</a></li>
         </ul>  `;
                         loginMember.innerHTML = loginMemberSrt;
                     }).catch(function (error) {
@@ -75,9 +75,8 @@ if (linetoken !== null) {
     //修改樣式
     let loginMemberSrt = "";
     loginMemberSrt = `<ul class="loginMember">
-        <li><a href="/memberPage.html">${username} 您好</a></li>
-        <li><a href="/sp1Cart.html">購物車</a></li>
-        <li><a href="">風味搜尋</a></li>
+        <li><a href="./memberPage.html">${username} 您好</a></li>
+        <li><a href="./sp1Cart.html">購物車</a></li>
         </ul>  `;
     loginMember.innerHTML = loginMemberSrt;
 }
@@ -96,8 +95,8 @@ else {
             //修改樣式
             let loginMemberSrt = "";
             loginMemberSrt = `<ul class="loginMember">
-        <li><a href="/memberPage.html">${memberProfile.Name} 您好</a></li>
-        <li><a href="/sp1Cart.html">購物車</a></li>
+        <li><a href="./memberPage.html">${memberProfile.Name} 您好</a></li>
+        <li><a href="./sp1Cart.html">購物車</a></li>
         </ul>  `;
 
             loginMember.innerHTML = loginMemberSrt;

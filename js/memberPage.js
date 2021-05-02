@@ -17,17 +17,17 @@
 let memberPageAPI = `${allApi}api/Orders/GetOrderList`;
 
 //►►►_____________________DOM____________________►►►
-const userCartList=document.getElementById("userCartList");
-const signOutBtnId=document.getElementById("signOutBtnId")
-const nextIndexBtnId=document.getElementById("nextIndexBtnId")
-let userOrderListRender=[];
+const userCartList = document.getElementById("userCartList");
+const signOutBtnId = document.getElementById("signOutBtnId")
+const nextIndexBtnId = document.getElementById("nextIndexBtnId")
+let userOrderListRender = [];
 
 
 function userCartListRender() {
     console.log("a");
-    let userOrderListRenderSrt="";
-    userOrderListRender.forEach(function (item){
-        userOrderListRenderSrt+=`
+    let userOrderListRenderSrt = "";
+    userOrderListRender.forEach(function (item) {
+        userOrderListRenderSrt += `
         <tr>
         <th>${item.Id}</th>
         <th>${item.AddTime}</th>
@@ -38,31 +38,41 @@ function userCartListRender() {
         </tr>
         `
     })
-    userCartList.innerHTML=userOrderListRenderSrt;
+    userCartList.innerHTML = userOrderListRenderSrt;
 
 }
 
+//補 用變數token接值(line還是會員)
+let token = "";
 
-
-axios.get(memberPageAPI ,license)
+if (linetoken !== null) {
+    token = { headers: { Authorization: `Bearer ${linetoken}` } };
+} else {
+    token = license;
+}
+//共用--歷史訂單
+axios.get(memberPageAPI, token)
     .then(function (response) {
-        userOrderListRender=response.data.orderdata;
+        userOrderListRender = response.data.orderdata;
         console.log(userOrderListRender);
         userCartListRender()
     })
     .catch(function (error) {
         console.log(error);
-});
+    });
 
+//登出
 function signOutBtn() {
     //console.log("aaa");
     localStorage.removeItem("mytoken");
-    window.location.replace(`${domain}index.html`);
+    //補line註銷
+    localStorage.removeItem("linetoken");
+    window.location.replace(`${domain}/index.html`);
 }
-signOutBtnId.addEventListener("click",signOutBtn)
+signOutBtnId.addEventListener("click", signOutBtn)
 
-
+//回首頁
 function nextIndexBtn() {
-    window.location.replace(`${domain}index.html`)
+    window.location.replace(`${domain}/index.html`)
 }
-nextIndexBtnId.addEventListener("click",nextIndexBtn)
+nextIndexBtnId.addEventListener("click", nextIndexBtn)

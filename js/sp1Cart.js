@@ -1,6 +1,6 @@
 //我要把資料待到這 才推到 遠端ＡＰＩ
 // ►►► 預設載入產品ＡＰＩ
-let OrderList=JSON.parse(localStorage.getItem("OrderDetails"));
+let OrderList = JSON.parse(localStorage.getItem("OrderDetails"));
 console.log(OrderList);
 //研究桌子
 //item要改OrderList
@@ -22,37 +22,36 @@ console.log(OrderList);
 
 
 //►►►_____________________Dom____________________►►►
-const productImgId =document.getElementById("productImgId")
-const productOrderList=document.getElementById("productOrderList")
+const productImgId = document.getElementById("productImgId")
+const productOrderList = document.getElementById("productOrderList")
 //const purchasingValueSP1Id=document.getElementById("purchasingValueSP1Id");
 const purchasingNumAddLessPlus = document.getElementById("purchasingNumAddLessPlus");
 const purchasingPay = document.getElementById("purchasingPay");
 const orderResult = document.getElementById("orderResult");
 //►►►_____________________API____________________►►►
-let postOrderAPI = `${allApi}api/Orders/PostOrder`;
+//let postOrderAPI = `${allApi}api/Orders/PostOrder`;
 //測試line登入用  const MyToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJVY2I0MzQ4NmEwZTUxZTRkNTYwZDU2MWY3NjIzYWQ2OTciLCJQZXJtaXNzaW9uIjoxLCJpYXQiOiI0LzIzLzIwMjEgMjo1MTowNyBQTSIsIkV4cCI6IjQvMjQvMjAyMSAyOjUxOjA3IFBNIn0.ONBKVlzjv2qoVbf2MBfm3pVV1eVIVp0bfvXpTaaKCl4svkb5_bEhKwYa_Fk314oudNOBRV8S1rvFrZP6jDMWqQ";
 const MyToken = localStorage.getItem("mytoken")
 //const license = { headers: { Authorization: `Bearer ${MyToken}` } };
-const nextBtnSpc1=document.getElementById("nextBtnId");
+const nextBtnSpc1 = document.getElementById("nextBtnId");
 
 
-let productImgIdSrt="";
-let productOrderListSrt="";
-let purchasingNumAddLessPlusSrt="";
-let purchasingPaySrt="";
+let productImgIdSrt = "";
+let productOrderListSrt = "";
+let purchasingNumAddLessPlusSrt = "";
+let purchasingPaySrt = "";
 
 
 //►►►渲染產品資料
-function productRender(){
-    let orderResultSrt="";
-    OrderList.forEach(function (item){
-        orderResultSrt+=`
+function productRender() {
+    let orderResultSrt = "";
+    OrderList.forEach(function (item) {
+        orderResultSrt += `
     <tr>
         <td data-set:"${item.ProductId}">
             <div class="productImg" >
-            <img src="http://${item.ProductImg}"  alt="">
-            </div>
-                    
+            <img src="https:${item.ProductImg}"  alt="">
+            </div>      
         </td>
 
         <td>
@@ -76,7 +75,7 @@ function productRender(){
     </tr>`
     });
 
-    orderResult.innerHTML=orderResultSrt;
+    orderResult.innerHTML = orderResultSrt;
 }
 productRender();
 
@@ -84,7 +83,7 @@ productRender();
 //►►►數量加減 價格變動
 //let ProTotalAllSP1=Number(ProTotal)
 
-function quantitySP1(e){
+function quantitySP1(e) {
     console.log(e);
     console.log(e.path[0].classList[1]);
     // if(e.path[0].classList[1] === "addLess" && Quantity >=0){
@@ -117,7 +116,7 @@ function quantitySP1(e){
     // }
 }
 
-orderResult.addEventListener("click",quantitySP1)
+orderResult.addEventListener("click", quantitySP1)
 
 
 
@@ -138,7 +137,7 @@ orderResult.addEventListener("click",quantitySP1)
 // };
 //console.log(shoppingCart);
 
-function text03(){
+function text03() {
 
 
     // if(Quantity <=0 ){
@@ -158,10 +157,10 @@ function text03(){
     //     }}});
     //     shoppingCart.push(cartPushSP1)
     //    localStorage.setItem("OrderDetails",JSON.stringify(cartPushSP1));
-        alert("要去下一頁囉")
-        window.location.replace(`sp2Pay.html`);
-    
-    
+    alert("要去下一頁囉")
+    window.location.replace(`sp2Pay.html`);
+
+
 };
 
-nextBtnSpc1.addEventListener("click",text03)
+nextBtnSpc1.addEventListener("click", text03)

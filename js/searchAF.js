@@ -1,8 +1,8 @@
-let backSearch =localStorage.getItem("backSearch");
-let backSearch2 =localStorage.getItem("backSearch2");
-if(backSearch2 ===null){
-console.log("?");
-}else{
+let backSearch = localStorage.getItem("backSearch");
+let backSearch2 = localStorage.getItem("backSearch2");
+if (backSearch2 === null) {
+  console.log("?");
+} else {
   console.log(backSearch2);
 
 
@@ -37,17 +37,18 @@ JSbtnlow.addEventListener('click', JSLow);
 var JSbtnhigh = document.querySelector(".JSHeightToLow");
 JSbtnhigh.addEventListener('click', JSHigh);
 
-cc.addEventListener("click",commodityLink);
-function commodityLink(e){
-  let commodityLinkId=e.path[1].id;
+cc.addEventListener("click", commodityLink);
+function commodityLink(e) {
+  let commodityLinkId = e.path[1].id;
   console.log();
   if (e.path[1].className !== "commodityLiList") {
-      return;  
-  }else {
-  localStorage.setItem("commodityId",`${commodityLinkId}`);
-  window.location.replace(`commodityPage.html`);
-  //window.location.replace(`?id=${commodityLinkId}`)
-}}
+    return;
+  } else {
+    localStorage.setItem("commodityId", `${commodityLinkId}`);
+    window.location.replace(`commodityPage.html`);
+    //window.location.replace(`?id=${commodityLinkId}`)
+  }
+}
 
 //<li  class="commodityLiList" id="${item.Id}"></li>
 //期間限定
@@ -71,7 +72,7 @@ let FreeDate = [];
 
 //axios抓api
 function rootFolder() {
-  var hhApi = `http://vacationaroma.rocket-coding.com/api/MinProducts/MenuClass?classid=${getIndex}`;
+  var hhApi = `${allApi}api/MinProducts/MenuClass?classid=${getIndex}`;
   console.log(getIndex);
   axios.get(hhApi)
     .then(function (response) {
@@ -96,7 +97,7 @@ function rootFolder() {
 }
 
 function Low() {
-  var LowApi = `http://vacationaroma.rocket-coding.com/api/MinProducts/MenuClassLow?classid=${getIndex}`;
+  var LowApi = `${allApi}api/MinProducts/MenuClassLow?classid=${getIndex}`;
   console.log(getIndex);
   axios.get(LowApi)
     .then(function (response) {
@@ -121,7 +122,7 @@ function Low() {
 }
 
 function High() {
-  var HighApi = `http://vacationaroma.rocket-coding.com/api/MinProducts/MenuClassHigh?classid=${getIndex}`;
+  var HighApi = `${allApi}api/MinProducts/MenuClassHigh?classid=${getIndex}`;
   console.log(getIndex);
   axios.get(HighApi)
     .then(function (response) {
@@ -146,7 +147,7 @@ function High() {
 }
 
 function Free() {
-  var FreeApi = `http://vacationaroma.rocket-coding.com/api/MinProducts/GetIndex`;
+  var FreeApi = `${allApi}api/MinProducts/GetIndex`;
 
   axios.get(FreeApi)
     .then(function (response) {

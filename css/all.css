@@ -965,4 +965,8 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
+
+.cartContentList th {
+  text-align: left;
+}
 /*# sourceMappingURL=all.css.map */
