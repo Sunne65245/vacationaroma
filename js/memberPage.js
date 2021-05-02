@@ -22,44 +22,81 @@ const signOutBtnId = document.getElementById("signOutBtnId")
 const nextIndexBtnId = document.getElementById("nextIndexBtnId")
 let userOrderListRender = [];
 
+
 //補
 const userList = document.getElementById("userList");
+const MemberAPI = `${allApi}api/User/Getuserdata`;
+let Profile = [];
+let lineUserProfile = JSON.parse(localStorage.getItem("lineUserProfile"));
+let Delivery = "";
 //會員資料
-function userListRender() {
-    console.log("會員資料");
+function LINEuserListRender() {
+    console.log("LINE會員資料");
     let userListRenderSrt = "";
-    userListRender.forEach(function (item) {
-        userListRenderSrt += `
-         <img src="${memberProfile.ImgName}" alt="">
-                <h2 class="memberName">${memberProfile.Name}/h2>
+    userListRenderSrt = `
+         <img src="${lineUserProfile.ImgName}" alt="">
+                <h2 class="memberName">${lineUserProfile.Name}</h2>
                 <ul class="selectCommodity">
                     <li>
                         <span>會員帳號</span>
-                        <span>${memberProfile.Email}</span>
+                        <span>${lineUserProfile.Email}</span>
+                    </li>
+                </ul>`
+    userList.innerHTML = userListRenderSrt;
+}
+
+function userListRender() {
+    axios.get(MemberAPI, license)
+        .then(function (response) {
+            Profile = response.data;
+            console.log("會員資料");
+            //修改樣式
+            let userListRenderSrt = "";
+            userListRenderSrt = `
+         <img src="${Profile.ImgName}" alt="">
+                <h2 class="memberName">${Profile.Name}</h2>
+                <ul class="selectCommodity">
+                    <li>
+                        <span>會員帳號</span>
+                        <span>${Profile.Email}</span>
                     </li>
                     <li>
                         <span>手機</span>
-                        <span>${memberProfile.Phone}</span>
+                        <span>${Profile.Phone}</span>
                     </li>
                 </ul>`
-    })
-    userList.innerHTML = userListRenderSrt;
-
+            userList.innerHTML = userListRenderSrt;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
+
 //畫面載入渲染
-userListRender();
+if (linetoken !== null) {
+    LINEuserListRender();
+} else {
+    userListRender();
+}
+
+
 
 function userCartListRender() {
     console.log("a");
     let userOrderListRenderSrt = "";
     userOrderListRender.forEach(function (item) {
+        if (item.Payment === 1) {
+            Delivery = "店取";
+        } else {
+            Delivery = "宅配";
+        }
         userOrderListRenderSrt += `
         <tr>
-        <th rowspan="${item.length}">${item.Id}</th>
-        <th rowspan="${item.length}">${item.AddTime}</th>
-        <th rowspan="${item.length}">${item.SubTotal}</th>
-        <th rowspan="${item.length}">店取或宅配${item.AddTime}</th>
-        <th rowspan="${item.length}">${item.Name}</th>
+        <th>${item.Id}</th>
+        <th>${item.AddTime}</th>
+        <th>${item.SubTotal}</th>
+        <th>${Delivery} ${item.AddTime}</th>
+        <th>${item.Name}</th>
         <th>${item.ProductName}</th>
         </tr>
         `
@@ -88,8 +125,10 @@ function signOutBtn() {
     localStorage.removeItem("linetoken");
     localStorage.removeItem("friend");
     localStorage.removeItem("name");
+    localStorage.removeItem("lineUserProfile");
     localStorage.removeItem("OrderDetails");
     localStorage.removeItem("orderId");
+    localStorage.removeItem("payment");
     window.location.replace(`${domain}/index.html`);
 }
 signOutBtnId.addEventListener("click", signOutBtn)

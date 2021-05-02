@@ -40,6 +40,7 @@ function qaz() {
                         console.log(lineProfile);
                         localStorage.setItem("linetoken", `${res.data.linetoken}`);
                         localStorage.setItem("name", `${lineProfile.Name}`);
+                        localStorage.setItem("lineUserProfile", JSON.stringify(lineProfile));
                         //修改樣式
                         console.log("第一次line登入名稱")
                         let loginMemberSrt = "";

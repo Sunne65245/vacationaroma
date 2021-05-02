@@ -53,7 +53,7 @@ function productRender() {
     <tr>
         <td data-set:"${item.ProductId}">
             <div class="productImg" >
-            <img src="${item.ProductImg}" alt="">
+            <img src="https:${item.ProductImg}" alt="">
             </div>      
         </td>
         <td>
@@ -69,7 +69,7 @@ function productRender() {
             </div>
         </td>
         <td>
-            <span id="purchasingPay">NT.${OrderList.ProTotal}</span>
+            <span id="purchasingPay">NT.${item.Price}</span>
         </td>
     </tr>`;
     });

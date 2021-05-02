@@ -1,13 +1,18 @@
-
-.cartSp5{
+.cartSp5 {
     margin: 2rem auto;
-    text-align:center;
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
 }
 
-.cartContentList{
-    th{
+.cartContentList {
+    th {
         text-align: left;
+    }
+    td {
+        img {
+            height: 5rem;
+            text-align: center;
+        }
     }
 }

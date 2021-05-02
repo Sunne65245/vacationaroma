@@ -969,4 +969,9 @@ body {
 .cartContentList th {
   text-align: left;
 }
+
+.cartContentList td img {
+  height: 5rem;
+  text-align: center;
+}
 /*# sourceMappingURL=all.css.map */
