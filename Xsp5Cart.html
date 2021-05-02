@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shoppingCart5</title>
+    <title>shoppingCart1</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/all.css">
 </head>
@@ -39,7 +39,7 @@
             <span>訂購完成</span>
         </h2>
         <!-- 補 -->
-
+        <h3 class="deliveryTitle">收件資訊</h3>
 
         <ul class="deliveryList" id="deliveryLinePickerId">
         </ul>
@@ -53,30 +53,11 @@
             </thead>
 
 
-            <tbody class="cartContentList cartList " id="userCartList">
-                <!-- <tr>
-                    <td>
-                        <div class="productImg">
-                            <img src="./img/素材/20170502171200.jpg" alt="">
-                        </div>
-                    </td>
-
-                    <td>
-                        <div>
-                            <h3 class="product">台灣 古坑 日曬 比里咖啡莊園</h3>
-                            <span class="grinding">沖煮方式：義式手沖壺</span>
-                            <span class="price">單價 1690</span>
-                        </div>
-                    </td>
-
-                    <td>
-                        <span id="purchasingValueSP1Id">2</span>
-                    </td>
-                    <td>
-                        <span>NT.1690</span>
-                    </td>
-
-                </tr> -->
+            <tbody class="cartContentList" id="userCartList">
+                <!-- <th>訂購日期</th>
+                <th>金額</th>
+                <th>收件人</th>
+                <th>訂單內容</th> -->
             </tbody>
             <!-- 總計 -->
             <tfoot id="ordersubtotal">
@@ -115,13 +96,11 @@
     <!-- 尾 店家資訊 結束 -->
 
     <!-- 載入ＪＳ -->
-    <script src="./js/API.js?v=050104"></script>
+    <script src="./js/API.js?v=050225"></script>
 
     <!-- 判斷登入 -->
-    <script src="./js/loginMember.js?v=050104"></script>
-    <script src="./js/sp5Cart.js?v=050113"></script>
-
-    <!-- 好了再打開 -->
+    <script src="./js/loginMember.js?v=050225"></script>
+    <script src="./js/sp5Cart.js?v=050225"></script>
     <script>
         window.onbeforeunload = function (e) {
             var e = window.event || e;

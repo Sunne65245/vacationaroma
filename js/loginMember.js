@@ -6,8 +6,7 @@ const loginMember = document.querySelector(".loginMember");
 let memberProfile = [];
 let memberToken = localStorage.getItem("mytoken");
 let lineProfile = [];
-const license = { headers: { Authorization: `Bearer ${memberToken}` } };
-
+let license = { headers: { Authorization: `Bearer ${memberToken}` } }
 
 // 先抓網址檢查有沒有問好？
 let q = window.location.href.indexOf("?f")//如果找到會大於-1`
@@ -69,6 +68,7 @@ if (q > -1) {
 let linetoken = localStorage.getItem("linetoken");
 let username = localStorage.getItem("name");
 
+
 //非第一次line登入
 if (linetoken !== null) {
     console.log("非第一次line登入名稱")
@@ -107,3 +107,25 @@ else {
 
 }
 
+//補
+let headtoken = "";
+let checktoken = "";
+//是否有加好友
+let friend = localStorage.getItem("friend");
+//訊息通知
+let notice = 0;
+//用變數token接值(line還是會員)
+if (linetoken !== null) {
+    headtoken = { headers: { Authorization: `Bearer ${linetoken}` } };
+    checktoken = linetoken;
+
+} else {
+    headtoken = { headers: { Authorization: `Bearer ${memberToken}` } }
+    checktoken = memberToken;
+}
+
+if (friend === "true") {
+    notice = 1;//LINE通知
+} else {
+    notice = 2;//Email通知
+}

@@ -28,17 +28,16 @@ let orderLineData = "";
 let orderId = "";
 let PostOrderAPI = `${allApi}api/Orders/PostOrder/${orderId}`;
 
-//是否有加好友
-let notice = localStorage.getItem("friend");
-if (notice === "true") {
-    notice = "1";//LINE通知
-} else {
-    notice = "2";//Email通知
-}
+
+// //是否有加好友
+// let notice = localStorage.getItem("friend");
+// if (notice === "true") {
+//     notice = "1";//LINE通知
+// } else {
+//     notice = "2";//Email通知
+// }
 
 function confirmLineOrder(e) {
-
-
     if (LineName.value === "") {
         alert("名字未填寫");
         return
@@ -54,15 +53,15 @@ function confirmLineOrder(e) {
         console.log("ya");
         //再把塞值放到這
         orderLineData = {
-            "mytoken": linetoken,
+            "mytoken": checktoken,
             "order": {
                 "Name": String(LineName.value),
                 "Phone": LinePhone.value,
                 "Address": LineAdd.value,
-                "Payment": 1,   //LINEPay 
+                "Payment": 1,   //LINEPay
                 "ProTotal": Number(dataLineProTotal),  //產品總額
-                "Shipping": 60,    //運費固定
-                "SubTotal": dataLineProTotal + 60,   //訂單總額 待改
+                "Shipping": 0,    //運費固定
+                "SubTotal": dataLineProTotal,   //訂單總額 待改
                 "Notice": notice,
                 "OrderDetails": OrderSp3Line,
                 //data-set:"${item.ProductId} 額外的ＩＤ

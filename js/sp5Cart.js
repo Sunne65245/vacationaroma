@@ -47,7 +47,7 @@ const orderSubtotal = document.getElementById("ordersubtotal");
 //►►►渲染產品資料
 function productRender() {
     let orderResultSrt = "";
-    let subtoalStr = "";
+    //let subtoalStr = "";
     productList.forEach(function (item) {
         orderResultSrt += `
     <tr>
@@ -78,16 +78,6 @@ function productRender() {
     //orderSubtotal.innerHTML = subtoalStr;
 }
 
-
-//補 用變數token接值(line還是會員)
-let token = "";
-//let address = "";
-if (linetoken !== null) {
-    token = { headers: { Authorization: `Bearer ${linetoken}` } };
-} else {
-    token = license;
-    address = "display:none;";
-}
 //訂單id
 let orderLineId = JSON.parse(localStorage.getItem("orderId"));
 //補linepay兩隻api
@@ -98,10 +88,33 @@ let data = {
 //►►►_____________________API____________________►►►
 //補
 let memberPageAPI = `${allApi}api/Orders/GetOrderList/${orderLineId}`;
+let payment = localStorage.getItem("payment");
 //let pickerLineAPI = `${allApi}api/Orders/Consignee/${orderLineId}`;
 
+console.log(headtoken);
+
+//補
+//linepay專用--第二支api第三支api
+if (linetoken !== null && payment === "1") {
+    let c = window.location.search.split(`=`)[1].split(`&`)[0];
+    let confirmAPI = `${allApi}api/Pay/Postconfirm?transactionId=${c}`;
+    axios.post(confirmAPI, data)
+        .then(function (response) {
+            console.log(response.data);
+            console.log("linepay訂單成立");
+        });
+    //?
+    let StatusAPI = `${allApi}api/Pay/Put`;
+    axios.put(StatusAPI, data)
+        .then(function (response) {
+            console.log(response.data);
+            console.log("linepay訂單狀態為處理中");
+        });
+}
+
+
 //共用---訂購完成(本人訂單資料)
-axios.get(memberPageAPI, token)
+axios.get(memberPageAPI, headtoken)
     .then(function (response) {
         productList = response.data.detaildata;
         OrderList = response.data;
@@ -142,24 +155,7 @@ axios.get(memberPageAPI, token)
 //         console.log(error);
 //     });
 
-//補
-//linepay專用--第二支api第三支api
-if (linetoken !== null) {
-    let c = window.location.search.split(`=`)[1].split(`&`)[0];
-    let confirmAPI = `${allApi}api/Pay/Postconfirm?transactionId=${c}`;
-    axios.post(confirmAPI, data)
-        .then(function (response) {
-            console.log(response.data);
-            console.log("linepay訂單成立");
-        });
-    //?
-    let StatusAPI = `${allApi}api/Pay/Put`;
-    axios.put(StatusAPI, data)
-        .then(function (response) {
-            console.log(response.data);
-            console.log("linepay訂單狀態為處理中");
-        });
-}
+
 // function signOutBtn() {
 //     //console.log("aaa");
 //     localStorage.removeItem("mytoken");

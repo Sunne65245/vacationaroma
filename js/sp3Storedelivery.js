@@ -25,7 +25,6 @@ OrderSp3.forEach(function (item) {
 })
 
 let orderData = "";
-
 console.log(orderData);
 
 
@@ -33,9 +32,19 @@ console.log(orderData);
 let orderId = "";
 let PostOrderAPI = `${allApi}api/Orders/PostOrder`;
 
+
 // let Phone=recipientPhone.value;
 // let MobileReg = /^(09)[0-9]{8}$/;
 // (str.match(MobileReg)) ? true : false;
+
+// //補 是否有加好友
+// let notice = localStorage.getItem("friend");
+// if (notice === "true") {
+//     notice = "1";//LINE通知
+// } else {
+//     notice = "2";//Email通知
+// }
+
 function confirmOrder() {
 
     if (recipientName.value === "") {
@@ -48,15 +57,16 @@ function confirmOrder() {
 
     else {
         orderData = {
-            "mytoken": memberToken,
+            "mytoken": checktoken,
             "order": {
                 "Name": String(recipientName.value),
                 "Phone": recipientPhone.value,
                 "Address": "門市取貨付款",
                 "Payment": 2,   //門市取貨
                 "ProTotal": Number(dataProTotal),  //產品總額
-                "Shipping": 60,    //運費固定
-                "SubTotal": dataProTotal + 60,   //訂單總額 待改
+                "Shipping": 0,    //運費固定
+                "SubTotal": dataProTotal,   //訂單總額 待改
+                "Notice": notice,
                 "OrderDetails": OrderSp3,
                 //data-set:"${item.ProductId} 額外的ＩＤ
             }

@@ -49,14 +49,13 @@ let orderConfirm = [];
 
 //lienPayApl
 let LinePayApi = `${allApi}api/Pay/Getreserve/${orderLineId}`;
-//補
-const linelicense = { headers: { Authorization: `Bearer ${linetoken}` } };
+
 
 let lineDataWeb = ""
 function goLinePay() {
 
 
-    axios.get(LinePayApi, linelicense)
+    axios.get(LinePayApi, headtoken)
         .then(function (response) {
             console.log(response.data);
             lineDataWeb = response.data.web;
@@ -85,15 +84,8 @@ function goLinePay() {
 stepBtnLineId.addEventListener("click", goLinePay);
 
 
-
-
-
-
-
-
-
 //渲染用
-axios.get(pickerLineAPI, linelicense)
+axios.get(pickerLineAPI, headtoken)
     .then(function (response) {
         console.log(response);
         orderConfirm = response.data;

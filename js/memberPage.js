@@ -22,6 +22,32 @@ const signOutBtnId = document.getElementById("signOutBtnId")
 const nextIndexBtnId = document.getElementById("nextIndexBtnId")
 let userOrderListRender = [];
 
+//補
+const userList = document.getElementById("userList");
+//會員資料
+function userListRender() {
+    console.log("會員資料");
+    let userListRenderSrt = "";
+    userListRender.forEach(function (item) {
+        userListRenderSrt += `
+         <img src="${memberProfile.ImgName}" alt="">
+                <h2 class="memberName">${memberProfile.Name}/h2>
+                <ul class="selectCommodity">
+                    <li>
+                        <span>會員帳號</span>
+                        <span>${memberProfile.Email}</span>
+                    </li>
+                    <li>
+                        <span>手機</span>
+                        <span>${memberProfile.Phone}</span>
+                    </li>
+                </ul>`
+    })
+    userList.innerHTML = userListRenderSrt;
+
+}
+//畫面載入渲染
+userListRender();
 
 function userCartListRender() {
     console.log("a");
@@ -29,11 +55,11 @@ function userCartListRender() {
     userOrderListRender.forEach(function (item) {
         userOrderListRenderSrt += `
         <tr>
-        <th>${item.Id}</th>
-        <th>${item.AddTime}</th>
-        <th>${item.SubTotal}</th>
-        <th>店取或宅配${item.AddTime}</th>
-        <th>${item.Name}</th>
+        <th rowspan="${item.length}">${item.Id}</th>
+        <th rowspan="${item.length}">${item.AddTime}</th>
+        <th rowspan="${item.length}">${item.SubTotal}</th>
+        <th rowspan="${item.length}">店取或宅配${item.AddTime}</th>
+        <th rowspan="${item.length}">${item.Name}</th>
         <th>${item.ProductName}</th>
         </tr>
         `
@@ -42,16 +68,9 @@ function userCartListRender() {
 
 }
 
-//補 用變數token接值(line還是會員)
-let token = "";
-
-if (linetoken !== null) {
-    token = { headers: { Authorization: `Bearer ${linetoken}` } };
-} else {
-    token = license;
-}
+console.log(headtoken);
 //共用--歷史訂單
-axios.get(memberPageAPI, token)
+axios.get(memberPageAPI, headtoken)
     .then(function (response) {
         userOrderListRender = response.data.orderdata;
         console.log(userOrderListRender);
@@ -67,6 +86,10 @@ function signOutBtn() {
     localStorage.removeItem("mytoken");
     //補line註銷
     localStorage.removeItem("linetoken");
+    localStorage.removeItem("friend");
+    localStorage.removeItem("name");
+    localStorage.removeItem("OrderDetails");
+    localStorage.removeItem("orderId");
     window.location.replace(`${domain}/index.html`);
 }
 signOutBtnId.addEventListener("click", signOutBtn)

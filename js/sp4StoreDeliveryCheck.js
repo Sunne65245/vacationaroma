@@ -2,7 +2,7 @@
 // ►►► () *,.*♫_____________________☺____________________♫*,.*
 
 // ►►► 預設載入產品ＡＰＩ
-let orderId=JSON.parse(localStorage.getItem("orderId"));//訂單id
+let orderId = JSON.parse(localStorage.getItem("orderId"));//訂單id
 console.log(orderId);
 // let OrderListData=[OrderList];
 // console.log(OrderListData)
@@ -17,21 +17,21 @@ let orderConfirm = [];
 
 function goIndex() {
 
-    window.location.replace(`Xsp5Cart.html`)
-    
+    window.location.replace(`${domain}/Xsp5Cart.html`)
+
 };
 
-stepBtnSDId.addEventListener("click",goIndex);
+stepBtnSDId.addEventListener("click", goIndex);
 
-axios.get(pickerAPI,license)
+axios.get(pickerAPI, headtoken)
     .then(function (response) {
         console.log(response);
-        orderConfirm=response.data;
+        orderConfirm = response.data;
         console.log(orderConfirm);
 
         //修改樣式
         let Srt = "";
-        Srt+=`
+        Srt += `
         <li>姓名
             <span>${orderConfirm.Name}</span>
             <hr class="solid">
@@ -42,7 +42,7 @@ axios.get(pickerAPI,license)
             <hr class="solid">
         </li>`;
 
-        deliveryPickerId.innerHTML=Srt;
+        deliveryPickerId.innerHTML = Srt;
     })
     .catch(function (error) {
         console.log(error);
