@@ -32,12 +32,23 @@ function try02() {
         .then(function (response) {
             signUpDate = response.data;
             console.log(signUpDate);
-            alert("註冊成功跳轉回登入,請到mail開通帳號");
-            window.location.replace(`${domain}/login.html`)
+
+            switch (signUpDate.message) {
+                case 5:
+                    alert("會員帳號已經有人使用");
+                    break;
+                case 15:
+                    alert("Email格式不正確");
+                    break;
+                case 16:
+                    alert("手機格式不正確");
+                    break;
+            }
+            if (signUpDate.check === "ok") {
+                alert("註冊成功跳轉回登入,請到mail開通帳號");
+                window.location.replace(`${domain}/login.html`);
+            }
         })
-        .catch(function (error) {
-            console.log(error);
-        });
 
 
     // axios.request({
