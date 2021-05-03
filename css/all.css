@@ -140,7 +140,7 @@ body {
   z-index: 0;
   height: 30rem;
   background-size: cover;
-  background-image: url("/img/素材/coffee-2540277_1280.jpg");
+  background-image: url("../img/index-pexels-juan-pablo-serrano-arenas-894695.jpeg");
 }
 
 .indexBanner .indexBannerContent {
@@ -329,15 +329,15 @@ body {
 }
 
 .footer .IGBtn {
-  background-image: url("/img/iconIG.png");
+  background-image: url("../img/iconIG.png");
 }
 
 .footer .FBBtn {
-  background-image: url("/img/iconFB.png");
+  background-image: url("../img/iconFB.png");
 }
 
 .footer .LineBtn {
-  background-image: url("/img/iconLine.png");
+  background-image: url("../img/iconLine.png");
 }
 
 .footer .mapKit {
@@ -450,7 +450,7 @@ body {
 }
 
 .memberContent .memberNav .memberName {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 
 .memberContent .memberNav .memberInformation {
@@ -869,6 +869,11 @@ body {
 }
 
 .nextBtn {
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   text-align: center;
   margin: 1rem 0;
   padding: 1rem;
@@ -959,6 +964,13 @@ body {
   font-size: 1rem;
 }
 
+.nextBtnRight {
+  display: block;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .cartSp5 {
   margin: 2rem auto;
   text-align: center;
@@ -966,12 +978,71 @@ body {
   font-weight: bold;
 }
 
-.cartContentList th {
+.cartContentList img {
+  height: 5rem;
+  text-align: center;
+}
+
+.theadList th {
   text-align: left;
 }
 
-.cartContentList td img {
-  height: 5rem;
-  text-align: center;
+.loader_container {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border: 3px dotted #C7C7BB;
+  border-radius: 50%;
+  position: relative;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+}
+
+.loader::after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: -5px;
+  background-color: #7F867B;
 }
 /*# sourceMappingURL=all.css.map */

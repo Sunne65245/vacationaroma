@@ -50,8 +50,8 @@ function productRender() {
     //let subtoalStr = "";
     productList.forEach(function (item) {
         orderResultSrt += `
-    <tr>
-        <td data-set:"${item.ProductId}">
+    <tr class="OrderItem">
+        <td data-set"${item.ProductId}">
             <div class="productImg" >
             <img src="https:${item.ProductImg}" alt="">
             </div>      
@@ -112,6 +112,11 @@ if (linetoken !== null && payment === "1") {
         });
 }
 
+setTimeout ( className , 1800 ) 
+
+function className(){
+    document.querySelector(".loader_container").className = "hide";
+}
 
 //共用---訂購完成(本人訂單資料)
 axios.get(memberPageAPI, headtoken)

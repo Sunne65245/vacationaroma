@@ -53,7 +53,7 @@ function userListRender() {
             //修改樣式
             let userListRenderSrt = "";
             userListRenderSrt = `
-         <img src="${Profile.ImgName}" alt="">
+        
                 <h2 class="memberName">${Profile.Name}</h2>
                 <ul class="selectCommodity">
                     <li>

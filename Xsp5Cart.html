@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shoppingCart1</title>
+    <title>shoppingCart5</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/all.css?v=050203">
 </head>
@@ -39,29 +39,37 @@
             <span>訂購完成</span>
         </h2>
         <!-- 補 -->
-        <h3 class="deliveryTitle">收件資訊</h3>
 
         <ul class="deliveryList" id="deliveryLinePickerId">
         </ul>
+
+        <div class="loader_container">
+            <div class="loader"></div>
+        </div>
+
         <table class="cartContent setInFrame">
 
-            <thead class="cartList">
+            <thead class="cartList theadList">
                 <th></th>
                 <th>商品名稱</th>
                 <th>數量</th>
                 <th>品項價格</th>
             </thead>
 
+            
 
-            <tbody class="cartContentList" id="userCartList">
+
+            <tbody class="cartContentList cartList" id="userCartList">
                 <!-- <th>訂購日期</th>
                 <th>金額</th>
                 <th>收件人</th>
                 <th>訂單內容</th> -->
             </tbody>
+
+
+
             <!-- 總計 -->
             <tfoot id="ordersubtotal">
-
                 <td colspan="15" align="right" class="tdNotSolid">
                     <div class="nextBtn" id="nextBtnId">
                         <span>回首頁</span>
@@ -70,6 +78,10 @@
             </tfoot>
 
         </table>
+
+
+
+
 
     </div>
 
@@ -101,6 +113,7 @@
     <!-- 判斷登入 -->
     <script src="./js/loginMember.js?v=050238"></script>
     <script src="./js/sp5Cart.js?v=050241"></script>
+    <!-- 好了再打開
     <script>
         window.onbeforeunload = function (e) {
             var e = window.event || e;
@@ -109,7 +122,7 @@
             localStorage.removeItem("orderId");
             localStorage.removeItem("payment");
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

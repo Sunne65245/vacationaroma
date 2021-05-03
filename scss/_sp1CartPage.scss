@@ -31,7 +31,6 @@ body{
 
 
 .cartList{
-    // text-align: center;
     
     width: 100%;
 
@@ -58,28 +57,28 @@ body{
 
         h3{
             font-size: 1.5rem;
-            //margin-bottom: 0.5rem;
+
         }
 
 
         .productImg{
-            //max-width: 8rem;  
+
             padding-top: 1rem;
             overflow:hidden;
         }
         img{
             height: 5rem;
-        //    width: 100%; 
             text-align: center;
-            //margin-top: 2rem;
         }
 
     }
+    
     .tdNotSolid{
         border:none
     }
 
 }
+
 .grinding{
     line-height: 1.5rem;
 }
@@ -127,6 +126,8 @@ color: $VABorder ;
 
 
 .nextBtn{
+    display: block;
+    flex-direction:row-reverse;
     text-align: center;
     margin: 1rem 0;
     padding: 1rem;

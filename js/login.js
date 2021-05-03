@@ -20,7 +20,7 @@ const signUpBtnId = document.getElementById("signUpBtnId")
 
 function signUp() {
     console.log("a");
-    window.location.replace(`signUp.html`);
+    window.location.replace(`${domain}signUp.html`);
 }
 signUpBtnId.addEventListener("click", signUp)
 
