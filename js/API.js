@@ -15,5 +15,5 @@ if (OrderDetailsJudge == null) {
     localStorage.setItem("OrderDetails", JSON.stringify(OrderDetails));
 }
 // 預設登入網址
-//let domain = `https://vacationaroma.rocket-coding.com/vacationaroma`;
-let domain = "https://127.0.0.1:5501";
+let domain = `https://vacationaroma.rocket-coding.com/vacationaroma`;
+//let domain = `http://127.0.0.1:5500`;

@@ -158,7 +158,7 @@ function text03() {
     //     shoppingCart.push(cartPushSP1)
     //    localStorage.setItem("OrderDetails",JSON.stringify(cartPushSP1));
     alert("要去下一頁囉")
-    window.location.replace(`sp2Pay.html`);
+    window.location.replace(`${domain}/sp2Pay.html`);
 
 
 };

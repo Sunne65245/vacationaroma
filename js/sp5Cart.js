@@ -50,8 +50,8 @@ function productRender() {
     //let subtoalStr = "";
     productList.forEach(function (item) {
         orderResultSrt += `
-    <tr class="OrderItem">
-        <td data-set"${item.ProductId}">
+    <tr>
+        <td data-set:"${item.ProductId}">
             <div class="productImg" >
             <img src="https:${item.ProductImg}" alt="">
             </div>      
@@ -111,10 +111,10 @@ if (linetoken !== null && payment === "1") {
             console.log("linepay訂單狀態為處理中");
         });
 }
+//定時器
+setTimeout(className, 1800)
 
-setTimeout ( className , 1800 ) 
-
-function className(){
+function className() {
     document.querySelector(".loader_container").className = "hide";
 }
 

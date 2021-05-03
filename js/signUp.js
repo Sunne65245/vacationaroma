@@ -32,6 +32,7 @@ function try02() {
         .then(function (response) {
             signUpDate = response.data;
             console.log(signUpDate);
+            alert("註冊成功跳轉回登入,請到mail開通帳號");
             window.location.replace(`${domain}/login.html`)
         })
         .catch(function (error) {

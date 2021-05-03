@@ -32,6 +32,7 @@ let Delivery = "";
 //會員資料
 function LINEuserListRender() {
     console.log("LINE會員資料");
+    console.log(lineUserProfile);
     let userListRenderSrt = "";
     userListRenderSrt = `
          <img src="${lineUserProfile.ImgName}" alt="">
@@ -53,7 +54,7 @@ function userListRender() {
             //修改樣式
             let userListRenderSrt = "";
             userListRenderSrt = `
-        
+         <img src="${Profile.ImgName}" alt="">
                 <h2 class="memberName">${Profile.Name}</h2>
                 <ul class="selectCommodity">
                     <li>
@@ -94,7 +95,7 @@ function userCartListRender() {
         <tr>
         <th>${item.Id}</th>
         <th>${item.AddTime}</th>
-        <th>${item.SubTotal}</th>
+        <th>${item.Price}</th>
         <th>${Delivery} ${item.AddTime}</th>
         <th>${item.Name}</th>
         <th>${item.ProductName}</th>

@@ -7,7 +7,8 @@ let memberProfile = [];
 let memberToken = localStorage.getItem("mytoken");
 let lineProfile = [];
 let license = { headers: { Authorization: `Bearer ${memberToken}` } }
-
+//頭部導覽列
+let loginMemberSrt = "";
 // 先抓網址檢查有沒有問好？
 let q = window.location.href.indexOf("?f")//如果找到會大於-1`
 function qaz() {
@@ -43,7 +44,6 @@ function qaz() {
                         localStorage.setItem("lineUserProfile", JSON.stringify(lineProfile));
                         //修改樣式
                         console.log("第一次line登入名稱")
-                        let loginMemberSrt = "";
                         loginMemberSrt = `<ul class="loginMember">
         <li><a href="./memberPage.html">${lineProfile.Name} 您好</a></li>
         <li><a href="./sp1Cart.html">購物車</a></li>
@@ -73,13 +73,14 @@ let username = localStorage.getItem("name");
 //非第一次line登入
 if (linetoken !== null) {
     console.log("非第一次line登入名稱")
-    //修改樣式
-    let loginMemberSrt = "";
-    loginMemberSrt = `<ul class="loginMember">
+    if (loginMemberSrt === "") {
+        //修改樣式
+        loginMemberSrt = `<ul class="loginMember">
         <li><a href="./memberPage.html">${username} 您好</a></li>
         <li><a href="./sp1Cart.html">購物車</a></li>
         </ul>  `;
-    loginMember.innerHTML = loginMemberSrt;
+        loginMember.innerHTML = loginMemberSrt;
+    }
 }
 
 //一般會員是否登入判斷x`
@@ -93,14 +94,14 @@ else {
             memberProfile = response.data;
             //console.log(`axios的${memberProfile.Name}`);
             console.log(`會員登入名稱${memberProfile.Name}`)
-            //修改樣式
-            let loginMemberSrt = "";
-            loginMemberSrt = `<ul class="loginMember">
+            if (loginMemberSrt === "") {
+                //修改樣式
+                loginMemberSrt = `<ul class="loginMember">
         <li><a href="./memberPage.html">${memberProfile.Name} 您好</a></li>
         <li><a href="./sp1Cart.html">購物車</a></li>
         </ul>  `;
-
-            loginMember.innerHTML = loginMemberSrt;
+                loginMember.innerHTML = loginMemberSrt;
+            }
         })
         .catch(function (error) {
             console.log(error);

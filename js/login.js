@@ -20,7 +20,7 @@ const signUpBtnId = document.getElementById("signUpBtnId")
 
 function signUp() {
     console.log("a");
-    window.location.replace(`${domain}signUp.html`);
+    window.location.replace(`${domain}/signUp.html`);
 }
 signUpBtnId.addEventListener("click", signUp)
 
@@ -33,8 +33,8 @@ function login() {
 
     axios.post(API, VaLogin)
         .then(function (response) {
-            console.log(response);
             userToken = response.data.mytoken;
+            console.log(userToken);
             localStorage.setItem("mytoken", `${response.data.mytoken}`);
 
             //登入成功 要寫跳轉的功能 可以額外寫函式再放進來
