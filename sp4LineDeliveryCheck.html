@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sp4LineDeliveryCheck</title>
-    <link rel="stylesheet" href="./css/all.css?b=17050301">
+    <link rel="stylesheet" href="./css/all.css?b=17050403">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
@@ -53,19 +53,7 @@
             <h3 class="deliveryTitle">收件資訊確認</h3>
 
             <ul class="deliveryList" id="deliveryLinePickerId">
-                <!-- <li>姓名
-                    <span>孫小毛</span>
-                    <hr class="solid">
-                </li>
-
-                <li>手機
-                    <span>0912-345678</span>
-                    <hr class="solid">
-                </li>
-                <li>地址
-                    <span>高雄</span>
-                    <hr class="solid">
-                </li> -->
+            <!-- 渲染訂購人資訊 -->
 
             </ul>
 
@@ -89,17 +77,24 @@
             <li>門市地址 高雄市鹽埕區假期一路3F</li>
 
         </ul>
-        <div class="mapkit">
+        <div class="mapKit setInFrame">
+            
+            <!-- 地圖最後載入 -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.294170546787!2d120.300311!3d22.6043902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9f297a86cf40dfb!2z6auY6ZuE6Luf6auU56eR5oqA5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1620052976128!5m2!1szh-TW!2stw"
+                width="512" height="200" style="border:0;" allowfullscreen="" >  
+            </iframe>  
         </div>
+
 
     </div>
     <!-- 尾 店家資訊 結束 -->
 
     <!-- 載入ＪＳ -->
-    <script src="./js/API.js?b=17050301"></script>
+    <script src="./js/API.js?b=17050403"></script>
     <!-- 判斷登入 -->
-    <script src="./js/loginMember.js?b=17050301"></script>
-    <script src="./js/sp4LineDeliveryCheck.js?b=17050301"></script>
+    <script src="./js/loginMember.js?b=17050403"></script>
+    <script src="./js/sp4LineDeliveryCheck.js?b=17050403"></script>
 
 </body>
 

@@ -1,16 +1,5 @@
-let backSearch = localStorage.getItem("backSearch");
-let backSearch2 = localStorage.getItem("backSearch2");
-if (backSearch2 === null) {
-  console.log("?");
-} else {
-  console.log(backSearch2);
-
-
-}
-
 
 //jq抓li分類值
-var getIndex = "";
 $(document).ready(function () {
   $('.commodityArea').on('click', 'li', function (e) {
     getIndex = $(this).data('value');
@@ -19,8 +8,31 @@ $(document).ready(function () {
   });
 });
 
-//畫面初始化(期間限定)
-Free();
+//補 初始化綁回去下拉選單
+//js li下拉選單收合
+let backSearchi = localStorage.getItem("backSearch2");
+var toggler = document.getElementsByClassName("caret");
+let i;
+if (backSearchi !== null) {
+  console.log("有值")
+  toggler[backSearchi].parentElement.querySelector(".commodityArea").classList.toggle("active");
+  getIndex = localStorage.getItem("backSearch");
+  rootFolder();
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function () {
+      this.parentElement.querySelector(".commodityArea").classList.toggle("active");
+    });
+  }
+} else {
+  console.log("沒值");
+  //畫面初始化(期間限定)
+  Free();
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function () {
+      this.parentElement.querySelector(".commodityArea").classList.toggle("active");
+    });
+  }
+}
 
 //產品渲染內容區
 const cc = document.querySelector('.commodity');
@@ -50,18 +62,10 @@ function commodityLink(e) {
   }
 }
 
-//<li  class="commodityLiList" id="${item.Id}"></li>
 //期間限定
-var free = document.querySelector(".free");
+let free = document.querySelector(".free");
 free.addEventListener('click', Free);
-//js li下拉選單收合
-var toggler = document.getElementsByClassName("caret");
-var i;
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function () {
-    this.parentElement.querySelector(".commodityArea").classList.toggle("active");
-  });
-}
+
 
 
 //data資料

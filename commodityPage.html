@@ -8,8 +8,10 @@
     <title>commodityPage</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/all.css?b=17050301">
+    <link rel="stylesheet" href="./css/all.css?b=17050403">
     <style>
+
+        /*  AF協作 左方商品選單樣式修改與ＪＱ*/
         ul {
             list-style-type: none;
         }
@@ -26,6 +28,8 @@
         .active {
             display: block;
         }
+        /*  AF協作 左方商品選單與ＪＱ */
+
     </style>
 </head>
 
@@ -65,12 +69,11 @@
                     <hr class="solid">
                 </li>
 
-                <!-- <li><a class="free">特惠組合</a>
-                    <hr class="solid">
-                </li> -->
 
+
+                <!-- AF協作 -->
                 <li>
-                    <span class="caret">台灣商品</span>
+                    <span class="caret" id="index1">台灣商品</span>
                     <hr class="solid">
                     <ul class="commodityArea">
                         <li data-value="3001">台灣阿里山</a></li>
@@ -79,7 +82,7 @@
                     </ul>
                 </li>
                 <li>
-                    <span class="caret">中南美洲商品</span>
+                    <span class="caret" id="index2">中南美洲商品</span>
                     <hr class="solid">
                     <ul class="commodityArea">
                         <li data-value="4001">巴拿馬</li>
@@ -88,18 +91,18 @@
                     </ul>
                 </li>
                 <li>
-                    <!-- <a href="" ></a> -->
-                    <span class="caret">非洲商品</span>
+
+                    <span class="caret" id="index3">非洲商品</span>
                     <hr class="solid">
                     <ul class="commodityArea">
                         <li data-value="5001">衣索比亞</li>
                     </ul>
                 </li>
             </ul>
-
-
         </div>
+        <!-- AF協作 -->
         <!-- 商品選單欄位 結束 -->
+        
 
         <!-- 商品介紹 開始 -->
         <div class="purchasing">
@@ -131,8 +134,6 @@
 
                     <li class="selectPurchasingNum">
                         <div class="purchasingNum" id="cartLessPlus">
-
-                            <!-- <a href="" >-</a> -->
                             <span class="selectValueAddSub addLess">-</span>
                             <input type="text" name="" id="purchasingValueId" value="0" class="purchasingValue">
                             <span class="selectValueAddSub addPlus">+</span>
@@ -157,9 +158,7 @@
 
                 <span>描述</span>
                 <div id="pageAreaText">
-                    <!-- <p>*本商品有多款外包裝，照片僅供參考。</p>
-                    <p>*商品上架時間不等於烘焙時間，請放心。</p>
-                    <p>*您可以在『額外資訊』找到風味指標。風味指標並非烘焙度。風味指標越低，代表口味越沈重且不酸；越高則是有更高的果酸感，口味越清爽。您也可以利用風味指標與咖啡豆總表，快速選擇您喜愛的風味。</p> -->
+                    <!-- 渲染產品介紹文字 -->
                 </div>
 
             </div>
@@ -185,7 +184,13 @@
             <li>門市地址 高雄市鹽埕區假期一路3F</li>
 
         </ul>
-        <div class="mapkit">
+        <div class="mapKit setInFrame">
+            
+            <!-- 地圖最後載入 -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.294170546787!2d120.300311!3d22.6043902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9f297a86cf40dfb!2z6auY6ZuE6Luf6auU56eR5oqA5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1620052976128!5m2!1szh-TW!2stw"
+                width="512" height="200" style="border:0;" allowfullscreen="" >  
+            </iframe>  
         </div>
 
     </div>
@@ -194,13 +199,13 @@
 
     <!-- 載入ＪＳ -->
     <!-- 載入ＡＰＩ -->
-    <script src="./js/API.js?b=17050301"></script>
+    <script src="./js/API.js?b=17050403"></script>
     <!-- 判斷登入 -->
-    <script src="./js/loginMember.js?b=17050301"></script>
+    <script src="./js/loginMember.js?b=17050403"></script>
     <!-- 商品渲染 -->
 
-    <script src="./js/commodityPage.js?b=17050301"></script>
-    <script src="./js/aaaaa.js?b=17050301"></script>
+    <script src="./js/commodityPage.js?b=17050403"></script>
+    <script src="./js/CommodityMenuAF.js?b=17050403"></script>
 
 </body>
 
