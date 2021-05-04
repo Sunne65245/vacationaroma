@@ -12,9 +12,7 @@ if (OrderDetailsJudge == null) {
 }
 
 // 遠端網址
-//let domain = `https://vacationaroma.rocket-coding.com/vacationaroma`;
+let domain = `https://vacationaroma.rocket-coding.com/vacationaroma`;
 
 // 本地端
-let domain = "";
-//let domain = `http://127.0.0.1:5500`;
-//let domain = ` http://127.0.0.1:3000`;
+//let domain = "";
