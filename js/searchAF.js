@@ -58,7 +58,6 @@ function commodityLink(e) {
   } else {
     localStorage.setItem("commodityId", `${commodityLinkId}`);
     window.location.replace(`commodityPage.html`);
-    //window.location.replace(`?id=${commodityLinkId}`)
   }
 }
 

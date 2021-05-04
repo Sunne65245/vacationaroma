@@ -1,12 +1,3 @@
-// let oo = document.getElementById("index1");
-
-// function test1() {
-//   let j = 0;
-//   console.log(j);
-// };
-// oo.addEventListener('click', test1);
-
-
 
 //jq抓li分類值
 $(document).ready(function () {

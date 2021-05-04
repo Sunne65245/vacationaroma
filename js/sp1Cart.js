@@ -2,22 +2,9 @@
 // ►►► 預設載入產品ＡＰＩ
 let OrderList = JSON.parse(localStorage.getItem("OrderDetails"));
 console.log(OrderList);
-//研究桌子
-//item要改OrderList
-
-
-//►►►_____________________待辦事項____________________►►►
-//要把OrderList的物件資料渲染 綁好後inner到頁面上
-//要先榜ＤＯＭ
-//綁修改數量的函式
-//要同步修改總金額
-//按鈕下去跟單一商品一樣打包存進lg 但要比對ＩＤ
-//下一頁面要帶資料
 
 
 
-//►►►_____________________分隔線說明____________________►►►
-// ►►► () *,.*♫_____________________☺____________________♫*,.*
 
 
 
@@ -29,10 +16,7 @@ const purchasingNumAddLessPlus = document.getElementById("purchasingNumAddLessPl
 const purchasingPay = document.getElementById("purchasingPay");
 const orderResult = document.getElementById("orderResult");
 //►►►_____________________API____________________►►►
-//let postOrderAPI = `${allApi}api/Orders/PostOrder`;
-//測試line登入用  const MyToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJVY2I0MzQ4NmEwZTUxZTRkNTYwZDU2MWY3NjIzYWQ2OTciLCJQZXJtaXNzaW9uIjoxLCJpYXQiOiI0LzIzLzIwMjEgMjo1MTowNyBQTSIsIkV4cCI6IjQvMjQvMjAyMSAyOjUxOjA3IFBNIn0.ONBKVlzjv2qoVbf2MBfm3pVV1eVIVp0bfvXpTaaKCl4svkb5_bEhKwYa_Fk314oudNOBRV8S1rvFrZP6jDMWqQ";
 const MyToken = localStorage.getItem("mytoken")
-//const license = { headers: { Authorization: `Bearer ${MyToken}` } };
 const nextBtnSpc1 = document.getElementById("nextBtnId");
 
 
@@ -81,39 +65,11 @@ productRender();
 
 
 //►►►數量加減 價格變動
-//let ProTotalAllSP1=Number(ProTotal)
 
 function quantitySP1(e) {
     console.log(e);
     console.log(e.path[0].classList[1]);
-    // if(e.path[0].classList[1] === "addLess" && Quantity >=0){
-    //     console.log("--");
-    //     Quantity--;
-    //     purchasingNumAddLessPlusSrt=`
-    //     <span class="selectValueAddSub addLess">-</span>
-    //     <input type="text" name="" id="purchasingValueSP1Id" value="${Quantity}" class="purchasingValue">
-    //     <span class="selectValueAddSub  addPlus">+</span>`
-    //     purchasingNumAddLessPlus.innerHTML=purchasingNumAddLessPlusSrt;
-    //     ProTotalAllSP1-=UnitPrice;
 
-    //     purchasingPaySrt=`NT.${ProTotalAllSP1}`
-    //     purchasingPay.innerHTML=purchasingPaySrt;
-
-    // }else if(e.path[0].classList[1] ==="addPlus"  && Quantity >=0 ){
-    //     console.log("++");
-    //     Quantity++;
-    //     purchasingNumAddLessPlusSrt=`
-    //     <span class="selectValueAddSub addLess">-</span>
-    //     <input type="text" name="" id="purchasingValueSP1Id" value="${Quantity}" class="purchasingValue">
-    //     <span class="selectValueAddSub  addPlus">+</span>`
-    //     purchasingNumAddLessPlus.innerHTML=purchasingNumAddLessPlusSrt;
-    //     ProTotalAllSP1+=UnitPrice;
-
-    //     purchasingPaySrt=`NT.${ProTotalAllSP1}`
-    //     purchasingPay.innerHTML=purchasingPaySrt;
-    // }else{
-    //     return
-    // }
 }
 
 orderResult.addEventListener("click", quantitySP1)
@@ -121,46 +77,11 @@ orderResult.addEventListener("click", quantitySP1)
 
 
 
-//推二次購物車清單
-// let shoppingCart = {
-//     "OrderDetails": [
-//         { 
-//             "ProductName": item[0].ProductName, 
-//             "ProductBrew": item[0].ProductBrew, 
-//             "ProductImg": item[0].ProductImg, 
-//             "UnitPrice": item[0].UnitPrice, 
-//             "Quantity": Quantity,
-//             "ProTotal": ProTotalAllSP1,
 
-//         },
-//     ]
-// };
-//console.log(shoppingCart);
 
 function text03() {
-
-
-    // if(Quantity <=0 ){
-    //     alert("尚未選購");
-    //     return;
-    // }else{
-    //     let cartPushSP1="";
-    //     shoppingCart.forEach(function (item){
-    //     cartPushSP1+={ 
-    //         "ProductName": OrderList.ProductName, 
-    //         "ProductBrew": OrderList.ProductBrew, 
-    //         "ProductImg": OrderList.ProductImg, 
-    //         "UnitPrice": OrderList.UnitPrice, 
-    //         "Quantity": OrderList.Quantity,
-    //         "ProTotal": ProTotalAllSP1,
-    //         //"ProductId":item[0].ProductId,
-    //     }}});
-    //     shoppingCart.push(cartPushSP1)
-    //    localStorage.setItem("OrderDetails",JSON.stringify(cartPushSP1));
     alert("要去下一頁囉")
     window.location.replace(`${domain}/sp2Pay.html`);
-
-
 };
 
 nextBtnSpc1.addEventListener("click", text03)

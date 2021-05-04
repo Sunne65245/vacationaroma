@@ -1,36 +1,3 @@
-// let API3 = `http://vacationaroma.rocket-coding.com/api/Orders/GetOrderList/26`;
-// let API4 = `http://vacationaroma.rocket-coding.com/api/Orders/Consignee/26`;
-
-
-// const MyToken = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJVY2I0MzQ4NmEwZTUxZTRkNTYwZDU2MWY3NjIzYWQ2OTciLCJQZXJtaXNzaW9uIjoxLCJpYXQiOiI0LzIzLzIwMjEgMjo1MTowNyBQTSIsIkV4cCI6IjQvMjQvMjAyMSAyOjUxOjA3IFBNIn0.ONBKVlzjv2qoVbf2MBfm3pVV1eVIVp0bfvXpTaaKCl4svkb5_bEhKwYa_Fk314oudNOBRV8S1rvFrZP6jDMWqQ";
-// // const MyToken = localStorage.getItem("token");
-// // console.log(MyToken);
-// const license2 = { headers: { Authorization: `Bearer ${MyToken}` } };
-// //測試能否抓到訂單
-
-// function text03(){
-
-//     axios.get(API3,license2)
-//     .then(function (response) {
-//         console.log(response);     //response（顯示）
-//         })
-//         .catch(function (error) {
-//         console.log(error);
-//     });
-//     axios.get(API4,license2)
-//     .then(function (response) {
-//         console.log(response);     //response（顯示）
-//         })
-//         .catch(function (error) {
-//         console.log(error);
-//     });
-// };
-
-//►►►_____________________分隔線說明____________________►►►
-// ►►► () *,.*♫_____________________☺____________________♫*,.*
-//哪知網址是接ＬＩＮＥＰＡＹ?
-
-
 
 
 //訂單id
@@ -62,21 +29,6 @@ function goLinePay() {
             console.log(lineDataWeb);
             window.location.replace(lineDataWeb)
         });
-
-    //window.location.replace(`sp2Pay.html`);
-    //window.location.replace(`memberPage.html`)
-    console.log("goLinePay");
-
-    //---放錯位子
-    // let data = {
-    //     "Id": orderLineId   //訂單id
-    // };
-    // var url3 = `${allApi}api/Pay/Put`;
-    // axios.put(url3, data)
-    //     .then(function (response) {
-    //         console.log(response.data);
-    //     });
-
 }
 
 

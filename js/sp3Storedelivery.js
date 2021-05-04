@@ -1,9 +1,5 @@
 
 
-//►►►_____________________備註結束____________________►►►
-//►►►_____________________分隔線說明____________________►►►
-// ►►► () *,.*♫_____________________☺____________________♫*,.*
-
 //►►►_____________________DOM____________________►►►
 const recipientName = document.getElementById("recipientName")
 const recipientPhone = document.getElementById("recipientPhone")
@@ -33,9 +29,6 @@ let orderId = "";
 let PostOrderAPI = `${allApi}api/Orders/PostOrder`;
 
 
-// let Phone=recipientPhone.value;
-// let MobileReg = /^(09)[0-9]{8}$/;
-// (str.match(MobileReg)) ? true : false;
 
 // //補 是否有加好友
 // let notice = localStorage.getItem("friend");

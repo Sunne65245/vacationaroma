@@ -1,11 +1,8 @@
-//►►►_____________________分隔線說明____________________►►►
-// ►►► () *,.*♫_____________________☺____________________♫*,.*
 
 // ►►► 預設載入產品ＡＰＩ
 let orderId = JSON.parse(localStorage.getItem("orderId"));//訂單id
 console.log(orderId);
-// let OrderListData=[OrderList];
-// console.log(OrderListData)
+
 
 
 //►►►_____________________Dom____________________►►►

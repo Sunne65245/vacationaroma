@@ -1,13 +1,4 @@
 
-//左邊的商品霸要寫函式 如果在單一產品頁要能跳轉 但到了全部商品頁不能跳
-//產品描述的4eh要撰寫
-
-//►►►_____________________備註結束____________________►►►
-//►►►_____________________分隔線說明____________________►►►
-// ►►► () *,.*♫_____________________☺____________________♫*,.*
-
-
-
 
 
 //►►►_____________________ＤＯＭ____________________►►►
@@ -15,7 +6,6 @@ const purchasingId = document.getElementById("purchasingId")
 const purchasingImg = document.getElementById("purchasingImg")
 const areaNameId = document.getElementById("areaNameId");
 const areaText = document.getElementById("areaText");
-//const selectGrindId=document.getElementById("selectGrindId");
 
 
 
@@ -91,8 +81,7 @@ function areaProductContentSrt() {
 
 purchasingId.addEventListener("click", quantity)
 
-//三個變數 購買數量
-//let totalNum=Number(purchasingValueId.value);之後研究為什麼不會動
+
 ////金額
 let totalCashAll = Number(totalCash);
 
@@ -129,17 +118,14 @@ function quantity(e) {
 
 const selectGrindId = document.getElementById("selectGrindId");
 const grindingMethodId = document.getElementById("selectGrindId");
-//let selectGrindValue = selectGrindId.options[selectGrindId.selectedIndex].value;
 
 const selectNoGrindId = document.getElementById("selectNoGrindId");
 const grinHandPunchId = document.getElementById("grinHandPunchId");
 const ItalianGrinHandPunchId = document.getElementById("ItalianGrinHandPunchId");
 
-// let cart=localStorage.setItem("OrderDetails",[])
-// console.log(cart);
+
 
 let shoppingCart = JSON.parse(localStorage.getItem("OrderDetails"));
-//JSON.parse(localStorage.getItem("OrderDetails"));
 
 function buyCartBtn() {
     if (purchasingValueId.value <= 0 && selectGrindValue == `選取研磨方式`) {

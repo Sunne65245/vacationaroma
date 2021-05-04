@@ -1,16 +1,11 @@
 
 let cartAPI = `${allApi}api/Login`;
-//點選樣式storePayBtn linePayBtn 加上On
-
-
-//let API2 = `http://vacationaroma.rocket-coding.com/api/Orders/PostOrder`;
-
 
 
 const storePayBtnId = document.getElementById("storePayBtnId");
 let linePayBtnId = document.getElementById("linePayBtnId");
 
-//補 非line登入不可用LINEpay
+//AF補 非line登入不可用LINEpay
 if (linetoken !== null) {
     linePayBtnId.style.display = "block";
 }
@@ -21,8 +16,7 @@ function storePayBtnSpc2() {
         console.log("undefined");
         window.location.replace(`${domain}/login.html`)
     } else {
-        //下一頁具續選購
-        //補 門市取貨
+
         localStorage.setItem("payment", "2");
         window.location.replace(`${domain}/sp3StoreDelivery.html`)
     }

@@ -1,18 +1,4 @@
 
-//►►►_____________________待辦事項____________________►►►
-//要把OrderList的物件資料渲染 綁好後inner到頁面上
-//要先榜ＤＯＭ
-//綁修改數量的函式
-//要同步修改總金額
-//按鈕下去跟單一商品一樣打包存進lg 但要比對ＩＤ
-//下一頁面要帶資料
-
-
-
-//►►►_____________________分隔線說明____________________►►►
-// ►►► () *,.*♫_____________________☺____________________♫*,.*
-
-
 //►►►_____________________API____________________►►►
 let memberPageAPI = `${allApi}api/Orders/GetOrderList`;
 
@@ -35,7 +21,7 @@ function LINEuserListRender() {
     console.log(lineUserProfile);
     let userListRenderSrt = "";
     userListRenderSrt = `
-         <img src="${lineUserProfile.ImgName}" alt="">
+        <img src="${lineUserProfile.ImgName}" alt="">
                 <h2 class="memberName">${lineUserProfile.Name}</h2>
                 <ul class="selectCommodity">
                     <li>
@@ -54,7 +40,7 @@ function userListRender() {
             //修改樣式
             let userListRenderSrt = "";
             userListRenderSrt = `
-         <img src="${Profile.ImgName}" alt="">
+        <img src="${Profile.ImgName}" alt="">
                 <h2 class="memberName">${Profile.Name}</h2>
                 <ul class="selectCommodity">
                     <li>
@@ -122,7 +108,7 @@ axios.get(memberPageAPI, headtoken)
 function signOutBtn() {
     //console.log("aaa");
     localStorage.removeItem("mytoken");
-    //補line註銷
+    //AF補line註銷
     localStorage.removeItem("linetoken");
     localStorage.removeItem("friend");
     localStorage.removeItem("name");

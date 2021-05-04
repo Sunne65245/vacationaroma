@@ -1,7 +1,6 @@
 let signUpAPI = `${allApi}api/User/PostUser`;
 
-//const MyToken = "";
-//const license = { headers: { Authorization: `Bearer ${MyToken}` } };
+
 let signUp = {
     "Name": "",
     "Phone": "",
@@ -26,7 +25,6 @@ function try02() {
         "Password": `${userLogin.value}`,
     }
 
-    //console.log("yoooo",signUp); 
 
     axios.post(signUpAPI, signUp)
         .then(function (response) {
@@ -51,21 +49,9 @@ function try02() {
         })
 
 
-    // axios.request({
-    //     url: `${API}`,  //+license
-    //     method: 'post',
-    //     headers:headers,
-    //     data: signUp
-    // });
 
 }
 
-// line註冊的ＡＰＩ 功能取消
-// const LineSignUpAPI=`${allApi}api/User/PostUser`;;
 
 const lineSign = document.getElementById("lineSign");
-// lineSign.addEventListener("click",lineSignFu)
-// function lineSignFu() {
-// console.log("a");
-// }
 lineSign.addEventListener("click", try02)
