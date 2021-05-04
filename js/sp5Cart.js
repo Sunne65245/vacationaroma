@@ -2,20 +2,19 @@
 
 //►►►_____________________DOM____________________►►►
 const userCartList = document.getElementById("userCartList");
-//const signOutBtnId = document.getElementById("signOutBtnId")
 const nextIndexBtnId = document.getElementById("nextBtnId")
-//let userOrderListRender = [];
 
-//總計
 let productList = [];
 let OrderList = [];
+
+//AF補 總計
 const orderSubtotal = document.getElementById("ordersubtotal");
 
 //補
 //►►►渲染產品資料
 function productRender() {
     let orderResultSrt = "";
-
+    //let subtoalStr = "";
     productList.forEach(function (item) {
         orderResultSrt += `
     <tr>
@@ -41,9 +40,7 @@ function productRender() {
         </td>
     </tr>`;
     });
-
     userCartList.innerHTML = orderResultSrt;
-
 }
 
 //訂單id
@@ -54,12 +51,13 @@ let data = {
 };
 
 //►►►_____________________API____________________►►►
+//補
 let memberPageAPI = `${allApi}api/Orders/GetOrderList/${orderLineId}`;
 let payment = localStorage.getItem("payment");
 
 console.log(headtoken);
 
-//AF補
+//補
 //linepay專用--第二支api第三支api
 if (linetoken !== null && payment === "1") {
     let c = window.location.search.split(`=`)[1].split(`&`)[0];
@@ -77,14 +75,24 @@ if (linetoken !== null && payment === "1") {
             console.log("linepay訂單狀態為處理中");
         });
 }
-//定時器
-setTimeout(className, 1800)
 
+//loader定時器
+setTimeout(className, 2500);
+//通知定時器
+setTimeout(orderNotice, 5000);
 function className() {
     document.querySelector(".loader_container").className = "hide";
 }
 
-//AF補 共用---訂購完成(本人訂單資料)
+function orderNotice() {
+    if (linetoken !== null) {
+        alert("LINE已發送訂購完成通知,請到vacationaroma群組查看");
+    } else {
+        alert("MAIL已發送訂購完成通知,請到e-mail查看");
+    }
+}
+
+//共用---訂購完成(本人訂單資料)
 axios.get(memberPageAPI, headtoken)
     .then(function (response) {
         productList = response.data.detaildata;
@@ -95,6 +103,7 @@ axios.get(memberPageAPI, headtoken)
     .catch(function (error) {
         console.log(error);
     });
+
 
 
 function nextIndexBtn() {
