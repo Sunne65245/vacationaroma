@@ -52,7 +52,7 @@ function login() {
 
 //line會員登入的功能    
 const lineLogin = document.getElementById("lineLoginASD");
-console.log(lineLogin);
+
 
 function testLine() {
     axios.get(LineLoginUrl)

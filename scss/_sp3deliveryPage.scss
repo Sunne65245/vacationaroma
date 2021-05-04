@@ -17,8 +17,8 @@
     }
 }
 
-.nextBtnRight{
-    display: block;
-    justify-content:flex-end;
-    //flex-direction: row-reverse;
+
+.between{
+    display: flex;
+    justify-content: space-between;
 }

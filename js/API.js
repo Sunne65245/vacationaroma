@@ -15,4 +15,6 @@ if (OrderDetailsJudge == null) {
 //let domain = `https://vacationaroma.rocket-coding.com/vacationaroma`;
 
 // 本地端
-let domain = `http://127.0.0.1:5500`;
+let domain = "";
+//let domain = `http://127.0.0.1:5500`;
+//let domain = ` http://127.0.0.1:3000`;

@@ -890,11 +890,6 @@ body {
 }
 
 .nextBtn {
-  display: block;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   text-align: center;
   margin: 1rem 0;
   padding: 1rem;
@@ -985,11 +980,13 @@ body {
   font-size: 1rem;
 }
 
-.nextBtnRight {
-  display: block;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cartSp5 {
