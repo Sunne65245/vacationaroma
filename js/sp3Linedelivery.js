@@ -25,14 +25,14 @@ let orderLineData = "";
 let orderId = "";
 let PostOrderAPI = `${allApi}api/Orders/PostOrder/${orderId}`;
 
-
-// //是否有加好友
-// let notice = localStorage.getItem("friend");
-// if (notice === "true") {
-//     notice = "1";//LINE通知
-// } else {
-//     notice = "2";//Email通知
+//補 LINE用戶可選擇宅配或門市判斷
+// let userpay = localStorage.getItem("payment");
+// if (userpay === "1") {
+//     userpayment = 1; //linepay
+// } else if (userpay === "2") {
+//     userpayment = 2; //門市
 // }
+
 
 function confirmLineOrder(e) {
     if (LineName.value === "") {
@@ -55,7 +55,7 @@ function confirmLineOrder(e) {
                 "Name": String(LineName.value),
                 "Phone": LinePhone.value,
                 "Address": LineAdd.value,
-                "Payment": 1,   //LINEPay
+                "Payment": 1,
                 "ProTotal": Number(dataLineProTotal),  //產品總額
                 "Shipping": 0,    //運費固定
                 "SubTotal": dataLineProTotal,   //訂單總額 待改

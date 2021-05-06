@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shoppingCart5</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="./css/all.css?b=17050403">
+    <link rel="stylesheet" href="./css/all.css?b=17050425">
 </head>
 
 <body>
+
+
 
     <!-- 上方選單起始 要固定 -->
 
@@ -32,55 +34,63 @@
     </div>
     <!-- 上方選單結束 -->
 
+
+
     <!-- 商品區 需調整 -->
     <div class="cartContent setInFrame">
-
-        <h2 class="cartSp5">
-            <span>訂購完成</span>
-        </h2>
-        <!-- 補 -->
-
-        <ul class="deliveryList" id="deliveryLinePickerId">
-        </ul>
 
         <div class="loader_container">
             <div class="loader"></div>
         </div>
 
-        <table class="cartContent setInFrame">
+        <div class="hide" id="cartSp5id">
+            <h2 class="cartSp5">
+                <span>訂購完成</span>
+            </h2>
+            <!-- 補 -->
 
-            <thead class="cartList theadList">
-                <th></th>
-                <th>商品名稱</th>
-                <th>數量</th>
-                <th>品項價格</th>
-            </thead>
-
-
-
-
-            <tbody class="cartContentList cartList" id="userCartList">
-                <!-- 訂單樣式 -->
-            </tbody>
+            <ul class="deliveryList" id="deliveryLinePickerId">
+            </ul>
 
 
 
-            <!-- 總計 -->
-            <tfoot id="ordersubtotal">
-                <td colspan="15" align="right" class="tdNotSolid">
-                    <div class="nextBtn" id="nextBtnId">
-                        <span>回首頁</span>
-                    </div>
-                </td>
-            </tfoot>
+            <table class="cartContent setInFrame">
 
-        </table>
+                <thead class="cartList theadList">
+                    <th></th>
+                    <th>商品名稱</th>
+                    <th>數量</th>
+                    <th>品項價格</th>
+                </thead>
 
 
 
 
+                <tbody class="cartContentList cartList" id="userCartList">
+                    <!-- 訂單樣式 -->
+                </tbody>
 
+
+
+                <!-- 總計 -->
+                <tfoot id="ordersubtotal">
+                    <td colspan="15" align="right" class="tdNotSolid">
+                        <div class="nextBtn" id="nextBtnId">
+                            <span>回首頁</span>
+                        </div>
+                    </td>
+                </tfoot>
+
+            </table>
+
+
+
+
+
+        </div>
     </div>
+
+
 
 
 
@@ -99,23 +109,23 @@
 
         </ul>
         <div class="mapKit setInFrame">
-            
+
             <!-- 地圖最後載入 -->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.294170546787!2d120.300311!3d22.6043902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9f297a86cf40dfb!2z6auY6ZuE6Luf6auU56eR5oqA5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1620052976128!5m2!1szh-TW!2stw"
-                width="512" height="200" style="border:0;" allowfullscreen="" >  
-            </iframe>  
+                width="512" height="200" style="border:0;" allowfullscreen="">
+            </iframe>
         </div>
 
     </div>
     <!-- 尾 店家資訊 結束 -->
 
     <!-- 載入ＪＳ -->
-    <script src="./js/API.js?b=17050403"></script>
+    <script src="./js/API.js?b=17050425"></script>
 
     <!-- 判斷登入 -->
-    <script src="./js/loginMember.js?b=17050403"></script>
-    <script src="./js/sp5Cart.js?b=17050403"></script>
+    <script src="./js/loginMember.js?b=17050425"></script>
+    <script src="./js/sp5Cart.js?b=17050425"></script>
     <!-- 好了再打開 -->
     <script>
         window.onbeforeunload = function (e) {

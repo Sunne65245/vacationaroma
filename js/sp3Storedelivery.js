@@ -28,16 +28,6 @@ console.log(orderData);
 let orderId = "";
 let PostOrderAPI = `${allApi}api/Orders/PostOrder`;
 
-
-
-// //補 是否有加好友
-// let notice = localStorage.getItem("friend");
-// if (notice === "true") {
-//     notice = "1";//LINE通知
-// } else {
-//     notice = "2";//Email通知
-// }
-
 function confirmOrder() {
 
     if (recipientName.value === "") {

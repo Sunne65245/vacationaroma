@@ -75,13 +75,19 @@ if (linetoken !== null && payment === "1") {
             console.log("linepay訂單狀態為處理中");
         });
 }
+let cartSp5 = document.getElementById("cartSp5id");
 
 //loader定時器
-setTimeout(className, 2500);
+setTimeout(removeHideClassName, 2500);
 //通知定時器
 setTimeout(orderNotice, 5000);
-function className() {
+
+function removeHideClassName() {
+    //document.querySelector(".cartSp5").removeClass(" hide");
     document.querySelector(".loader_container").className = "hide";
+    //document.querySelector("#cartSp5").className.remove =( "hide");
+    cartSp5.classList.remove("hide");
+
 }
 
 function orderNotice() {

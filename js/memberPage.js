@@ -73,16 +73,16 @@ function userCartListRender() {
     let userOrderListRenderSrt = "";
     userOrderListRender.forEach(function (item) {
         if (item.Payment === 1) {
-            Delivery = "店取";
+            Delivery = "宅配"; //linepay
         } else {
-            Delivery = "宅配";
+            Delivery = "店取"; //門市取貨
         }
         userOrderListRenderSrt += `
         <tr>
         <th>${item.Id}</th>
         <th>${item.AddTime}</th>
         <th>${item.Price}</th>
-        <th>${Delivery} ${item.AddTime}</th>
+        <th>${Delivery}</th>
         <th>${item.Name}</th>
         <th>${item.ProductName}</th>
         </tr>

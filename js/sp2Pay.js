@@ -5,8 +5,10 @@ let cartAPI = `${allApi}api/Login`;
 const storePayBtnId = document.getElementById("storePayBtnId");
 let linePayBtnId = document.getElementById("linePayBtnId");
 
-//AF補 非line登入不可用LINEpay
+//AF補 會員不可用LINEpay 未登入及LINE用戶會看到LINEpay
 if (linetoken !== null) {
+    linePayBtnId.style.display = "block";
+} else if ((memberToken === "undefined" || memberToken === null) && (linetoken === "undefined" || linetoken === null)) {
     linePayBtnId.style.display = "block";
 }
 
