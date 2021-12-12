@@ -1,0 +1,181 @@
+body{
+    background-color:$VABackgroundColor;
+}
+
+//首頁banner
+.indexBanner{
+    margin: 4rem 0;
+    z-index:0;
+    height: 30rem;
+    // width: 100%;
+    background-size: cover;
+    background-image:url("../img/index-pexels-juan-pablo-serrano-arenas-894695.jpeg");
+
+    // overflow: hidden;
+    .indexBannerContent{
+        text-align: center;
+        padding: 8rem 0;
+        
+        h2{
+            font-size: 4rem;
+            //text-shadow:3px 3px 5px 6px #333333;
+            span{
+                display: flex;
+                flex-direction: column;
+                color: #ffffff;
+                margin:0.5rem;
+            }
+        }
+        .goCommodityPage{
+            margin: 0 auto;
+            text-align: center;
+            background-color: #ffffff;
+            //font-size: 1.5rem;
+            line-height: 2.5rem;
+            height: 2.5rem;
+            width: 6rem;
+
+            border-radius:0.5rem;
+            a{
+                display: block;
+                color:$VADarkOrange ;
+            }
+        }
+    }
+    
+
+}
+
+//關於我
+.aboutBrand{
+    background-color: #ffffff;
+    display: flex;
+    justify-content:space-between;
+    font-size: 1rem;
+    min-width: 63rem;
+    height: 24rem;
+    padding: 4rem 8rem;
+
+    
+    
+    .brandLogo{
+        display: flex;
+        flex-direction:column;
+        img{
+            width: 18rem;
+        }
+    }
+    .brandContent{
+        width: 90%;
+        text-align: left;
+        margin: 0 3rem;
+        p{
+            line-height: 1.5rem;
+            margin-top: 1rem;
+        }
+        img{
+            width: 18rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .brandContentImg{
+        text-align: right;
+
+    }
+
+    .brandImg{
+        //min-width: 20%;
+        text-align: right;
+        overflow: hidden;
+        
+        img{
+            padding: 2rem;
+            height:100%;
+
+        }
+    }
+}
+
+//商品區
+.commodityTitle{
+    margin-top: 3rem;
+    margin: 3rem auto;
+    padding-bottom: 3rem;
+    //background-color: $VABackgroundColor;
+    li{
+        cursor: pointer; 
+    }
+
+    h3 {
+        text-align: center;
+        img{
+            height:10rem;
+            
+        }
+    }
+
+    .commodity{
+        text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 86rem;
+
+
+
+        li{
+            padding: 1rem;
+            max-width: 22rem;
+            
+            overflow: hidden;
+            img{
+                height: 20rem;
+                //width: 120%;
+
+            }
+            .commodityName{
+                display: block;
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+            .commodityPrice{
+                display: block;
+                font-size: 1.5rem;
+                margin-top: 0.3rem;
+                color: $VADarkOrange;
+            }
+        }
+    }
+    
+
+}
+
+@media (max-width:500px) { 
+
+    .brandLogo{
+        display: none;
+    }
+
+    .aboutBrand{
+        display: block;
+        height: auto;
+        //min-width: 0rem;
+    }
+    .brandImg{
+        display: none;
+    }
+    .brandContent{
+        margin: 0rem;
+    }
+    .commodity{
+        text-align: center;
+        //margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: center;
+        //max-width: 0rem;
+    }
+
+}

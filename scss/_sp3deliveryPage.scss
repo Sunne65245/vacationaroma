@@ -1,0 +1,24 @@
+.deliveryTitle{
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.deliveryContent{
+    margin: 2rem auto;
+    width: 40rem;
+    li{
+        font-size: 1.2rem;
+        padding: 1rem;
+        color:$VADarkGray
+    }
+    input{
+        border: none;
+        font-size: 1rem;
+    }
+}
+
+
+.between{
+    display: flex;
+    justify-content: space-between;
+}

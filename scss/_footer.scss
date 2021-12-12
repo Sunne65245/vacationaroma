@@ -1,0 +1,68 @@
+// 表尾樣式
+.footer{
+    background-color:$VADarkGray;
+    color: #ffffff;
+    height:22rem ;
+    padding: 5rem 2rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    min-width: 60rem;
+    
+    li{
+        line-height: 2rem;
+    }
+    .footerIconBtn{
+        display:flex;
+    }
+    .social{
+        display: block;
+        background-size: contain;
+        height: 2rem;
+        width: 2rem;
+    }
+    .IGBtn{
+        cursor: pointer; 
+        background-image: url("../img/iconIG.png");
+    }
+    .FBBtn{
+        cursor: pointer; 
+        background-image: url("../img/iconFB.png");
+    }
+    .LineBtn{
+        cursor: pointer; 
+        background-image: url("../img/iconLine.png");
+    }
+}
+    
+.mapKit{
+    min-width: 32rem;
+    min-height: 12rem;
+    //background-color: #ffffff;
+}
+
+
+@media (max-width:768px) { 
+
+
+    .footer{
+        justify-content:flex-start ;
+        flex-wrap:wrap;
+        background-color:$VADarkGray;
+        padding: 5rem 2rem 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        min-width: 60rem;
+    }
+
+    .mapKit{
+        //display: none;
+        margin-top: 2rem;
+        min-width: 30rem;
+        min-height: 12rem;
+        //background-color: #ffffff;
+    }
+
+    .setInFrame{
+    margin: 0 2rem;
+    }
+}

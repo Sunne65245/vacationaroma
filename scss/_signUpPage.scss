@@ -1,0 +1,37 @@
+.signUpContent{
+    text-align: center;
+    margin: 5rem auto ;
+    width: 30rem;
+}
+
+.signUpTitle{
+    font-size: 2rem;
+    color:$VADarkGray;
+    margin: 2rem;
+}
+
+.signUpForm{
+    li{
+        text-align: left;
+        margin: 2rem 0;
+    }
+    input{
+        border: none;
+        color:$VADarkGray;
+        opacity:0.5;
+        //width: 80%;
+    }
+}
+
+.signUpBtn{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 1.1rem;
+    background-color:$VALoginBtn;
+    color: #ffffff;
+
+    
+}
+.lineLogin{
+    background-color:$LineColor;
+}

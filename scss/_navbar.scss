@@ -1,0 +1,39 @@
+.navbar{
+    background-color: $VARaspberry;
+    height: 10rem;
+
+
+    .dpSpaceBetween{
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-between;
+        min-width: 60rem;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-self:center;
+        li{
+            margin: 0 1rem;
+        }
+    }
+    a{
+        color: $VADarkOrange;
+    }
+    
+    img{
+        height: 10rem;
+       //margin: 2rem;
+    }}
+
+
+    // @media screen and (max-width:768px) { 
+
+    //     .vacationAromaLogo{
+    //         img{
+    //             height: 4rem;
+    //         }
+    //     }
+    
+    // }

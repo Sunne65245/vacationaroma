@@ -1,0 +1,60 @@
+.cartSp5 {
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cartContentList {
+    img {
+        height: 5rem;
+        text-align: center;
+    }
+}
+
+
+.theadList{
+        th {
+        text-align: left;
+    }
+}
+
+
+.loader_container {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 3px dotted #C7C7BB;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  @keyframes loading {
+    0%{
+      transform: rotate(0deg);
+    }
+    50%{
+      transform: rotate(180deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: loading 2s linear infinite;
+    &::after{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      content:"";
+      position: absolute;
+      top: 50px;
+      left: -5px;
+      background-color: #7F867B;
+    }
+}

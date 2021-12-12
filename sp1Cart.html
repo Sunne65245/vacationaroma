@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppingCart1</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/all.css?b=17050425">
+</head>
+
+<body>
+
+    <!-- 上方選單起始 要固定 -->
+    <div class="navbar">
+
+        <div class="setInFrame dpSpaceBetween">
+            <h1 class="vacationAromaLogo">
+                <a href="./index.html"><img src="./img/logoB.png" alt=""></a>
+            </h1>
+
+            <ul class="loginMember">
+                <li><a href="./login.html">會員登入</a></li>
+                <li id="shoppingCartID"><a href="./sp1Cart.html">購物車</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- 上方選單結束 -->
+
+    <!-- 商品區 需調整 -->
+    <div class="cartContent setInFrame">
+
+        <ul class="cartBar">
+            <li class="">確認購物車</li>
+            <li class="nextIcon">></li>
+
+            <li class="cancel">付款方式</li>
+            <li class="nextIcon cancel">></li>
+
+            <li class="cancel">資料填寫</li>
+            <li class="nextIcon cancel">></li>
+
+            <li class="cancel">確認收件資料</li>
+
+        </ul>
+
+        <table class="cartList">
+            <thead>
+                <th></th>
+                <th>商品名稱</th>
+                <th>數量</th>
+                <th>品項價格</th>
+            </thead>
+
+
+            <tbody id="orderResult">
+
+                <!-- 渲染訂購資訊
+                <tr>
+                    <td>
+                        <div class="productImg">
+                            <img src="./img/素材/20170502171200.jpg" alt="">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <h3 class="product">台灣 古坑 日曬 比里咖啡莊園</h3>
+                            <span class="grinding">沖煮方式：義式手沖壺</span>
+                            <span class="price">單價 1690</span>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="purchasingNum">
+                            <span class="selectValueAddSub addLess">-</span>
+                            <input type="text" name="" id="purchasingValueSP1Id" value="0" class="purchasingValue">
+                            <span class="selectValueAddSub  addPlus">+</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span>NT.1690</span>
+                    </td>
+
+                </tr> -->
+            </tbody>
+
+        </table>
+
+        <table class="cartList">
+
+            <td colspan="15" align="right" class="tdNotSolid">
+                <div class="nextBtn" id="nextBtnId">
+                    <span>下一步</span>
+                </div>
+            </td>
+        </table>
+
+    </div>
+
+
+    <!-- 尾 店家資訊 -->
+    <div class="footer">
+        <ul class="brandVA setInFrame">
+            <li class="footerIconBtn">
+                <a href="#" class="social IGBtn"></a>
+                <a href="#" class="social FBBtn"></a>
+                <a href="#" class="social LineBtn"></a>
+            </li>
+            <li>假期風味</li>
+            <li>聯絡電話 07-5169-123</li>
+            <li>門市地址 高雄市鹽埕區假期一路3F</li>
+
+        </ul>
+        <div class="mapKit setInFrame">
+
+            <!-- 地圖最後載入 -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.294170546787!2d120.300311!3d22.6043902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9f297a86cf40dfb!2z6auY6ZuE6Luf6auU56eR5oqA5ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1620052976128!5m2!1szh-TW!2stw"
+                width="512" height="200" style="border:0;" allowfullscreen="">
+            </iframe>
+        </div>
+
+    </div>
+    <!-- 尾 店家資訊 結束 -->
+
+    <!-- 載入ＪＳ -->
+    <script src="./js/API.js?b=17050425"></script>
+
+    <!-- 判斷登入 -->
+    <script src="./js/loginMember+shoppingCart.js?b=17050425"></script>
+    <!-- <script src="/js/commodityPage.js"></script> -->
+    <script src="./js/sp1Cart.js?b=17050425"></script>
+
+</body>
+
+</html>
