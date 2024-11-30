@@ -1,0 +1,114 @@
+/*- 價格 -*/
+.bk-price {
+    display: flex;
+    align-items: center;
+
+    .price-onsale {
+        color: $primary;
+        margin-right: .5rem;
+
+        +.price-regular {
+            font-size: .875rem;
+            color: rgba($body-color, .5);
+            text-decoration: line-through;
+        }
+    }
+}
+
+/*- 特價標籤 -*/
+.bk-label {
+    margin: -1px;
+
+    .label-discount,
+    .label-promotion {
+        @include list-unstyled;
+        font-size: .7rem;
+        color: $white;
+        margin-bottom: 0;
+
+        li {
+            display: inline-block;
+            background-color: $primary;
+            width: fit-content;
+            padding: 2px 4px;
+            margin-bottom: 4px;
+        }
+    }
+
+    .label-discount li {
+        background-color: $danger;
+    }
+}
+
+/*- 商品項目 Banner -*/
+.product-banner {
+    margin-bottom: 32px;
+}
+
+/*- 商品項目 -*/
+.product-item {
+    position: relative;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .caption {
+        padding: 1rem;
+
+        .title {
+            font-size: 1rem;
+            line-height: 1.25;
+            text-align: center;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.5rem;
+        }
+
+        .bk-price {
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .bk-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 4px;
+            margin: 0;
+
+            .label-discount,
+            .label-promotion {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .label-promotion {
+                align-items: end;
+            }
+        }
+    }
+}
+
+/*- 商品內頁 燈箱 -*/
+.product-lightbox {
+    .swiper {
+        // &-main {
+        //     .cover {
+        //         @include imgRatio(100%);
+        //     }
+        // }
+
+        &-thumbs {
+            padding-top: 8px;
+
+            .cover {
+                @include imgRatio(100%);
+            }
+        }
+    }
+}

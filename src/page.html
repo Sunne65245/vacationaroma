@@ -1,0 +1,182 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--Title setting-->
+{% block title %}頁面{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+{% import 'nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('index')}}
+{% endblock %}
+
+{% block HeadContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "breadcrumb.html" %}
+{% include "pg-banner.html" %}
+<div class="page">
+    <section class="ele ele-img-two">
+        <div class="container">
+            <div class="ele-title">區塊標題</div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/480?random=77" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/480?random=57" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ele ele-banner-slider">
+        <div class="container-fluid">
+            <div class="ele-title">區塊標題</div>
+            <div class="swiper swiper-Banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="cover">
+                            <img src="https://picsum.photos/1920/640?random=1" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <section class="ele ele-imgtext-left">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/540?random=5" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="caption">
+                        <div class="ele-title">區塊標題</div>
+                        <div class="text">半導體線上學習平台正式上線，歡迎各大專校院學生加入課程拿獎金</div>
+                        <a class="btn ele-more" href="#">more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ele ele-img-three">
+        <div class="container">
+            <div class="ele-title">區塊標題</div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=39" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=29" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=19" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ele ele-imgtext-right">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/540?random=55" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="caption">
+                        <div class="ele-title">區塊標題</div>
+                        <div class="text">半導體線上學習平台正式上線，歡迎各大專校院學生加入課程拿獎金</div>
+                        <a class="btn ele-more" href="#">more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ele ele-img-four">
+        <div class="container">
+            <div class="ele-title">區塊標題</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=28" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=38" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=48" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="cover">
+                        <img src="https://picsum.photos/960/960?random=58" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+
+    // 輪播Banner
+    var swiper = new Swiper('.swiper-Banner', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    // 商品清單輪播
+    var swiper = new Swiper('.swiper-product', {
+        spaceBetween: 24,
+        slidesPerView: 2,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+{% endblock %}

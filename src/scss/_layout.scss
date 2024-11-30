@@ -1,0 +1,178 @@
+/*- 輪播套件箭頭顏色 -*/
+.swiper {
+    --swiper-navigation-color: $white;
+    --swiper-pagination-color: $white;
+}
+
+/* 圓點頁碼樣式 */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #999;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333; // 活動頁碼的顏色
+    opacity: 1;
+}
+
+
+/* 可以根據需要調整按鈕的位置 */
+.swiper-button-next {
+    right: 10px;
+}
+
+
+/*- 項目ａ標籤移除樣式 -*/
+.item-link {
+    display: block;
+    color: $body-color;
+    text-decoration: none;
+}
+
+/*- 回到最上方 -*/
+.gotop {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+    i {
+        font-size: 1.75rem;
+        color: $gray-400;
+        line-height: 1;
+        padding: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+
+        i {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+/*- 頁尾 -*/
+.footer {
+    padding: 64px 0;
+    background: $white;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-logo img {
+        height: 32px;
+    }
+
+    .footer-copyright {
+        font-size: 0.875rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        .container {
+            flex-direction: column;
+        }
+
+        .footer-copyright {
+            text-align: center;
+        }
+    }
+}
+
+/*- 頁面通用 -*/
+.pg-body {
+    padding: 32px 0;
+
+    @include media-breakpoint-up(md) {
+        min-height: 70vh;
+    }
+}
+
+/*- 頁面名稱 -*/
+.pg-banner {
+    margin-bottom: 32px;
+}
+
+/*- 麵包屑 -*/
+.pg-breadcrumb {
+    font-size: .875rem;
+    margin: 16px 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $gray-300;
+    }
+}
+
+/*- 返回 -*/
+.pg-back {
+    text-align: center;
+
+    .btn-back {
+        min-width: 120px;
+        font-size: 0.875rem;
+        color: $gray-600;
+        background: #fff;
+        border-radius: 99px;
+
+        &:hover,
+        &:focus {
+            color: $primary;
+        }
+    }
+}
+
+.vac {
+    .nav-link {
+        cursor: pointer;
+
+        span {
+            display: flex;
+            align-items: center;
+            position: relative; // 確保偽元素的定位基準
+        }
+
+        // icon 的偽元素
+        span::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    // 個別 icon 設定
+    .nav-login span::before {
+        background-image: url('../images/Icons/icon-account.svg');
+    }
+
+    .nav-cart span::before {
+        background-image: url('../images/Icons/icon-shopping-cart.svg');
+    }
+
+    .nav-search span::before {
+        background-image: url('../images/Icons/icon-search.svg');
+    }
+}
+
+.inx-banner {
+    .cover {
+        img {
+            height: 300px;
+
+        }
+    }
+}

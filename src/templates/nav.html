@@ -1,0 +1,39 @@
+{% macro active(activePage='home') %}
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/vaca-logo.png">
+            <img src="images/vaca-logo.png" class="navbar-brand-w">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="nav navbar-nav vac">
+                <li class="nav-item">
+                    <a class="nav-link nav-login">
+                        <span>會員登入</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-cart">
+                        <span>購物車</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-search">
+                        <span>風味搜尋</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</nav>
+{% endmacro %}

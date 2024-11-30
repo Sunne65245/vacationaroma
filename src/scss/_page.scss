@@ -1,0 +1,66 @@
+$ele-padding: 48px;
+
+.page {
+    margin-top: - $ele-padding;
+    margin-bottom: - $ele-padding;
+}
+
+.ele {
+    overflow: hidden;
+    padding-top: $ele-padding;
+    padding-bottom: $ele-padding;
+
+    .container,
+    .container-fluid {
+        >.row {
+            margin-top: - $grid-gutter-width;
+
+            >* {
+                margin-top: $grid-gutter-width;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 1.75rem;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    &-more {
+        color: $white;
+        background-color: $primary;
+
+        &:hover,
+        &:focus {
+            background-color: darken($primary, 5%);
+        }
+    }
+}
+
+// 輪播Banner
+.ele-banner-slider {
+    .container-fluid {
+        padding: 0;
+    }
+}
+
+// 左圖右文
+.ele-imgtext-left {
+    .ele-title {
+        text-align: left;
+    }
+}
+
+// 左文右圖
+.ele-imgtext-right {
+    .ele-title {
+        text-align: left;
+    }
+
+    @include media-breakpoint-up(md) {
+        .row {
+            flex-direction: row-reverse;
+        }
+    }
+}

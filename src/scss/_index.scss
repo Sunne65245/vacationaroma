@@ -1,0 +1,288 @@
+// 通用元件
+.inx-head {
+    margin-bottom: 2rem;
+
+    .subtitle {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: lighten($primary, 24);
+    }
+
+    .title {
+        font-size: 1.75rem;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+    }
+}
+
+.btn-we-more {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: $white;
+    border-radius: 999px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    box-shadow: 0 6px 16px rgba(darken($primary, 16), 0.2);
+
+    &::after {
+        content: "\f061";
+        font-family: "Line Awesome Free";
+        transform: rotate(-45deg);
+        font-weight: 900;
+        margin-left: 8px;
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        background-color: lighten($primary, 24);
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        box-shadow: 0 6px 16px rgba(darken($primary, 16), 0.6);
+        opacity: 0.9;
+    }
+}
+
+
+
+// 首頁排版
+.inx-banner {
+    .caption {
+        color: $white;
+    }
+}
+
+.inx-news {
+    padding: 6rem 1rem;
+    background: url("../images/wel-visual-bg.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .inx-head {
+        color: $white;
+        position: relative;
+
+        .subtitle {
+            color: $white;
+            opacity: .6;
+        }
+
+        &::before {
+            content: "NEWS";
+            font-weight: 800;
+            font-size: 7rem;
+            letter-spacing: 0.1em;
+            opacity: .1;
+            color: white;
+            position: absolute;
+            top: -30%;
+            left: 0%;
+        }
+    }
+}
+
+.inx-video {
+    background-color: $white;
+    padding: 6rem 0;
+
+    .inx-head {
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "VIDEO";
+            font-weight: 800;
+            font-size: 7rem;
+            letter-spacing: 0.1em;
+            opacity: .1;
+            color: rgba(darken($primary, 24), 0.4);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+    }
+
+    .btn-we-more {
+        margin: 16px auto;
+    }
+}
+
+
+.video-card {
+    margin-top: 4rem;
+    background: url("../images/wel-visual-bg.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.2);
+    border-radius: 4px;
+    // display: flex;
+    // justify-content: center;
+    position: relative;
+    padding-top: 60px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.4);
+    }
+
+    &::after {
+        content: "\f04b";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        color: $white;
+        background-color: lighten($primary, 24);
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    .cover {
+        margin-top: -8rem;
+
+        .img-aspect {
+            aspect-ratio: 16 / 9;
+            border-radius: 4px;
+            overflow: hidden;
+
+            margin: 0 20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .caption {
+        color: $white;
+        padding: 20px;
+        min-height: 5rem;
+    }
+
+
+}
+
+
+
+.news-card {
+    margin-top: 1rem;
+    background-color: $white;
+    box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.2);
+    border-radius: 4px;
+
+    position: relative;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.4);
+    }
+
+    &::after {
+        content: "\f061";
+        font-family: "Line Awesome Free";
+        transform: rotate(-45deg);
+        font-weight: 900;
+        margin-left: 8px;
+        color: white;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-color: lighten($primary, 24);
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+
+    .cover {
+        .img-aspect {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .caption {
+        color: $gray-900;
+        padding: 20px;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+
+        .date {
+            color: $gray-600;
+            font-size: 0.75rem;
+        }
+
+        .title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; // 限制行數為2
+            overflow: hidden;
+            padding: 8px 32px 0 0;
+            line-height: 1.5;
+        }
+    }
+
+
+}
+
+
+.card {
+    background-color: $white;
+
+    a {
+        text-decoration: none;
+    }
+
+    // .date {}
+
+    .subtitle {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    // .text {}
+
+    // .summary {}
+}

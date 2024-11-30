@@ -1,0 +1,226 @@
+<!-- .nunjucks -->
+{% extends "layout.html" %}
+<!--Title setting-->
+{% block title %}{% endblock %}
+－ㄋ{% block navigation %} {% import 'nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('')}}{% endblock %}
+
+{% block HeadContent %}
+{% endblock %}
+
+{% block content %}
+
+<section class="inx-banner">
+    <div class="swiper swiper-Banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="cover">
+                    <div class="img-aspect">
+                        <img src="images/index-pexels-juan-pablo-serrano-arenas-894695.jpeg" class="" alt="">
+                    </div>
+                </div>
+                <div class="caption">
+                    <div class="title">大標題</div>
+                    <div class="text">介紹短文</div>
+                    <a href="#" class="btn-we-more" title="">MORE</a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="cover">
+                    <div class="img-aspect">
+                        <img src="https://picsum.photos/1920/640?random=1" class="" alt="">
+                    </div>
+                </div>
+                <div class="caption">
+                    <div class="title">大標題</div>
+                    <div class="text">介紹短文</div>
+                    <a href="#" class="btn-we-more" title="">MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+<section class="inx-news d-flex">
+    <div class="inx-head">
+        <div class="subtitle">NEWS</div>
+        <div class="title">新聞中心</div>
+        <a href="#" class="btn-we-more" title="">MORE</a>
+    </div>
+    <div class="swiper swiper-Banner">
+        <div class="swiper-wrapper">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<section class="inx-video d-flex">
+    <div class="container">
+        <div class="inx-head">
+            <div class="subtitle">VIDEO</div>
+            <div class="title">影音專區</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="video-card">
+                    <a href="#" class="">
+                        <div class="cover">
+                            <div class="img-aspect">
+                                <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="title">影音專區卡片標題</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-card">
+                    <a href="#" class="">
+                        <div class="cover">
+                            <div class="img-aspect">
+                                <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="title">影音專區卡片標題</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-card">
+                    <a href="#" class="">
+                        <div class="cover">
+                            <div class="img-aspect">
+                                <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="title">影音專區卡片標題</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <a href="#" class="btn-we-more" title="">MORE</a>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block js %}
+<script>
+    // 輪播Banner
+    var swiper = new Swiper(".swiper-Banner", {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    // 商品清單輪播
+    var swiper = new Swiper(".swiper-product", {
+        spaceBetween: 24,
+        slidesPerView: 2,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,122 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--Title setting-->
+{% block title %}產品內頁{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+{% import 'nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('product')}}
+{% endblock %}
+
+{% block HeadContent %}
+{% endblock %}
+
+{% block content %}
+<div class="pg-body pg-product-detail">
+    {% include "breadcrumb.html" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="product-lightbox">
+                    <div class="swiper swiper-main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=1" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/1000?random=2" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=3" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=4" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=5" alt="圖片標題">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="swiper swiper-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=1" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/1000?random=2" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=3" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=4" alt="圖片標題">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="cover">
+                                    <img src="https://picsum.photos/1920/800?random=5" alt="圖片標題">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-info">
+                    <div class="title">商品名稱</div>
+                    <div class="text">商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊</div>
+                    <div class="bk-price">
+                        <div class="price-onsale">$999</div>
+                        <div class="price-regular">$1,200</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            編輯器內容
+        </div>
+        {% include "pg-back.html" %}
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+    var swiperThumbs = new Swiper(".swiper-thumbs", {
+        spaceBetween: 8,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiperMain = new Swiper(".swiper-main", {
+        spaceBetween: 0,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiperThumbs,
+        },
+    });
+</script>
+{% endblock %}
