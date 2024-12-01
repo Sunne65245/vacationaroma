@@ -13820,7 +13820,7 @@ textarea.form-control-lg {
   font-size: 0.875rem;
 }
 .footer .community-btn {
-  margin-top: 8px;
+  margin-top: 16px;
 }
 .footer .community-btn a > img {
   width: 24px;
@@ -13844,6 +13844,7 @@ textarea.form-control-lg {
 /*- 頁面通用 -*/
 .pg-body {
   padding: 32px 0;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .pg-body {
@@ -13915,6 +13916,35 @@ textarea.form-control-lg {
   background-image: url("../images/Icons/icon-search.svg");
 }
 
+.product-list a {
+  text-decoration: none;
+}
+.product-list .cover .img-aspect {
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.product-list .cover .img-aspect img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.product-list .caption {
+  color: #462A1E;
+  padding: 20px;
+  min-height: 5rem;
+  text-align: center;
+}
+.product-list .caption .title {
+  font-size: 1.2rem;
+}
+.product-list .caption .price {
+  opacity: 0.8;
+}
+
 /*- 價格 -*/
 .bk-price {
   display: -webkit-box;
@@ -13934,38 +13964,114 @@ textarea.form-control-lg {
   text-decoration: line-through;
 }
 
-/*- 特價標籤 -*/
-.bk-label {
-  margin: -1px;
+/*- 單向商品項目 -*/
+.product-page .cover .img-aspect {
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 20px;
 }
-.bk-label .label-discount,
-.bk-label .label-promotion {
-  padding-left: 0;
-  list-style: none;
-  font-size: 0.7rem;
-  color: #fff;
-  margin-bottom: 0;
+.product-page .cover .img-aspect img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-.bk-label .label-discount li,
-.bk-label .label-promotion li {
-  display: inline-block;
+
+.product-info {
+  color: #462A1E;
+}
+.product-info .title {
+  font-size: 2rem;
+}
+
+/*- 購物車 -*/
+.quantity-selector {
+  margin-bottom: 20px;
+}
+.quantity-selector .label {
+  font-size: 16px;
+}
+.quantity-selector .quantity-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+  height: 40px;
+}
+.quantity-selector .quantity-control .btn-control {
+  width: 40px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.quantity-selector .quantity-control input {
+  width: 70px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 0;
+}
+.quantity-selector .quantity-control .btn-minus,
+.quantity-selector .quantity-control .btn-plus {
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+}
+.quantity-selector .quantity-control .btn-minus {
+  border-radius: 4px 0 0 4px;
+  font-size: 1.2rem;
+}
+.quantity-selector .quantity-control .btn-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.btn-add-cart {
   background-color: #462A1E;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 2px 4px;
-  margin-bottom: 4px;
-}
-.bk-label .label-discount li {
-  background-color: #dc3545;
+  color: #fff;
+  height: 40px;
 }
 
-/*- 商品項目 Banner -*/
-.product-banner {
-  margin-bottom: 32px;
+.total-price {
+  color: #462A1E;
+}
+.total-price .label {
+  font-size: 1.25rem;
+}
+.total-price .unit-price {
+  font-size: 2rem;
 }
 
-/*- 商品項目 -*/
+/*- 商品項目清單 -*/
 .product-item {
   position: relative;
   -webkit-box-align: center;
@@ -13982,7 +14088,6 @@ textarea.form-control-lg {
   text-align: center;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 2.5rem;
@@ -14023,42 +14128,141 @@ textarea.form-control-lg {
           align-items: end;
 }
 
-/*- 商品內頁 燈箱 -*/
-.product-lightbox .swiper-thumbs {
-  padding-top: 8px;
-}
-.product-lightbox .swiper-thumbs .cover {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
+/*- 商品項目 Banner -*/
+.product-banner {
+  margin-bottom: 32px;
+  width: auto;
+  height: 260px;
   overflow: hidden;
+  border-radius: 4px;
 }
-.product-lightbox .swiper-thumbs .cover img,
-.product-lightbox .swiper-thumbs .cover iframe,
-.product-lightbox .swiper-thumbs .cover video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 102%;
-  height: 102%;
+.product-banner.container {
+  height: 100%;
 }
-.product-lightbox .swiper-thumbs .cover.contain img,
-.product-lightbox .swiper-thumbs .cover.contain iframe,
-.product-lightbox .swiper-thumbs .cover.contain video {
+.product-banner img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  width: initial;
-  height: initial;
-  max-width: 100%;
-  max-height: 100%;
+  -o-object-position: center -215px;
+     object-position: center -215px;
+}
+
+.btn-sort {
+  color: #462A1E;
+  border: 1px solid #462A1E;
+}
+
+/*- 產品側選單 -*/
+.sidebar {
+  padding: 20px 0;
+}
+
+.sidebar,
+.sidebar a {
+  color: #462A1E;
+}
+
+.category-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.category-title::before {
+  content: "|";
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 8px;
+  color: #462A1E;
+}
+.category-icon {
+  font-weight: bold;
+  color: #333;
+}
+.category-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.category-list > .category-item:nth-child(1),
+.category-list > .category-item:nth-child(2) {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 16px;
+}
+.category-item {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 0;
+  display: block;
+}
+.category-group {
+  border-bottom: 1px solid #E5E5E5;
+  padding-bottom: 16px;
+}
+.category-group-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.category-group-content {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  padding-left: 20px;
+}
+.category-group-content.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.category-subitem {
+  text-decoration: none;
+  color: #666;
+  font-weight: 300;
+}
+
+.arrow-down {
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 0 10px 4px 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.arrow-down.active {
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 .page {
@@ -14248,34 +14452,6 @@ textarea.form-control-lg {
 .inx-product .inx-head {
   text-align: center;
   position: relative;
-}
-.inx-product a {
-  text-decoration: none;
-}
-.inx-product .cover .img-aspect {
-  border-radius: 4px;
-  overflow: hidden;
-  margin: 0 20px;
-}
-.inx-product .cover .img-aspect img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.inx-product .caption {
-  color: #462A1E;
-  padding: 20px;
-  min-height: 5rem;
-  text-align: center;
-}
-.inx-product .caption .title {
-  font-size: 1.2rem;
-}
-.inx-product .caption .price {
-  opacity: 0.8;
 }
 
 .inx-news {

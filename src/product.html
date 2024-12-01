@@ -14,165 +14,126 @@
 
 {% block content %}
 <div class="pg-body pg-product-list">
-    <div class="product-banner">
-        <div class="container">
-            <img src="https://picsum.photos/1920/640?random=100" class="img-fluid" alt="">
-        </div>
-    </div>
-    {% include "breadcrumb.html" %}
-    <div class="product-list">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-item">
-                        <a class="item-link" href="product-detail.html" title="">
-                            <div class="cover">
-                                <div class="img-ratio img-ratio-1by1">
-                                    <img src="https://picsum.photos/960/720?random=1" alt="">
-                                </div>
-                            </div>
-                        </a>
-                        <div class="caption">
-                            <div class="title">
-                                <a class="item-link" href="product-detail.html" title="">
-                                    飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫
-                                </a>
-                            </div>
-                            <div class="bk-price">
-                                <div class="price-onsale">$999</div>
-                                <div class="price-regular">$1,200</div>
-                            </div>
-                            <div class="bk-label">
-                                <ul class="label-discount">
-                                    <li>-20%</li>
-                                    <li>-$100</li>
-                                </ul>
-                                <ul class="label-promotion">
-                                    <li>買一送一</li>
-                                    <li>免運</li>
-                                </ul>
-                            </div>
-                        </div>
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-md-2">
+                {% include "product-Navbar.html" %}
+            </div>
+            <div class="col-md-10">
+                <div class="product-banner">
+                    <div class="container">
+                        <img src="images/pexels.jpg" class="" alt="">
                     </div>
+
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-item">
-                        <a class="item-link" href="product-detail.html" title="">
-                            <div class="cover">
-                                <div class="img-ratio img-ratio-1by1">
-                                    <img src="https://picsum.photos/960/720?random=1" alt="">
-                                </div>
-                            </div>
-                        </a>
-                        <div class="caption">
-                            <div class="title">
-                                <a class="item-link" href="product-detail.html" title="">
-                                    飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫
-                                </a>
-                            </div>
-                            <div class="bk-price">
-                                <div class="price-onsale">$999</div>
-                                <div class="price-regular">$1,200</div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- {% include "breadcrumb.html" %} -->
+                <div class="m-2">
+                    <a href="#" class="btn btn-sort">價格由低至高</a>
+                    <a href="#" class="btn btn-sort">價格由高至低</a>
                 </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-item">
-                        <a class="item-link" href="product-detail.html" title="">
-                            <div class="cover">
-                                <div class="img-ratio img-ratio-1by1">
-                                    <img src="https://picsum.photos/960/720?random=1" alt="">
+
+                <div class="product-list">
+                    <div class="product-list">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html" class="">
+                                        <div class="cover">
+                                            <div class="img-aspect">
+                                                <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                            <div class="price">NT.1490</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-                        </a>
-                        <div class="caption">
-                            <div class="title">
-                                <a class="item-link" href="product-detail.html" title="">
-                                    飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫
-                                </a>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html" class="">
+                                        <div class="cover">
+                                            <div class="img-aspect">
+                                                <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                            <div class="price">NT.1490</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="bk-price">
-                                <div class="price-onsale">$999</div>
-                                <div class="price-regular">$1,200</div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html" class="">
+                                        <div class="cover">
+                                            <div class="img-aspect">
+                                                <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                            <div class="price">NT.1490</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="bk-label">
-                                <ul class="label-discount">
-                                    <li>-20%</li>
-                                    <li>-$100</li>
-                                </ul>
-                                <ul class="label-promotion">
-                                    <li>買一送一</li>
-                                    <li>免運</li>
-                                </ul>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html" class="">
+                                        <div class="cover">
+                                            <div class="img-aspect">
+                                                <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                            <div class="price">NT.1490</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html" class="">
+                                        <div class="cover">
+                                            <div class="img-aspect">
+                                                <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                            <div class="price">NT.1490</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="product-card">
+                                    <a href="product-detail.html" class="">
+                                        <div class="cover">
+                                            <div class="img-aspect">
+                                                <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                            <div class="price">NT.1490</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-item">
-                        <a class="item-link" href="product-detail.html" title="">
-                            <div class="cover">
-                                <div class="img-ratio img-ratio-1by1">
-                                    <img src="https://picsum.photos/960/720?random=1" alt="">
-                                </div>
-                            </div>
-                        </a>
-                        <div class="caption">
-                            <div class="title">
-                                <a class="item-link" href="product-detail.html" title="">
-                                    飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫
-                                </a>
-                            </div>
-                            <div class="bk-price">
-                                <div class="price-onsale">$999</div>
-                                <div class="price-regular">$1,200</div>
-                            </div>
-                            <div class="bk-label">
-                                <ul class="label-discount">
-                                    <li>-20%</li>
-                                </ul>
-                                <ul class="label-promotion">
-                                    <li>買一送一</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="product-item">
-                        <a class="item-link" href="product-detail.html" title="">
-                            <div class="cover">
-                                <div class="img-ratio img-ratio-1by1">
-                                    <img src="https://picsum.photos/960/720?random=1" alt="">
-                                </div>
-                            </div>
-                        </a>
-                        <div class="caption">
-                            <div class="title">
-                                <a class="item-link" href="product-detail.html" title="">
-                                    飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫飛行傘布襯衫
-                                </a>
-                            </div>
-                            <div class="bk-price">
-                                <div class="price-onsale">$999</div>
-                                <div class="price-regular">$1,200</div>
-                            </div>
-                            <div class="bk-label">
-                                <ul class="label-discount">
-                                </ul>
-                                <ul class="label-promotion">
-                                    <li>買一送一</li>
-                                    <li>免運</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- {% include "pagination.html" %} -->
                 </div>
             </div>
         </div>
-        {% include "pagination.html" %}
+
     </div>
+
 </div>
 {% endblock %}
 

@@ -16,107 +16,105 @@
 <div class="pg-body pg-product-detail">
     {% include "breadcrumb.html" %}
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="product-lightbox">
-                    <div class="swiper swiper-main">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=1" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/1000?random=2" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=3" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=4" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=5" alt="圖片標題">
+        <div class="row gx-5">
+            <!-- 左側選單 -->
+            <div class="col-md-2">
+                {% include "product-Navbar.html" %}
+            </div>
+            <!-- 主要內容區 -->
+            <div class="col-md-10">
+                <div class="row">
+                    <!-- 商品圖片 -->
+                    <div class="col-md-6">
+                        <div class="product-page">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" alt="圖片標題">
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <div thumbsSlider="" class="swiper swiper-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=1" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/1000?random=2" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=3" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=4" alt="圖片標題">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="cover">
-                                    <img src="https://picsum.photos/1920/800?random=5" alt="圖片標題">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="product-info">
-                    <div class="title">商品名稱</div>
-                    <div class="text">商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊商品資訊</div>
-                    <div class="bk-price">
-                        <div class="price-onsale">$999</div>
-                        <div class="price-regular">$1,200</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            編輯器內容
-        </div>
-        {% include "pg-back.html" %}
-    </div>
-</div>
-{% endblock %}
 
-{% block js %}
-<script>
-    var swiperThumbs = new Swiper(".swiper-thumbs", {
-        spaceBetween: 8,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
-    var swiperMain = new Swiper(".swiper-main", {
-        spaceBetween: 0,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiperThumbs,
-        },
-    });
-</script>
-{% endblock %}
+                    </div>
+                    <!-- 商品資訊 -->
+                    <div class="col-md-6">
+                        <div class="product-info">
+                            <div class="title">台灣 古坑 日曬 比里咖啡莊園</div>
+                            <div class="description mt-3">
+                                <div class="my-2">規格</div>
+                                <ul>
+                                    <li>淨重：半磅 (227g)</li>
+                                    <li>烘焙度：中焙</li>
+                                    <li>處理法：日曬</li>
+                                    <li>產地：台灣雲林古坑</li>
+                                    <li>風味描述：蜜糖、柑橘、葡萄乾、巧克力</li>
+                                </ul>
+                            </div>
+                            <!-- 研磨方式選擇 -->
+                            <div class="grind-method">
+                                <div class="label">研磨方式</div>
+                                <select class="form-select">
+                                    <option>手沖</option>
+                                    <option>日曬</option>
+                                    <option>水洗</option>
+                                </select>
+                            </div>
+                            <div class="mt-2 ">
+                                <div class="quantity-selector">
+                                    <div class="label mb-2">購買數量</div>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-6">
+                                            <div class="quantity-control d-flex">
+                                                <button class="btn btn-minus">-</button>
+                                                <input type="text" value="1" class="form-control flex-grow-1" readonly>
+                                                <button class="btn btn-plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-add-cart w-100">加入購物車</button>
+                                        </div>
+                                    </div>
+                                    <div class="total-price d-flex justify-content-end align-items-baseline mt-5">
+                                        <span class="label me-2">合計 NT.</span>
+                                        <span class="unit-price">1600</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 商品描述 -->
+                    <hr>
+                    <div class="product-description">
+                        <div class="content">
+                            古坑日曬比里咖啡莊園位於雲嘉交界的台灣咖啡原鄉，海拔約 800 公尺，獨特的地理位置與氣候環境，成就了這款風味絕佳的咖啡豆。
+                            <br><br>
+                            日曬處理法完美保留了咖啡豆的原始風味，帶出濃郁的果香和堅果香氣。杯測時可以品嚐到明顯的蜜糖甜感，伴隨著柑橘及葡萄乾的果香，尾韻則有淡淡的巧克力香，口感圓潤飽滿。
+                            <br><br>
+                            每一批咖啡豆皆採用精密的烘焙控制，確保您能品嚐到最理想的風味。建議使用手沖萃取，水溫 90-92°C，研磨程度中細，能完整呈現這支咖啡的層次感。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include "pg-back.html" %}
+        </div>
+        {% endblock %}
+
+        {% block js %}
+        <script>
+            var swiperThumbs = new Swiper(".swiper-thumbs", {
+                spaceBetween: 8,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiperMain = new Swiper(".swiper-main", {
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiperThumbs,
+                },
+            });
+        </script>
+        {% endblock %}
