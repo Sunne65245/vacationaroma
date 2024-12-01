@@ -58,7 +58,9 @@
 /*- 頁尾 -*/
 .footer {
     padding: 64px 0;
-    background: $white;
+    background-color: $gray-900;
+    color: $white;
+
 
     .container {
         display: flex;
@@ -67,11 +69,24 @@
     }
 
     .footer-logo img {
-        height: 32px;
+        height: 60px;
     }
 
     .footer-copyright {
         font-size: 0.875rem;
+    }
+
+    .community-btn {
+        margin-top: 8px;
+
+        a>img {
+            width: 24px;
+            height: 100%;
+        }
+    }
+
+    .foot-list {
+        line-height: 1.5rem;
     }
 
     @include media-breakpoint-down(md) {
@@ -165,14 +180,5 @@
 
     .nav-search span::before {
         background-image: url('../images/Icons/icon-search.svg');
-    }
-}
-
-.inx-banner {
-    .cover {
-        img {
-            height: 300px;
-
-        }
     }
 }

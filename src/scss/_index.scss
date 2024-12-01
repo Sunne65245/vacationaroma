@@ -4,7 +4,7 @@
 
     .subtitle {
         font-size: 0.875rem;
-        font-weight: 600;
+        font-weight: 400;
         color: lighten($primary, 24);
     }
 
@@ -15,7 +15,7 @@
     }
 }
 
-.btn-we-more {
+.btn-va-more {
     text-decoration: none;
     padding: 0.5rem 1rem;
     background-color: $white;
@@ -50,11 +50,118 @@
 }
 
 
-
 // 首頁排版
 .inx-banner {
+    position: relative;
+
     .caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: $white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-size: 4rem;
+            font-weight: 500;
+        }
+    }
+
+    .cover {
+        margin-top: -8rem;
+
+        .img-aspect {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.inx-about {
+    background-color: $white;
+    margin: 40px 0;
+    padding: 60px 0;
+
+    .founder-sign {
+        width: 60%;
+    }
+
+    .coffee-photo {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.inx-product {
+    padding: 30px;
+
+    .inx-head {
+        text-align: center;
+        position: relative;
+
+        // &::before {
+        //     content: "";
+        //     opacity: .1;
+        //     position: absolute;
+        //     transform: translate(-50%, -50%);
+        //     height: 90px;
+        //     width: 100%;
+        //     background: url("../images/product_ind_bg.png");
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        // }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    .cover {
+
+        .img-aspect {
+            // aspect-ratio: 16 / 9;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 20px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+
+        }
+    }
+
+    .caption {
+        color: $primary;
+        padding: 20px;
+        min-height: 5rem;
+        text-align: center;
+
+        .title {
+            font-size: 1.2rem;
+        }
+
+        .price {
+            opacity: 0.8;
+        }
     }
 }
 
@@ -110,7 +217,7 @@
         }
     }
 
-    .btn-we-more {
+    .btn-va-more {
         margin: 16px auto;
     }
 }
@@ -185,8 +292,6 @@
 
 }
 
-
-
 .news-card {
     margin-top: 1rem;
     background-color: $white;
@@ -253,7 +358,7 @@
         .title {
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2; // 限制行數為2
+            // -webkit-line-clamp: 2; // 限制行數為2
             overflow: hidden;
             padding: 8px 32px 0 0;
             line-height: 1.5;

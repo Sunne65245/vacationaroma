@@ -13799,7 +13799,8 @@ textarea.form-control-lg {
 /*- 頁尾 -*/
 .footer {
   padding: 64px 0;
-  background: #fff;
+  background-color: #212529;
+  color: #fff;
 }
 .footer .container {
   display: -webkit-box;
@@ -13813,10 +13814,20 @@ textarea.form-control-lg {
           justify-content: space-between;
 }
 .footer .footer-logo img {
-  height: 32px;
+  height: 60px;
 }
 .footer .footer-copyright {
   font-size: 0.875rem;
+}
+.footer .community-btn {
+  margin-top: 8px;
+}
+.footer .community-btn a > img {
+  width: 24px;
+  height: 100%;
+}
+.footer .foot-list {
+  line-height: 1.5rem;
 }
 @media (max-width: 767.98px) {
   .footer .container {
@@ -13902,10 +13913,6 @@ textarea.form-control-lg {
 }
 .vac .nav-search span::before {
   background-image: url("../images/Icons/icon-search.svg");
-}
-
-.inx-banner .cover img {
-  height: 300px;
 }
 
 /*- 價格 -*/
@@ -14120,7 +14127,7 @@ textarea.form-control-lg {
 }
 .inx-head .subtitle {
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 400;
   color: rgb(155.68, 93.408, 66.72);
 }
 .inx-head .title {
@@ -14129,7 +14136,7 @@ textarea.form-control-lg {
   letter-spacing: 0.1em;
 }
 
-.btn-we-more {
+.btn-va-more {
   text-decoration: none;
   padding: 0.5rem 1rem;
   background-color: #fff;
@@ -14148,7 +14155,7 @@ textarea.form-control-lg {
   -webkit-box-shadow: 0 6px 16px rgba(12.88, 7.728, 5.52, 0.2);
           box-shadow: 0 6px 16px rgba(12.88, 7.728, 5.52, 0.2);
 }
-.btn-we-more::after {
+.btn-va-more::after {
   content: "\f061";
   font-family: "Line Awesome Free";
   -webkit-transform: rotate(-45deg);
@@ -14171,14 +14178,104 @@ textarea.form-control-lg {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.btn-we-more:hover {
+.btn-va-more:hover {
   -webkit-box-shadow: 0 6px 16px rgba(12.88, 7.728, 5.52, 0.6);
           box-shadow: 0 6px 16px rgba(12.88, 7.728, 5.52, 0.6);
   opacity: 0.9;
 }
 
+.inx-banner {
+  position: relative;
+}
 .inx-banner .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.inx-banner .caption .title {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.inx-banner .cover {
+  margin-top: -8rem;
+}
+.inx-banner .cover .img-aspect {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.inx-banner .cover .img-aspect img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.inx-about {
+  background-color: #fff;
+  margin: 40px 0;
+  padding: 60px 0;
+}
+.inx-about .founder-sign {
+  width: 60%;
+}
+.inx-about .coffee-photo {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inx-product {
+  padding: 30px;
+}
+.inx-product .inx-head {
+  text-align: center;
+  position: relative;
+}
+.inx-product a {
+  text-decoration: none;
+}
+.inx-product .cover .img-aspect {
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 20px;
+}
+.inx-product .cover .img-aspect img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.inx-product .caption {
+  color: #462A1E;
+  padding: 20px;
+  min-height: 5rem;
+  text-align: center;
+}
+.inx-product .caption .title {
+  font-size: 1.2rem;
+}
+.inx-product .caption .price {
+  opacity: 0.8;
 }
 
 .inx-news {
@@ -14230,7 +14327,7 @@ textarea.form-control-lg {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.inx-video .btn-we-more {
+.inx-video .btn-va-more {
   margin: 16px auto;
 }
 
@@ -14373,7 +14470,6 @@ textarea.form-control-lg {
 .news-card .caption .title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   overflow: hidden;
   padding: 8px 32px 0 0;
   line-height: 1.5;
